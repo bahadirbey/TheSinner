@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class PlayBtn : MonoBehaviour
 {
+    public GameObject options;
   
     public void play()
     {
         SceneManager.LoadScene("");
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Target1" )
+        {
+            options.gameObject.SetActive(true);
+        }
     }
 
 }
