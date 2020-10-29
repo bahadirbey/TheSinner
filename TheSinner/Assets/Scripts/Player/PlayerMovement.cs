@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
     public float maxComboDelay;
 
     bool attacking;
+    float attackTime;
+    public float startAttackTime;
+    float realGravityScale;
     //Melee attack End
 
     private State state;
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         facingRight = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        realGravityScale = rb.gravityScale;
     }
 
     void Update()
@@ -81,10 +85,13 @@ public class PlayerMovement : MonoBehaviour
         {
             case State.Normal:
                 Animate();
-                Move();
-                Flip();
-                Jump();
-                Roll();
+                if (!attacking)
+                {
+                    Move();
+                    Flip();
+                    Jump();
+                    Roll();
+                }
                 MeleeAttack();
                 break;
             case State.DodgeRollSliding:
@@ -96,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove));
         animator.SetFloat("verticalSpeed", rb.velocity.y);
+        animator.SetBool("attacking", attacking);
     }
     void Move()
     {
@@ -166,10 +174,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
+                attacking = true;               
+                rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
+                attackTime = startAttackTime;
+
                 lastClickedTime = Time.time;
                 noOfClicks++;
                 if (noOfClicks == 1)
                 {
+                    animator.SetTrigger("attack");
                     animator.SetBool("attack1", true);
                 }
                 noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
@@ -179,12 +193,20 @@ public class PlayerMovement : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
                 }
-
+            }
+            if (attackTime > 0)
+            {
+                attackTime -= Time.deltaTime;
+            }
+            else if(attacking)
+            {
                 timeBtwAttack = startTimeBtwAttack;
+                attacking = false;
             }
         }
         else
         {
+            rb.gravityScale = realGravityScale;
             timeBtwAttack -= Time.deltaTime;
         }
     }
@@ -221,6 +243,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("attack2", false);
         animator.SetBool("attack3", false);
         noOfClicks = 0;
+        attackTime = 0f;
     }
 
     private void OnDrawGizmosSelected()
