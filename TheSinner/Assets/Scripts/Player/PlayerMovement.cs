@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public GameObject shield;
+    SpriteRenderer sprite;
     //General elements End
 
     //Move Begin
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Flip Begin
     bool facingRight;
+    bool canFlip;
     //Flip End
 
     //Jump Begin
@@ -55,33 +57,60 @@ public class PlayerMovement : MonoBehaviour
     float attackTime;
     public float startAttackTime;
     float realGravityScale;
+
+    bool canAttack;
     //Melee attack End
 
     //Take Damage Begin
     public int health;
     public bool hittable;
-    public bool block;
+    public bool blocking;
+
+    bool daze;
+    float dazedTime;
+    public float startDazedTime;
     //Take Damage End
 
     //Block Begin
     public float startBlockTime;
     float blockTime;
+
+    public float startTimeBtwBlocks;
+    float timeBtwBlocks;
+
+    bool canBlock;
     //Block End
 
+    //CompanionCD Begin
+    public GameObject companionCD;
+    //CompannionCD End
+
+    //Death Begin
+    public bool dead;
+    public GameObject deathPanel;
+    //Death End
+
+    //States Begin
     private State state;
     enum State
     {
         Normal,
         DodgeRollSliding,
+        Death
     }
+    //States End
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        dazedTime = startDazedTime;
+        canFlip = true;
+        hittable = true;
         state = State.Normal;
         checkRadius = .1f;
         facingRight = true;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         realGravityScale = rb.gravityScale;
         shield.SetActive(false);
     }
@@ -90,6 +119,12 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         horizontalMove = Input.GetAxis("Horizontal");
+
+        if (isGrounded)
+        {
+            canAttack = true;
+            canBlock = true;
+        }
 
         if (Time.time - lastClickedTime > maxComboDelay)
         {
@@ -107,11 +142,15 @@ public class PlayerMovement : MonoBehaviour
                     Jump();
                     Roll();
                     Block();
+                    Daze();
                 }
                 MeleeAttack();
+                Death();
                 break;
             case State.DodgeRollSliding:
                 RollSliding();
+                break;
+            case State.Death:
                 break;
         }
     }
@@ -120,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove));
         animator.SetFloat("verticalSpeed", rb.velocity.y);
         animator.SetBool("attacking", attacking);
-        animator.SetBool("block", block);
+        animator.SetBool("blocking", blocking);
     }
     void Move()
     {
@@ -129,15 +168,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Flip()
     {
-        if (facingRight && horizontalMove < 0)
+        if (canFlip)
         {
-            facingRight = false;
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        else if (!facingRight && horizontalMove > 0)
-        {
-            facingRight = true;
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            if (facingRight && horizontalMove < 0)
+            {
+                facingRight = false;
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                companionCD.transform.eulerAngles = new Vector3(0,0,0);
+            }
+            else if (!facingRight && horizontalMove > 0)
+            {
+                facingRight = true;
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                companionCD.transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
     }
 
@@ -191,12 +235,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X) && canAttack)
             {
                 attacking = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
                 attackTime = startAttackTime;
+                canFlip = false;
 
                 lastClickedTime = Time.time;
                 noOfClicks++;
@@ -221,10 +266,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 timeBtwAttack = startTimeBtwAttack;
                 attacking = false;
+                canFlip = true;
             }
         }
         else
-        {
+        { 
             rb.gravityScale = realGravityScale;
             timeBtwAttack -= Time.deltaTime;
         }
@@ -241,6 +287,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("attack1", false);
             noOfClicks = 0;
         }
+
+        if (!isGrounded)
+        {
+            canBlock = false;
+        }
     }
 
     public void returnSecond()
@@ -254,6 +305,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("attack2", false);
             noOfClicks = 0;
         }
+
+        if (!isGrounded)
+        {
+            canBlock = false;
+        }
     }
 
     public void returnLast()
@@ -263,36 +319,107 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("attack3", false);
         noOfClicks = 0;
         attackTime = 0f;
-    }
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
+        if (!isGrounded)
+        {
+            canBlock = false;
+        }
     }
 
     public void Block()
     {
-        if (blockTime <= 0)
+        if (timeBtwBlocks <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Z) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Z) && canBlock)
             {
-                block = true;
-                shield.SetActive(true);
+                rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
                 blockTime = startBlockTime;
+                blocking = true;
+                shield.SetActive(true);
+                animator.SetTrigger("block");
+                canFlip = false;
+                canBlock = false;
+            }
+            if (blockTime > 0)
+            {
+                rb.velocity = Vector2.zero;
+                blockTime -= Time.deltaTime;
+            }
+            else if (blocking)
+            {
+                timeBtwBlocks = startTimeBtwBlocks;
+                blocking = false;
+                canFlip = true;
             }
         }
         else
         {
-            blockTime -= Time.deltaTime;
+            timeBtwBlocks -= Time.deltaTime;
         }
-       
+
     }
 
     public void DisableBlock()
     {
         shield.SetActive(false);
-        block = false;
+        blocking = false;
+        canFlip = true;
+        rb.gravityScale = realGravityScale;
+
+        if (!isGrounded)
+        {
+            canAttack = false;
+        }
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        daze = true;
+    }
+
+    void Daze()
+    {
+        if (daze)
+        {
+            if (dazedTime > 0)
+            {
+                if (facingRight)
+                {
+                    rb.velocity = new Vector2(-speed * Time.deltaTime/2,0);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(speed * Time.deltaTime/2, 0);
+                }
+                sprite.color = new Color(.5f,.5f,.5f,1);
+                dazedTime -= Time.deltaTime;
+            }
+            else
+            {
+                sprite.color = new Color(1, 1, 1, 1);
+                daze = false;
+                dazedTime = startDazedTime;
+            }
+        }
+    }
+
+    void Death()
+    {
+        if(health <= 0)
+        {
+            if (!dead)
+            {
+                animator.SetTrigger("death");
+            }
+            dead = true;
+            deathPanel.SetActive(true);
+            rb.velocity = Vector2.zero;
+            
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
