@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
     private Rigidbody2D rb;
     private Animator animator;
+    public GameObject shield;
     //General elements End
 
     //Move Begin
@@ -27,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
 
     private bool extraJump;
+
+    public GameObject jumpEffect;
     //Jump End
 
     //Roll Begin
@@ -35,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     //Roll End
 
     //Melee attack Begin
-    public float timeBtwAttack;
+    float timeBtwAttack;
     public float startTimeBtwAttack;
 
     public Transform attackPos;
@@ -44,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int damage;
 
-    public int noOfClicks = 0;
+    int noOfClicks = 0;
     float lastClickedTime;
     public float maxComboDelay;
 
@@ -53,6 +56,17 @@ public class PlayerMovement : MonoBehaviour
     public float startAttackTime;
     float realGravityScale;
     //Melee attack End
+
+    //Take Damage Begin
+    public int health;
+    public bool hittable;
+    public bool block;
+    //Take Damage End
+
+    //Block Begin
+    public float startBlockTime;
+    float blockTime;
+    //Block End
 
     private State state;
     enum State
@@ -69,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         realGravityScale = rb.gravityScale;
+        shield.SetActive(false);
     }
 
     void Update()
@@ -91,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
                     Flip();
                     Jump();
                     Roll();
+                    Block();
                 }
                 MeleeAttack();
                 break;
@@ -104,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove));
         animator.SetFloat("verticalSpeed", rb.velocity.y);
         animator.SetBool("attacking", attacking);
+        animator.SetBool("block", block);
     }
     void Move()
     {
@@ -133,11 +150,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && extraJump)
         {
+            Instantiate(jumpEffect, transform.position, Quaternion.identity);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
             extraJump = false;
         }
     }
-
 
     void Roll()
     {
@@ -160,10 +177,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(-rollingSpeed * Time.deltaTime, rb.velocity.y);
         }
 
+        hittable = false;
         rollingSpeed -= rollingSpeed * slindingTime * Time.deltaTime;
 
         if (rollingSpeed < 200f)
         {
+            hittable = true;
             state = State.Normal;
         }
     }
@@ -174,7 +193,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
-                attacking = true;               
+                attacking = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
                 attackTime = startAttackTime;
@@ -198,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 attackTime -= Time.deltaTime;
             }
-            else if(attacking)
+            else if (attacking)
             {
                 timeBtwAttack = startTimeBtwAttack;
                 attacking = false;
@@ -244,6 +263,35 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("attack3", false);
         noOfClicks = 0;
         attackTime = 0f;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+
+    public void Block()
+    {
+        if (blockTime <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Z) && isGrounded)
+            {
+                block = true;
+                shield.SetActive(true);
+                blockTime = startBlockTime;
+            }
+        }
+        else
+        {
+            blockTime -= Time.deltaTime;
+        }
+       
+    }
+
+    public void DisableBlock()
+    {
+        shield.SetActive(false);
+        block = false;
     }
 
     private void OnDrawGizmosSelected()

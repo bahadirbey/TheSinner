@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class BasicCreature : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public int damage;
+    public PlayerMovement player;
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.tag == "Player")
+        {
+            if (player.hittable)
+            {
+                player.TakeDamage(damage);
+                Destroy(gameObject);
+            }
+        }
     }
 }
