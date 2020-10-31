@@ -18,26 +18,44 @@ public class WarriorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        AttackAnimation();
+        Facing();
     }
 
-    void Attack()
+    void AttackAnimation()
     {
         if (!attacked)
         {
             animator.SetBool("attack",true);
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-            for (int i = 0; i < enemiesToDamage.Length; i++)
-            {
-                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
-            }
-            attacked = true;
+            
         }
+    }
+
+    public void Attack()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
+        }
+        attacked = true;
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    void Facing()
+    {
+        if (WarriorManager.facingRight)
+        {
+            transform.eulerAngles = new Vector3(0,0,0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
 
     private void OnDrawGizmosSelected()

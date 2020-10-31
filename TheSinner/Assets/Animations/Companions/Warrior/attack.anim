@@ -33,7 +33,7 @@ AnimationClip:
       value: {fileID: 8955749491123090644, guid: cea4884fbfc98ba4db6bb2dd4c5b470b, type: 3}
     - time: 0.5
       value: {fileID: -8425929945347164670, guid: cea4884fbfc98ba4db6bb2dd4c5b470b, type: 3}
-    - time: 0.5833333
+    - time: 0.56666666
       value: {fileID: 6593633146450839934, guid: cea4884fbfc98ba4db6bb2dd4c5b470b, type: 3}
     - time: 0.6666667
       value: {fileID: -6462140436133021798, guid: cea4884fbfc98ba4db6bb2dd4c5b470b, type: 3}
@@ -93,6 +93,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.4
+    functionName: Attack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.75
     functionName: Destroy
     data: 

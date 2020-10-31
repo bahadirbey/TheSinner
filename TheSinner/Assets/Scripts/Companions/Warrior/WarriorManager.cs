@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class WarriorManager : MonoBehaviour
 {
+    public GameObject spawningEffect;
     public GameObject warrior;
     public GameObject player;
-
+  
     public float coolDown;
     float coolDownTimer;
     Vector2 whereToSpawn;
@@ -18,10 +19,7 @@ public class WarriorManager : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    void Start()
-    {
-
-    }
+    internal static bool facingRight;
 
     void Update()
     {
@@ -40,6 +38,8 @@ public class WarriorManager : MonoBehaviour
             FindSpawningPlace();
             if (closestEnemy != null)
             {
+                Vector2 whereToSpawnEffect = new Vector2(whereToSpawn.x - .4f, whereToSpawn.y + 1.4f);
+                Instantiate(spawningEffect , whereToSpawnEffect, Quaternion.identity);
                 Instantiate(warrior, whereToSpawn, Quaternion.identity);
                 coolDownTimer = coolDown;
                 spawnRight = false;
@@ -49,21 +49,23 @@ public class WarriorManager : MonoBehaviour
         }
     }
 
+
     void FindSpawningPlace()
     {
         FindClosestEnemy();
-        if (closestEnemy != null) {
+        if (closestEnemy != null)
+        {
             spawnRight = Physics2D.OverlapCircle(new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y), checkRadius, whatIsGround);
             spawnLeft = Physics2D.OverlapCircle(new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y), checkRadius, whatIsGround);
         }
-        if (spawnRight)
+        if (spawnLeft)
         {
-            whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y);
-            warrior.transform.eulerAngles = new Vector3(0,180,0);
-        }else if (spawnLeft)
+            whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y - .5f);
+            facingRight = true;
+        } else if (spawnRight)
         {
-            whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y);
-            warrior.transform.eulerAngles = new Vector3(0, 0 , 0);
+            whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y - .5f);
+            facingRight = false;
         }
     }
 
