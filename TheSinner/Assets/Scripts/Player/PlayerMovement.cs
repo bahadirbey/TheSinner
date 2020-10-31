@@ -123,7 +123,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             canAttack = true;
-            canBlock = true;
+            if (!blocking)
+            {
+                canBlock = true;
+            }           
+            rb.gravityScale = realGravityScale;
         }
 
         if (Time.time - lastClickedTime > maxComboDelay)
@@ -202,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.C) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.C) && isGrounded && !blocking)
         {
             state = State.DodgeRollSliding;
             rollingSpeed = 1600f;
