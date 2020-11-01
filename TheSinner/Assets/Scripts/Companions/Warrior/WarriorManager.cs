@@ -7,7 +7,7 @@ public class WarriorManager : MonoBehaviour
     public GameObject spawningEffect;
     public GameObject warrior;
     public GameObject player;
-  
+    
     public float coolDown;
     float coolDownTimer;
     Vector2 whereToSpawn;
@@ -20,6 +20,7 @@ public class WarriorManager : MonoBehaviour
     public LayerMask whatIsGround;
 
     internal static bool facingRight;
+    bool playerLeft;
 
     void Update()
     {
@@ -57,15 +58,35 @@ public class WarriorManager : MonoBehaviour
         {
             spawnRight = Physics2D.OverlapCircle(new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y), checkRadius, whatIsGround);
             spawnLeft = Physics2D.OverlapCircle(new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y), checkRadius, whatIsGround);
+            if (player.transform.position.x - closestEnemy.transform.position.x < 0)
+            {
+                playerLeft = true;
+            }
         }
-        if (spawnLeft)
+        if (playerLeft)
         {
-            whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y - .5f);
-            facingRight = true;
-        } else if (spawnRight)
+            if (spawnRight)
+            {
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y - .5f);
+                facingRight = false;
+            }else if(spawnLeft)
+            {
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y - .5f);
+                facingRight = true;
+            }
+        }
+        else
         {
-            whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y - .5f);
-            facingRight = false;
+            if (spawnLeft)
+            {
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y - .5f);
+                facingRight = true;
+            }
+            else if (spawnRight)
+            {
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y - .5f);
+                facingRight = false;
+            }
         }
     }
 

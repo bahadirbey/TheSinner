@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WarriorController : MonoBehaviour
 {
+    public GameObject destroyingEffect;
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
@@ -43,6 +44,7 @@ public class WarriorController : MonoBehaviour
 
     public void Destroy()
     {
+        Instantiate(destroyingEffect, new Vector2(transform.position.x, transform.position.y + .5f), Quaternion.identity);
         Destroy(gameObject);
     }
 
