@@ -516,7 +516,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 9
-  jumpEffect: {fileID: 1633746417818036482, guid: 4fcf8dfb5baaac84f9e8a289cbe92506, type: 3}
+  jumpEffect: {fileID: 5484002882833584939, guid: 4fcf8dfb5baaac84f9e8a289cbe92506, type: 3}
   slindingTime: 0.3
   startTimeBtwAttack: 0.2
   attackPos: {fileID: 1178444057}
@@ -527,7 +527,7 @@ MonoBehaviour:
   damage: 10
   maxComboDelay: 0.3
   startAttackTime: 0.2
-  health: 100
+  health: 10
   hittable: 0
   blocking: 0
   startDazedTime: 0.1
@@ -1730,6 +1730,7 @@ GameObject:
   - component: {fileID: 1260511459}
   - component: {fileID: 1260511460}
   - component: {fileID: 1260511461}
+  - component: {fileID: 1260511462}
   m_Layer: 0
   m_Name: CompanionManager
   m_TagString: Untagged
@@ -1788,6 +1789,26 @@ MonoBehaviour:
   player: {fileID: 319200367}
   coolDown: 5
   viewRadius: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &1260511462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b55b5416b0cb214dad31e0b53744381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 10
+  viewRadius: 11
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
