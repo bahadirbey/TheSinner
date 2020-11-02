@@ -5,11 +5,13 @@ using UnityEngine;
 public class TakeDamage : MonoBehaviour
 {
     public int health;
+    internal int currentHealth;
     private Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        currentHealth = health;
     }
 
     void Update()
@@ -19,12 +21,17 @@ public class TakeDamage : MonoBehaviour
 
     public void GetDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
         animator.SetTrigger("getHit");
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Destroyed()
+    {
+        Destroy(gameObject);
     }
 }

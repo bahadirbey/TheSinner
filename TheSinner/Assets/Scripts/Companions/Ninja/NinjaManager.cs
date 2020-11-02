@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarriorManager : MonoBehaviour
+public class NinjaManager : MonoBehaviour
 {
     public GameObject spawningEffect;
-    public GameObject warrior;
+    public GameObject ninja;
     public GameObject player;
 
     public float coolDown;
@@ -15,7 +15,7 @@ public class WarriorManager : MonoBehaviour
     Collider2D[] enemies;
     public float viewRadius;
     public LayerMask whatIsEnemies;
-    Transform closestEnemy;
+    internal static Transform targetEnemy;
 
     internal static bool facingRight;
     bool playerLeft;
@@ -35,13 +35,12 @@ public class WarriorManager : MonoBehaviour
         if (coolDownTimer <= 0)
         {
             FindSpawningPlace();
-            if (closestEnemy != null)
+            if (targetEnemy != null)
             {
                 Vector2 whereToSpawnEffect = new Vector2(whereToSpawn.x - .4f, whereToSpawn.y + 1.4f);
                 Instantiate(spawningEffect, whereToSpawnEffect, Quaternion.identity);
-                Instantiate(warrior, whereToSpawn, Quaternion.identity);
+                Instantiate(ninja, whereToSpawn, Quaternion.identity);
                 coolDownTimer = coolDown;
-                closestEnemy = null;
             }
         }
     }
@@ -49,49 +48,51 @@ public class WarriorManager : MonoBehaviour
 
     void FindSpawningPlace()
     {
-        FindClosestEnemy();
-        if (closestEnemy != null)
+        FindTargetEnemy();
+        if (targetEnemy != null)
         {
-            if (player.transform.position.x - closestEnemy.transform.position.x < 0)
+            if (player.transform.position.x - targetEnemy.transform.position.x < 0)
             {
                 playerLeft = true;
             }
 
             if (playerLeft)
             {
-                whereToSpawn = new Vector2(closestEnemy.transform.position.x + .5f, closestEnemy.transform.position.y - .5f);
+
+                whereToSpawn = new Vector2(targetEnemy.transform.position.x + .5f, targetEnemy.transform.position.y - .5f);
                 facingRight = false;
             }
             else
             {
-                whereToSpawn = new Vector2(closestEnemy.transform.position.x - .5f, closestEnemy.transform.position.y - .5f);
+
+                whereToSpawn = new Vector2(targetEnemy.transform.position.x - .5f, targetEnemy.transform.position.y - .5f);
                 facingRight = true;
+
             }
         }
-        
     }
 
-    void FindClosestEnemy()
+    void FindTargetEnemy()
     {
         enemies = Physics2D.OverlapCircleAll(transform.position, viewRadius, whatIsEnemies);
-        closestEnemy = null;
+        targetEnemy = null;
         for (int i = 0; i < enemies.Length; i++)
         {
-
-            if (closestEnemy == null)
+            if (enemies[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 2))
             {
-                closestEnemy = enemies[i].transform;
+                targetEnemy = enemies[i].transform;
+                break;
             }
-            else if (Vector2.Distance(closestEnemy.transform.position, player.transform.position) < Vector2.Distance(player.transform.position, enemies[i].transform.position))
+            else
             {
-                closestEnemy = enemies[i].transform;
+                targetEnemy = null;
             }
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(player.transform.position, viewRadius);
     }
 }
