@@ -10,6 +10,7 @@ public class Item1 : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             item1.gameObject.SetActive(true);
+
         }
     }
 }
