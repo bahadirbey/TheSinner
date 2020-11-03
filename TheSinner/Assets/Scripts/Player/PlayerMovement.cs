@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     //Melee attack End
 
     //Take Damage Begin
+    internal int maxHealth;
     public int health;
     public bool hittable;
     public bool blocking;
@@ -113,10 +114,16 @@ public class PlayerMovement : MonoBehaviour
         facingRight = true;
         realGravityScale = rb.gravityScale;
         shield.SetActive(false);
+        maxHealth = 100;
     }
 
     void Update()
     {
+        if (health >= maxHealth)
+        {
+            health = maxHealth;
+        }
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         horizontalMove = Input.GetAxis("Horizontal");
 
@@ -422,6 +429,11 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             
         }
+    }
+
+    public void GetHeal(int heal)
+    {
+        health += heal;
     }
 
 

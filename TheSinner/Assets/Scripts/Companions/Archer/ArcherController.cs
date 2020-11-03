@@ -28,6 +28,7 @@ public class ArcherController : MonoBehaviour
         if (!attacked)
         {
             animator.SetBool("attack", true);
+            attacked = true;
         }
     }
 
