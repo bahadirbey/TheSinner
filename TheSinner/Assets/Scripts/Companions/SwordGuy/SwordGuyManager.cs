@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarriorManager : MonoBehaviour
+public class SwordGuyManager : MonoBehaviour
 {
     public GameObject spawningEffect;
-    public GameObject warrior;
+    public GameObject swordGuy;
     public GameObject player;
 
     public float coolDown;
@@ -39,7 +39,7 @@ public class WarriorManager : MonoBehaviour
             {
                 Vector2 whereToSpawnEffect = new Vector2(whereToSpawn.x - .4f, whereToSpawn.y + 1.4f);
                 Instantiate(spawningEffect, whereToSpawnEffect, Quaternion.identity);
-                Instantiate(warrior, whereToSpawn, Quaternion.identity);
+                Instantiate(swordGuy, whereToSpawn, Quaternion.identity);
                 coolDownTimer = coolDown;
                 closestEnemy = null;
             }
@@ -68,7 +68,7 @@ public class WarriorManager : MonoBehaviour
                 facingRight = true;
             }
         }
-        
+
     }
 
     void FindClosestEnemy()
@@ -91,7 +91,7 @@ public class WarriorManager : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(player.transform.position, viewRadius);
     }
 }
