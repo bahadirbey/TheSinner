@@ -8,6 +8,8 @@ TagManager:
   - Target1
   - shield
   - Enemy
+  - petPos
+  - companionManager
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - Ground
   - Mob
-  - 
+  - FlyingMob
   - 
   - 
   - 
