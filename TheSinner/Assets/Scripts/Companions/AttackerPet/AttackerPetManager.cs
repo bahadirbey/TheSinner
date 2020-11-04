@@ -20,7 +20,6 @@ public class AttackerPetManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isDead);
         if (isDead)
         {
             Spawn();   
