@@ -3,31 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler,IDropHandler
 {
     [SerializeField] private Canvas canvas;
-
-
+    
     private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Tıkladın");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        canvasGroup.alpha = .6f;
+        canvasGroup.blocksRaycasts = false;
+        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Sürükleniyor");
+        rectTransform.anchoredPosition += eventData.delta/canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("Bıraktın");
+        canvasGroup.alpha = 1.0f;
+        canvasGroup.blocksRaycasts = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -36,14 +42,9 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
 
     // Start is called before the first frame update
-    void Start()
+  
+    public void OnDrop(PointerEventData eventData)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }
