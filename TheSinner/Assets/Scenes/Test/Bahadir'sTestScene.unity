@@ -391,8 +391,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008027077, y: 0.5958433}
-  m_Size: {x: 0.5083456, y: 2.0211082}
+  m_Offset: {x: 0.008027077, y: -0.16053796}
+  m_Size: {x: 0.5083456, y: 0.5083456}
   m_Direction: 0
 --- !u!95 &236322175
 Animator:
@@ -528,8 +528,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 10
-  maxComboDelay: 0.3
-  startAttackTime: 0.2
+  maxComboDelay: 0.2
+  startAttackTime: 0.4
   health: 100
   hittable: 0
   blocking: 0
@@ -1093,8 +1093,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008027077, y: 0.5958433}
-  m_Size: {x: 0.5083456, y: 2.0211082}
+  m_Offset: {x: 0.008027077, y: -0.16053796}
+  m_Size: {x: 0.5083456, y: 0.5083456}
   m_Direction: 0
 --- !u!114 &698421642
 MonoBehaviour:

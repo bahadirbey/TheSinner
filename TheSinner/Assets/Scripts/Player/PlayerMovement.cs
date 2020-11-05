@@ -263,11 +263,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
 
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
-                }
+                
             }
             if (attackTime > 0)
             {
@@ -284,6 +280,15 @@ public class PlayerMovement : MonoBehaviour
         { 
             rb.gravityScale = realGravityScale;
             timeBtwAttack -= Time.deltaTime;
+        }
+    }
+
+    public void Attack()
+    {
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
         }
     }
 

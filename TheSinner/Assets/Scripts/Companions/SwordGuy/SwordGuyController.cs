@@ -58,7 +58,7 @@ public class SwordGuyController : MonoBehaviour
 
     void Facing()
     {
-        if (WarriorManager.facingRight)
+        if (SwordGuyManager.facingRight)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }

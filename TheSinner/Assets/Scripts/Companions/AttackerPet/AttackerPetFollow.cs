@@ -12,6 +12,7 @@ public class AttackerPetFollow : MonoBehaviour
     public float viewRadius;
     public LayerMask whatIsEnemies;
     Transform target;
+    public float attackRange;
 
     public GameObject explosionEffect;
     void Start()
@@ -74,7 +75,7 @@ public class AttackerPetFollow : MonoBehaviour
     void Explode()
     {
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(transform.position, new Vector2(1.7f, .9f), 0, whatIsEnemies);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(transform.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
