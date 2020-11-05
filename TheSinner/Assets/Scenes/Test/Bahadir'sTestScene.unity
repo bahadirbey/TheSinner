@@ -526,7 +526,7 @@ MonoBehaviour:
   attackRange: 0.6
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   damage: 10
   maxComboDelay: 0.2
   startAttackTime: 0.4
@@ -1911,6 +1911,7 @@ GameObject:
   - component: {fileID: 1260511464}
   - component: {fileID: 1260511465}
   - component: {fileID: 1260511466}
+  - component: {fileID: 1260511467}
   m_Layer: 0
   m_Name: CompanionManager
   m_TagString: Untagged
@@ -2062,6 +2063,26 @@ MonoBehaviour:
   attackerPet: {fileID: 7472775480778880940, guid: 1cc1de6bf48ec514c9de85073d3dcdc5, type: 3}
   target: {fileID: 0}
   coolDown: 10
+--- !u!114 &1260511467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bc3784747d45242a71993bd967f3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  thor: {fileID: 5185329966996840226, guid: 5f0d643a5658ece41b0d08053e7e0c17, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 5
+  viewRadius: 8.11
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!4 &1305529197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8924208532391640643, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
