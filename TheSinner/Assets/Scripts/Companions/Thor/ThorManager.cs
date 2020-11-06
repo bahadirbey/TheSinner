@@ -37,7 +37,7 @@ public class ThorManager : MonoBehaviour
             FindSpawningPlace();
             if (closestEnemy != null)
             {
-                Vector2 whereToSpawnEffect = new Vector2(whereToSpawn.x - .4f, whereToSpawn.y + 1.4f);
+                Vector2 whereToSpawnEffect = new Vector2(whereToSpawn.x, whereToSpawn.y);
                 Instantiate(spawningEffect, whereToSpawnEffect, Quaternion.identity);
                 Instantiate(thor, whereToSpawn, Quaternion.identity);
                 coolDownTimer = coolDown;

@@ -27,18 +27,13 @@ public class WarriorController : MonoBehaviour
     {
         if (!attacked)
         {
-            animator.SetBool("attack",true);
-            
+            animator.SetBool("attack",true);           
         }
     }
 
     public void Attack()
     {
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-        {
-            enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
-        }
+        WarriorManager.closestEnemy.GetComponent<TakeDamage>().GetDamage(damage);
         attacked = true;
     }
 

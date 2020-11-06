@@ -528,7 +528,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   damage: 10
-  maxComboDelay: 0.2
+  maxComboDelay: 0.4
   startAttackTime: 0.4
   health: 100
   hittable: 0
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39570be8cc35f4f499694bafc992868d, type: 3}
   m_Name: 
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6f07ab0112aae740aef3e4f39711b49, type: 3}
   m_Name: 

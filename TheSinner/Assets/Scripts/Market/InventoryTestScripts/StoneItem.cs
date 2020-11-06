@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class StoneItem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private UsedItemsTest usedItems;
+    public GameObject itemButton;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        usedItems = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
     }
 
     public void Use()
     {
         Debug.Log("used");
+
+        for (int i = 0; i < usedItems.slots.Length; i++)
+        {
+            if (usedItems.isFull[i] == false)
+            {
+                Instantiate(itemButton, usedItems.slots[i].transform, false);
+                Destroy(gameObject);
+                usedItems.isFull[i] = true;
+                break;
+            }
+        }
+
     }
 }

@@ -21,4 +21,9 @@ public class SpawnTest : MonoBehaviour
     {
         Debug.Log("dropped");
     }
+
+    public void RemoveItem()
+    {
+        Debug.Log("removed");
+    }
 }

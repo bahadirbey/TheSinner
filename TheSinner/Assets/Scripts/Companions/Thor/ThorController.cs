@@ -17,17 +17,16 @@ public class ThorController : MonoBehaviour
 
     public void Attack()
     {
-
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
         }
-        Instantiate(destroyingEffect, new Vector2(transform.position.x, transform.position.y + .5f), Quaternion.identity);
     }
 
     public void Destroy()
     {
+        Instantiate(destroyingEffect, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         Destroy(gameObject);
     }
 

@@ -15,7 +15,7 @@ public class WarriorManager : MonoBehaviour
     Collider2D[] enemies;
     public float viewRadius;
     public LayerMask whatIsEnemies;
-    Transform closestEnemy;
+    internal static Transform closestEnemy;
 
     internal static bool facingRight;
     bool playerLeft;
@@ -41,7 +41,6 @@ public class WarriorManager : MonoBehaviour
                 Instantiate(spawningEffect, whereToSpawnEffect, Quaternion.identity);
                 Instantiate(warrior, whereToSpawn, Quaternion.identity);
                 coolDownTimer = coolDown;
-                closestEnemy = null;
             }
         }
     }
@@ -77,7 +76,6 @@ public class WarriorManager : MonoBehaviour
         closestEnemy = null;
         for (int i = 0; i < enemies.Length; i++)
         {
-
             if (closestEnemy == null)
             {
                 closestEnemy = enemies[i].transform;

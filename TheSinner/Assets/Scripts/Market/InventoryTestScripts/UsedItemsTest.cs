@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryTest : MonoBehaviour
+public class UsedItemsTest : MonoBehaviour
 {
     public bool[] isFull;
     public GameObject[] slots;
