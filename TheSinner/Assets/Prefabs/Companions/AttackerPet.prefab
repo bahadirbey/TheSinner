@@ -121,7 +121,8 @@ MonoBehaviour:
   viewRadius: 6
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
+  attackRange: 0
   explosionEffect: {fileID: 5952811639770675638, guid: de3c804b5fd4d4443bd0bbd198c5cb4a, type: 3}
 --- !u!50 &7472775480778880937
 Rigidbody2D:

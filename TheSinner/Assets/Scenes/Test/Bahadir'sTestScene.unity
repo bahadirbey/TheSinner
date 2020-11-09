@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 236322174}
   - component: {fileID: 236322173}
   - component: {fileID: 236322172}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BasicCreature2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236322171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55, y: 2.412, z: 0}
+  m_LocalPosition: {x: 1, y: -3.34, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 844181715}
@@ -530,7 +530,7 @@ MonoBehaviour:
   damage: 10
   maxComboDelay: 0.4
   startAttackTime: 0.4
-  health: 100
+  health: 1
   hittable: 0
   blocking: 0
   startDazedTime: 0.1
@@ -1234,11 +1234,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8924208531725235104, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8924208531809319354, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8924208532008661638, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1290,15 +1290,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8924208532008661639, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8924208532391640640, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8924208533570234151, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782427562ae0d7b4eb85a8ec5e1dcf84, type: 3}
@@ -1988,7 +1988,7 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
   player: {fileID: 319200367}
-  coolDown: 10
+  coolDown: 5
   viewRadius: 11
   whatIsEnemies:
     serializedVersion: 2
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   archer: {fileID: 3654750545995434531, guid: 322adfaddfbdd44468da47055c8bc750, type: 3}
   player: {fileID: 319200367}
-  coolDown: 10
+  coolDown: 5
   viewRadius: 15
   whatIsEnemies:
     serializedVersion: 2
@@ -2028,7 +2028,7 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   swordGuy: {fileID: 4628744228396282631, guid: 67fe1ae0c4985ec46af2b7666e17c362, type: 3}
   player: {fileID: 319200367}
-  coolDown: 20
+  coolDown: 5
   viewRadius: 7
   whatIsEnemies:
     serializedVersion: 2
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6f07ab0112aae740aef3e4f39711b49, type: 3}
   m_Name: 
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78bc3784747d45242a71993bd967f3a4, type: 3}
   m_Name: 

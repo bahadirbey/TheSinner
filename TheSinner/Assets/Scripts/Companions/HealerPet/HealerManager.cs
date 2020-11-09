@@ -13,6 +13,11 @@ public class HealerManager : MonoBehaviour
 
     //internal static bool facingRight;
 
+    private void Start()
+    {
+        coolDownTimer = coolDown;
+    }
+
     void Update()
     {
         if (coolDownTimer > 0)

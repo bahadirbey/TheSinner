@@ -16,6 +16,7 @@ public class AttackerPetManager : MonoBehaviour
     {
         isDead = true;
         target = GameObject.FindGameObjectWithTag("petPos").transform;
+        coolDownTimer = coolDown;
     }
 
     void Update()

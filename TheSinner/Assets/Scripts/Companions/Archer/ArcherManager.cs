@@ -20,6 +20,11 @@ public class ArcherManager : MonoBehaviour
     internal static bool facingRight;
     bool playerLeft;
 
+    private void Start()
+    {
+        coolDownTimer = coolDown;
+    }
+
     void Update()
     {
         if (coolDownTimer > 0)
