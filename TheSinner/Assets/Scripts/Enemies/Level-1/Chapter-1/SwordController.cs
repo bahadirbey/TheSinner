@@ -6,7 +6,7 @@ public class SwordController : MonoBehaviour
 {
     Animator animator;
     private Patrol patrol;
-    bool walking;
+
     void Start()
     {
         animator = GetComponent<Animator>();

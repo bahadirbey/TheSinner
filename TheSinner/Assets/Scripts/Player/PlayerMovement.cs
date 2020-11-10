@@ -432,7 +432,7 @@ public class PlayerMovement : MonoBehaviour
             dead = true;
             deathPanel.SetActive(true);
             rb.velocity = Vector2.zero;
-            
+            canFlip = false;
         }
     }
 
