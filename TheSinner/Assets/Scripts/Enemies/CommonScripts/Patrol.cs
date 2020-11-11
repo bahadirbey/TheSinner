@@ -11,7 +11,7 @@ public class Patrol : MonoBehaviour
     float waitTime;
     internal bool canPatrol;
     internal bool patrolMovement;
-
+    internal RaycastHit2D groundInfo;
     void Start()
     {
         waitTime = 1f;
@@ -19,13 +19,13 @@ public class Patrol : MonoBehaviour
     }
 
     void Update()
-    {  
+    {
+        groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         PatrolMovement();  
     }
 
     void PatrolMovement()
     {
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (canPatrol)
         {
             if (!groundInfo.collider)

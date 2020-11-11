@@ -531,11 +531,11 @@ MonoBehaviour:
   damage: 10
   maxComboDelay: 0.4
   startAttackTime: 0.4
-  health: 1
+  health: 100
   hittable: 0
   blocking: 0
   startDazedTime: 0.1
-  startBlockTime: 0.8
+  startBlockTime: 0.6
   startTimeBtwBlocks: 2
   companionCD: {fileID: 1783765301}
   dead: 0
@@ -867,7 +867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418894639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 0.63, z: 0}
+  m_LocalPosition: {x: 0.346, y: 0.644, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 745573694}
@@ -1307,7 +1307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698421639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.64, y: -1.75, z: 0}
+  m_LocalPosition: {x: 7.39, y: -0.96, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1624099100}
@@ -1355,8 +1355,8 @@ GameObject:
   - component: {fileID: 745573694}
   - component: {fileID: 745573693}
   - component: {fileID: 745573692}
-  - component: {fileID: 745573695}
   - component: {fileID: 745573696}
+  - component: {fileID: 745573695}
   - component: {fileID: 745573698}
   - component: {fileID: 745573699}
   - component: {fileID: 745573697}
@@ -1445,7 +1445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745573691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.98, y: -1.37, z: 0}
+  m_LocalPosition: {x: -4.78, y: -2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418894640}
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  distance: 2
+  distance: 0.5
   groundDetection: {fileID: 1480607415}
 --- !u!114 &745573696
 MonoBehaviour:
@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   bar: {fileID: 666977784}
   healthBar: {fileID: 499305959}
   startDazedTime: 0.5
@@ -1525,14 +1525,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaca424261a31b7488a5422c747eaeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwAttack: 5
-  startReadyAttackTime: 3
+  attackRangeX: 1
+  attackRangeY: 1.25
+  chaseRangeX: 8
+  chaseRangeY: 2
+  chasingPoint: {fileID: 745573694}
+  startReadyAttackTime: 2
   attackPos: {fileID: 418894640}
-  attackRange: 0.6
+  attackRange: 0
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
   damage: 10
+  whatIsToChase:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1001 &800560091
 PrefabInstance:
   m_ObjectHideFlags: 0

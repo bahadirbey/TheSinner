@@ -7,8 +7,13 @@ public class MeleeAttack : MonoBehaviour
     private Animator animator;
     private Patrol patrol;
 
-    float timeBtwAttack;
-    public float startTimeBtwAttack;
+    public float attackRangeX;
+    public float attackRangeY;
+    public float chaseRangeX;
+    public float chaseRangeY;
+    public Transform chasingPoint;
+
+    bool attacking;
     float readyAttackTime;
     public float startReadyAttackTime;
 
@@ -18,6 +23,10 @@ public class MeleeAttack : MonoBehaviour
     public LayerMask whatIsEnemies;
 
     public int damage;
+
+    bool canChase;
+    Collider2D playerToChase;
+    public LayerMask whatIsToChase;
 
     void Start()
     {
@@ -29,42 +38,36 @@ public class MeleeAttack : MonoBehaviour
 
     void Update()
     {
-        playerToDamage = Physics2D.OverlapCircle(attackPos.position, attackRange, whatIsEnemies);
+        playerToDamage = Physics2D.OverlapBox(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
         MeleeAttackPrep();
+        Chasing();
     }
 
     void MeleeAttackPrep()
-    {
-        if (timeBtwAttack <= 0)
-        {
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
+    {      
             if (playerToDamage != null)
             {
                 patrol.canPatrol = false;
                 patrol.patrolMovement = false;
+                canChase = false;
 
                 if (readyAttackTime <= 0)
                 {
                     readyAttackTime = startReadyAttackTime;
                     animator.SetBool("attacking", true);
+                    attacking = true;
                 }
                 else
                 {
                     readyAttackTime -= Time.deltaTime;
                 }
-
             }
-            else
+            else if(!attacking)
             {
+                canChase = true;
                 patrol.canPatrol = true;
                 patrol.patrolMovement = true;
-            }
-
-            timeBtwAttack -= Time.deltaTime;
-        }
+            }         
     }
 
     public void Attack()
@@ -80,11 +83,52 @@ public class MeleeAttack : MonoBehaviour
         animator.SetBool("attacking", false);
         patrol.canPatrol = true;
         patrol.patrolMovement = true;
+        attacking = false;
+    }
+
+    void Chasing()
+    {
+        playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
+
+        if (playerToChase != null && !attacking)
+        {
+            if (playerToChase.transform.position.x < transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+            }
+            else if (playerToChase.transform.position.x > transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+        }
+
+        if (!patrol.groundInfo.collider && playerToChase != null && canChase)
+        {
+            transform.Translate(Vector2.zero);
+        }
+        else if (playerToChase != null && canChase && patrol.groundInfo.collider)
+        {
+            patrol.canPatrol = false;
+            if (playerToChase.transform.position.x < transform.position.x)
+            {
+                transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
+            }
+            else if (playerToChase.transform.position.x > transform.position.x)
+            {
+                transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
+            }
+        }
+        else if(playerToChase == null)
+        {
+            patrol.canPatrol = true;
+            patrol.patrolMovement = true;
+        }
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX,attackRangeY,0));
+        Gizmos.DrawWireCube(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector3(chaseRangeX, chaseRangeY, 0));
     }
 }

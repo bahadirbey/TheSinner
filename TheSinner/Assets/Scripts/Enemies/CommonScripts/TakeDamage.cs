@@ -16,8 +16,6 @@ public class TakeDamage : MonoBehaviour
     float startBarHidingTime;
 
     bool dazed;
-    float dazedTime;
-    bool dazeTimeEqual;
     public float startDazedTime;
     private SpriteRenderer sprite;
 
@@ -68,6 +66,7 @@ public class TakeDamage : MonoBehaviour
 
     public void EndDaze()
     {
+        animator.SetBool("getHitBool", false);
         patrol.canPatrol = true;
         sprite.color = new Color(1, 1, 1, 1);
         dazed = false;
