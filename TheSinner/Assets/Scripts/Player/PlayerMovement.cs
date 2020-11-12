@@ -92,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject deathPanel;
     //Death End
 
+    //Kill Count Begin
+    internal static int killCounter;
+    internal static bool canRegenHealth;
+    //Kill Count End
+
     //States Begin
     private State state;
     enum State
@@ -156,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
                     Block();
                     Daze();
                 }
+                CountKilling();
                 MeleeAttack();
                 Death();
                 break;
@@ -178,6 +184,15 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
+    }
+
+    void CountKilling()
+    {
+        if (killCounter >= 10)
+        {
+            canRegenHealth = true;
+            killCounter = 0;
+        }
     }
 
     void Flip()

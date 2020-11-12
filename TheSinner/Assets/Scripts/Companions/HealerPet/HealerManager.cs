@@ -7,23 +7,12 @@ public class HealerManager : MonoBehaviour
     public GameObject healerPet;
     public GameObject player;
 
-    public float coolDown;
-    float coolDownTimer;
     Vector2 whereToSpawn;
 
-    //internal static bool facingRight;
 
-    private void Start()
-    {
-        coolDownTimer = coolDown;
-    }
 
     void Update()
     {
-        if (coolDownTimer > 0)
-        {
-            coolDownTimer -= Time.deltaTime;
-        }
 
         if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().maxHealth)
         {
@@ -33,11 +22,11 @@ public class HealerManager : MonoBehaviour
 
     void Spawn()
     {
-        if (coolDownTimer <= 0)
+        if (PlayerMovement.canRegenHealth)
         {
             FindSpawningPlace();
             Instantiate(healerPet, whereToSpawn, Quaternion.identity);
-            coolDownTimer = coolDown;
+            PlayerMovement.canRegenHealth = false;
         }
     }
 

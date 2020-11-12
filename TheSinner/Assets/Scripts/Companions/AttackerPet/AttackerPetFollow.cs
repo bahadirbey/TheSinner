@@ -15,6 +15,8 @@ public class AttackerPetFollow : MonoBehaviour
     public float attackRange;
 
     public GameObject explosionEffect;
+
+    public float coolDown;
     void Start()
     {
         followingPoint = GameObject.FindGameObjectWithTag("petPos").GetComponent<Transform>();
@@ -25,7 +27,11 @@ public class AttackerPetFollow : MonoBehaviour
     {
         Follow();
         Flip();
-        FindTarget();
+        coolDown -= Time.deltaTime;
+        if (coolDown <= 0)
+        {
+            FindTarget();
+        }
     }
 
     void Follow()

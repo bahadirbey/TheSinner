@@ -56,6 +56,7 @@ public class TakeDamage : MonoBehaviour
     public void Destroyed()
     {
         dead = true;
+        PlayerMovement.killCounter += 1;
     }
 
     void ShowHealthBar()

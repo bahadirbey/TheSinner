@@ -111,7 +111,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7472775480778880940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70826ee32ee121f4fa96edb948e062a7, type: 3}
   m_Name: 
@@ -124,6 +124,7 @@ MonoBehaviour:
     m_Bits: 1536
   attackRange: 0
   explosionEffect: {fileID: 5952811639770675638, guid: de3c804b5fd4d4443bd0bbd198c5cb4a, type: 3}
+  coolDown: 15
 --- !u!50 &7472775480778880937
 Rigidbody2D:
   serializedVersion: 4
