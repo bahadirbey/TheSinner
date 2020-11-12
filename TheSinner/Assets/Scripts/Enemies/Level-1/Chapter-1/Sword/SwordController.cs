@@ -12,7 +12,6 @@ public class SwordController : MonoBehaviour
     private SpriteRenderer sprite;
     float dazeSpeed;
 
-    public SwordDead swordDeadScript;
     public GameObject swordDead;
 
     internal RaycastHit2D dazeInfo;
@@ -33,7 +32,7 @@ public class SwordController : MonoBehaviour
         dazeInfo = Physics2D.Raycast(dazeDetection.position, Vector2.down, distance);
         Animate();
         Daze();
-        Death();
+        Death();     
     }
 
     void Animate()
@@ -76,7 +75,10 @@ public class SwordController : MonoBehaviour
             Instantiate(swordDead, transform.position, Quaternion.identity);
             if (transform.eulerAngles == new Vector3(0,0,0))
             {
-                swordDeadScript.facingRight = true;
+                SwordDead.facingRight = true;
+            }else if (transform.eulerAngles == new Vector3(0, 180, 0))
+            {
+                SwordDead.facingRight = false;
             }
             Destroy(gameObject);
         }

@@ -18,6 +18,8 @@ public class TakeDamage : MonoBehaviour
     public float startDazedTime;
     internal bool dead;
 
+    internal int hitCounter;
+    internal bool hit;
     void Start()
     {
         startBarHidingTime = 2f;
@@ -41,6 +43,11 @@ public class TakeDamage : MonoBehaviour
         barHidingTime = startBarHidingTime;
         dazed = true;
         dazedTime = startDazedTime;
+        hit = true;
+        if (hitCounter < 3)
+        {
+            hitCounter++;
+        }
 
         if (currentHealth <= 0)
         {
@@ -51,6 +58,7 @@ public class TakeDamage : MonoBehaviour
     public void GetHitAnimation()
     {
         animator.SetBool("getHitBool", false);
+        hit = false;
     }    
 
     public void Destroyed()

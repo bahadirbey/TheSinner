@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordDead : MonoBehaviour
 {
-    internal bool facingRight;
+    internal static bool facingRight;
     float countDown;
 
     private void Start()

@@ -156,11 +156,11 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Move();
                     Flip();
-                    Jump();
-                    Roll();
-                    Block();
+                    Jump();  
                     Daze();
                 }
+                Roll();
+                Block();
                 CountKilling();
                 MeleeAttack();
                 Death();

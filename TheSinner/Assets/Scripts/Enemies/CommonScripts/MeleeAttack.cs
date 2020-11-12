@@ -28,8 +28,11 @@ public class MeleeAttack : MonoBehaviour
     Collider2D playerToChase;
     public LayerMask whatIsToChase;
 
+    private TakeDamage takeDamage;
+
     void Start()
     {
+        takeDamage = GetComponent<TakeDamage>();
         animator = GetComponent<Animator>();
         patrol = GetComponent<Patrol>();
         readyAttackTime = startReadyAttackTime;
@@ -50,6 +53,11 @@ public class MeleeAttack : MonoBehaviour
             patrol.canPatrol = false;
             patrol.patrolMovement = false;
             canChase = false;
+
+            if (takeDamage.hitCounter < 3 && takeDamage.hit)
+            {
+                readyAttackTime = startReadyAttackTime;
+            }
 
             if (readyAttackTime <= 0)
             {
@@ -107,6 +115,7 @@ public class MeleeAttack : MonoBehaviour
         patrol.canPatrol = true;
         patrol.patrolMovement = true;
         attacking = false;
+        readyAttackTime = startReadyAttackTime;
     }
 
     void Chasing()
