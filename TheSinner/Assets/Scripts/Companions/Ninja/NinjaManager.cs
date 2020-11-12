@@ -64,13 +64,13 @@ public class NinjaManager : MonoBehaviour
             if (playerLeft)
             {
 
-                whereToSpawn = new Vector2(targetEnemy.transform.position.x + .5f, targetEnemy.transform.position.y - .5f);
+                whereToSpawn = new Vector2(targetEnemy.transform.position.x + .5f, targetEnemy.transform.position.y);
                 facingRight = false;
             }
             else
             {
 
-                whereToSpawn = new Vector2(targetEnemy.transform.position.x - .5f, targetEnemy.transform.position.y - .5f);
+                whereToSpawn = new Vector2(targetEnemy.transform.position.x - .5f, targetEnemy.transform.position.y);
                 facingRight = true;
 
             }

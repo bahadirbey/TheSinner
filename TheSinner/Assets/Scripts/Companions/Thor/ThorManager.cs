@@ -64,12 +64,12 @@ public class ThorManager : MonoBehaviour
 
             if (playerLeft)
             {
-                whereToSpawn = new Vector2(closestEnemy.transform.position.x + 1.5f, closestEnemy.transform.position.y + .5f);
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x + 1.5f, closestEnemy.transform.position.y);
                 facingRight = false;
             }
             else
             {
-                whereToSpawn = new Vector2(closestEnemy.transform.position.x - 1.5f, closestEnemy.transform.position.y + .5f);
+                whereToSpawn = new Vector2(closestEnemy.transform.position.x - 1.5f, closestEnemy.transform.position.y);
                 facingRight = true;
             }
         }

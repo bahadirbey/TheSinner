@@ -13,7 +13,7 @@ public class MeleeAttack : MonoBehaviour
     public float chaseRangeY;
     public Transform chasingPoint;
 
-    bool attacking;
+    internal bool attacking;
     float readyAttackTime;
     public float startReadyAttackTime;
 
@@ -44,37 +44,60 @@ public class MeleeAttack : MonoBehaviour
     }
 
     void MeleeAttackPrep()
-    {      
-            if (playerToDamage != null)
-            {
-                patrol.canPatrol = false;
-                patrol.patrolMovement = false;
-                canChase = false;
+    {
+        if (playerToDamage != null)
+        {
+            patrol.canPatrol = false;
+            patrol.patrolMovement = false;
+            canChase = false;
 
-                if (readyAttackTime <= 0)
-                {
-                    readyAttackTime = startReadyAttackTime;
-                    animator.SetBool("attacking", true);
-                    attacking = true;
-                }
-                else
-                {
-                    readyAttackTime -= Time.deltaTime;
-                }
-            }
-            else if(!attacking)
+            if (readyAttackTime <= 0)
             {
-                canChase = true;
-                patrol.canPatrol = true;
-                patrol.patrolMovement = true;
-            }         
+                readyAttackTime = startReadyAttackTime;
+                animator.SetBool("attacking", true);
+                attacking = true;
+            }
+            else
+            {
+                readyAttackTime -= Time.deltaTime;
+            }
+        }
+        else if (!attacking)
+        {
+            canChase = true;
+            patrol.canPatrol = true;
+            patrol.patrolMovement = true;
+        }
     }
 
     public void Attack()
     {
         if (playerToDamage != null)
         {
-            playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+            if (!PlayerMovement.blocking)
+            {
+                playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+                if (playerToDamage.transform.position.x > transform.position.x)
+                {
+                    PlayerMovement.dazeRight = true;
+                }else if (playerToDamage.transform.position.x < transform.position.x)
+                {
+                    PlayerMovement.dazeRight = false;
+                }
+            }
+            else
+            {
+                if (PlayerMovement.facingRight && playerToDamage.transform.position.x > transform.position.x)
+                {
+                    playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+                    PlayerMovement.dazeRight = true;
+                }
+                else if (!PlayerMovement.facingRight && playerToDamage.transform.position.x < transform.position.x)
+                {
+                    playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+                    PlayerMovement.dazeRight = false;
+                }
+            }
         }
     }
 
@@ -118,7 +141,7 @@ public class MeleeAttack : MonoBehaviour
                 transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
             }
         }
-        else if(playerToChase == null)
+        else if (playerToChase == null)
         {
             patrol.canPatrol = true;
             patrol.patrolMovement = true;
@@ -128,7 +151,7 @@ public class MeleeAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX,attackRangeY,0));
+        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 0));
         Gizmos.DrawWireCube(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector3(chaseRangeX, chaseRangeY, 0));
     }
 }

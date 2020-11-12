@@ -66,12 +66,12 @@ public class SamuraiManager : MonoBehaviour
 
                 if (playerLeft)
                 {
-                    whereToSpawn = new Vector2(enemies[0].transform.position.x + .5f, enemies[0].transform.position.y - .5f);
+                    whereToSpawn = new Vector2(enemies[0].transform.position.x + .5f, enemies[0].transform.position.y);
                     facingRight = false;
                 }
                 else
                 {
-                    whereToSpawn = new Vector2(enemies[0].transform.position.x - .5f, enemies[0].transform.position.y - .5f);
+                    whereToSpawn = new Vector2(enemies[0].transform.position.x - .5f, enemies[0].transform.position.y);
                     facingRight = true;
                 }
             }

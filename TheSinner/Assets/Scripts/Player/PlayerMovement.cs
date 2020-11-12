@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     //Move End
 
     //Flip Begin
-    bool facingRight;
+    internal static bool facingRight;
     bool canFlip;
     //Flip End
 
@@ -65,11 +65,12 @@ public class PlayerMovement : MonoBehaviour
     internal int maxHealth;
     public int health;
     public bool hittable;
-    public bool blocking;
+    public static bool blocking;
 
     bool daze;
     float dazedTime;
     public float startDazedTime;
+    internal static bool dazeRight;
     //Take Damage End
 
     //Block Begin
@@ -162,6 +163,8 @@ public class PlayerMovement : MonoBehaviour
                 RollSliding();
                 break;
             case State.Death:
+                Animate();
+                Death();
                 break;
         }
     }
@@ -290,6 +293,15 @@ public class PlayerMovement : MonoBehaviour
         {
             enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
         }
+
+        if (facingRight)
+        {
+            rb.velocity = new Vector2(speed / 2, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-speed / 2, 0);
+        }
     }
 
     public void returnFirst()
@@ -401,7 +413,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (dazedTime > 0)
             {
-                if (facingRight)
+                if (!dazeRight)
                 {
                     rb.velocity = new Vector2(-speed /2,0);
                 }
@@ -428,11 +440,15 @@ public class PlayerMovement : MonoBehaviour
             if (!dead)
             {
                 animator.SetTrigger("death");
+                animator.SetBool("dead", true);
             }
+
+            state = State.Death;
             dead = true;
             deathPanel.SetActive(true);
-            rb.velocity = Vector2.zero;
             canFlip = false;
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0;
         }
     }
 
