@@ -19,7 +19,6 @@ public class MeleeAttack : MonoBehaviour
 
     Collider2D playerToDamage;
     public Transform attackPos;
-    public float attackRange;
     public LayerMask whatIsEnemies;
 
     public int damage;
