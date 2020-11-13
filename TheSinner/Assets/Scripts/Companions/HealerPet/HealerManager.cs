@@ -14,7 +14,7 @@ public class HealerManager : MonoBehaviour
     void Update()
     {
 
-        if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().maxHealth)
+        if (player.GetComponent<PlayerMovement>().currentHealth < player.GetComponent<PlayerMovement>().maxHealth)
         {
             Spawn();
         }

@@ -62,8 +62,9 @@ public class PlayerMovement : MonoBehaviour
     //Melee attack End
 
     //Take Damage Begin
-    internal int maxHealth;
-    public int health;
+    public float currentHealth;
+    public float maxHealth;
+    
     public bool hittable;
     public static bool blocking;
 
@@ -125,9 +126,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (health >= maxHealth)
+        if (currentHealth >= maxHealth)
         {
-            health = maxHealth;
+            currentHealth = maxHealth;
         }
         
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
@@ -418,7 +419,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
         daze = true;
     }
 
@@ -450,7 +451,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Death()
     {
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
             if (!dead)
             {
@@ -469,7 +470,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetHeal(int heal)
     {
-        health += heal;
+        currentHealth += heal;
     }
 
 
