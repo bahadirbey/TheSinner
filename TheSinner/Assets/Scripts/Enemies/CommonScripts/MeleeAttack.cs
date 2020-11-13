@@ -41,6 +41,7 @@ public class MeleeAttack : MonoBehaviour
     void Update()
     {
         playerToDamage = Physics2D.OverlapBox(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
+        playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
         MeleeAttackPrep();
         Chasing();
     }
@@ -119,8 +120,6 @@ public class MeleeAttack : MonoBehaviour
 
     void Chasing()
     {
-        playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
-
         if (playerToChase != null && !attacking)
         {
             if (playerToChase.transform.position.x < transform.position.x)

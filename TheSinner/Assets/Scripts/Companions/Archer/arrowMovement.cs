@@ -11,7 +11,6 @@ public class arrowMovement : MonoBehaviour
     void Update()
     {
         Move();
-        
     }
 
     void Move()
