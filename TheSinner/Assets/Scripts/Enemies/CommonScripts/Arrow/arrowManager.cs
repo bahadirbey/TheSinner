@@ -11,6 +11,8 @@ public class arrowManager : MonoBehaviour
     private GameObject player;
     Vector3 direction;
     bool reachedToTarget;
+    Vector3 directionToMove;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -19,6 +21,7 @@ public class arrowManager : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, angleAxis, Time.deltaTime * 50);
+        directionToMove = transform.position - player.transform.position;
     }
 
     void Update()
@@ -32,16 +35,11 @@ public class arrowManager : MonoBehaviour
         if (!reachedToTarget)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, speed);
-            if (new Vector2(transform.position.x, transform.position.y) == target)
+            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 0.2f)
             {
-                reachedToTarget = true;
+                Destroy(gameObject);
             }
-        }
-        else
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target, -speed);
-        }
-        
+        }   
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
