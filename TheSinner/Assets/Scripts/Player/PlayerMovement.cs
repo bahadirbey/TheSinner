@@ -36,7 +36,12 @@ public class PlayerMovement : MonoBehaviour
 
     //Roll Begin
     private float rollingSpeed;
+    public float startRollingSpeed;
+    public float endRollingSpeed;
     public float slindingTime;
+
+    float rollingCoolDown;
+    public float startRollingCoolDown;
     //Roll End
 
     //Melee attack Begin
@@ -184,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalMove * speed * Time.deltaTime, rb.velocity.y);
     }
 
     void CountKilling()
@@ -219,46 +224,54 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
             extraJump = true;
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && extraJump)
         {
             Instantiate(jumpEffect, transform.position, Quaternion.identity);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
             extraJump = false;
         }
     }
 
     void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.C) && isGrounded && !blocking)
+        if (rollingCoolDown <= 0)
         {
-            state = State.DodgeRollSliding;
-            rollingSpeed = 50f;
-            animator.SetTrigger("roll");
+            if (Input.GetKeyDown(KeyCode.C) && isGrounded && !blocking)
+            {
+                state = State.DodgeRollSliding;
+                rollingSpeed = startRollingSpeed;
+                animator.SetTrigger("roll");
+                rollingCoolDown = startRollingCoolDown;
+            }
         }
+        else
+        {
+            rollingCoolDown -= Time.deltaTime;
+        }   
     }
 
     void RollSliding()
     {
-        if (facingRight)
-        {
-            rb.velocity = new Vector2(rollingSpeed, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(-rollingSpeed, rb.velocity.y);
-        }
+            if (facingRight)
+            {
+                rb.velocity = new Vector2(rollingSpeed * Time.deltaTime, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-rollingSpeed * Time.deltaTime, rb.velocity.y);
+            }
 
-        hittable = false;
-        rollingSpeed -= rollingSpeed * slindingTime;
+            hittable = false;
+            rollingSpeed -= rollingSpeed * slindingTime * Time.deltaTime;
 
-        if (rollingSpeed < 2f)
-        {
-            hittable = true;
-            state = State.Normal;
-        }
+            if (rollingSpeed < endRollingSpeed)
+            {
+                hittable = true;
+                state = State.Normal;
+            }
     }
 
     void MeleeAttack()
@@ -312,11 +325,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (facingRight)
         {
-            rb.velocity = new Vector2(speed / 2, 0);
+            rb.velocity = new Vector2(speed * Time.deltaTime / 2, 0);
         }
         else
         {
-            rb.velocity = new Vector2(-speed / 2, 0);
+            rb.velocity = new Vector2(-speed * Time.deltaTime / 2, 0);
         }
     }
 
@@ -419,8 +432,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        daze = true;
+        if (currentHealth - damage < 0)
+        {
+            currentHealth = 0;
+        }
+        else
+        {
+            currentHealth -= damage;
+            daze = true;
+        }
     }
 
     void Daze()
@@ -431,11 +451,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!dazeRight)
                 {
-                    rb.velocity = new Vector2(-speed /2,0);
+                    rb.velocity = new Vector2(-speed * Time.deltaTime /2,0);
                 }
                 else
                 {
-                    rb.velocity = new Vector2(speed /2, 0);
+                    rb.velocity = new Vector2(speed * Time.deltaTime /2, 0);
                 }
                 sprite.color = new Color(.5f,.5f,.5f,1);
                 dazedTime -= Time.deltaTime;
@@ -470,7 +490,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetHeal(int heal)
     {
-        currentHealth += heal;
+        if (currentHealth + heal > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += heal;
+        }
     }
 
 

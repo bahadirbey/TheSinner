@@ -40,10 +40,10 @@ public class AttackerPetFollow : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, followingPoint.position, speed);
         }else if( target != null) { 
-            if (Vector2.Distance(transform.position, target.position) > .2f)
+            if (Vector2.Distance(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + .5f)) > .2f)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed);
-            }else if (Vector2.Distance(transform.position, target.position) < .2f)
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + .5f), speed);
+            }else if (Vector2.Distance(transform.position, new Vector2(target.transform.position.x, target.transform.position.y + .5f)) < .2f)
             {
                 AttackerPetManager.isDead = true;
                 Explode();
@@ -111,5 +111,6 @@ public class AttackerPetFollow : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

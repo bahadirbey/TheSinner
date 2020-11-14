@@ -99,6 +99,11 @@ MonoBehaviour:
   speed: 0.25
   destroyAnimation: {fileID: 5952811639770675638, guid: de3c804b5fd4d4443bd0bbd198c5cb4a, type: 3}
   damage: 10
+  explosionEffect: {fileID: 5952811639770675638, guid: de3c804b5fd4d4443bd0bbd198c5cb4a, type: 3}
+  attackRange: 0.5
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!58 &-7241320426359862558
 CircleCollider2D:
   m_ObjectHideFlags: 0

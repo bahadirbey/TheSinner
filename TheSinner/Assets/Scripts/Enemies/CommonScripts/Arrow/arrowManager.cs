@@ -11,7 +11,9 @@ public class arrowManager : MonoBehaviour
     private GameObject player;
     Vector3 direction;
     bool reachedToTarget;
-    Vector3 directionToMove;
+    public GameObject explosionEffect;
+    public float attackRange;
+    public LayerMask whatIsEnemy;
 
     private void Start()
     {
@@ -21,7 +23,6 @@ public class arrowManager : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, angleAxis, Time.deltaTime * 50);
-        directionToMove = transform.position - player.transform.position;
     }
 
     void Update()
@@ -37,9 +38,20 @@ public class arrowManager : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target, speed);
             if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 0.2f)
             {
-                Destroy(gameObject);
+                Explode();
             }
         }   
+    }
+
+    void Explode()
+    {
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(transform.position, attackRange, whatIsEnemy);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+        }
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,9 +68,20 @@ public class arrowManager : MonoBehaviour
             {
                 PlayerMovement.dazeRight = false;
             }
-            
+
             Instantiate(destroyAnimation, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "shield")
+        {
+            Destroy(gameObject);                        
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
