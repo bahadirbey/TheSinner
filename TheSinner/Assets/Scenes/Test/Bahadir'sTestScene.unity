@@ -589,16 +589,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 442128017}
-  speed: 400
+  speed: 8
   groundCheck: {fileID: 1747364455}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 600
+  jumpForce: 10
   jumpEffect: {fileID: 5484002882833584939, guid: 4fcf8dfb5baaac84f9e8a289cbe92506, type: 3}
-  startRollingSpeed: 500
-  endRollingSpeed: 450
-  slindingTime: 0.3
+  startRollingSpeed: 30
+  endRollingSpeed: 1
+  slindingTime: 0.13
   startRollingCoolDown: 1
   startTimeBtwAttack: 0.2
   attackPos: {fileID: 1178444057}

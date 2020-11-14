@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(horizontalMove * speed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
     }
 
     void CountKilling()
@@ -224,13 +224,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             extraJump = true;
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && extraJump)
         {
             Instantiate(jumpEffect, transform.position, Quaternion.identity);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             extraJump = false;
         }
     }
@@ -257,15 +257,15 @@ public class PlayerMovement : MonoBehaviour
     {
             if (facingRight)
             {
-                rb.velocity = new Vector2(rollingSpeed * Time.deltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(rollingSpeed, rb.velocity.y);
             }
             else
             {
-                rb.velocity = new Vector2(-rollingSpeed * Time.deltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(-rollingSpeed, rb.velocity.y);
             }
 
             hittable = false;
-            rollingSpeed -= rollingSpeed * slindingTime * Time.deltaTime;
+            rollingSpeed -= rollingSpeed * slindingTime;
 
             if (rollingSpeed < endRollingSpeed)
             {
@@ -325,11 +325,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (facingRight)
         {
-            rb.velocity = new Vector2(speed * Time.deltaTime / 2, 0);
+            rb.velocity = new Vector2(speed / 2, 0);
         }
         else
         {
-            rb.velocity = new Vector2(-speed * Time.deltaTime / 2, 0);
+            rb.velocity = new Vector2(-speed / 2, 0);
         }
     }
 
@@ -451,11 +451,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!dazeRight)
                 {
-                    rb.velocity = new Vector2(-speed * Time.deltaTime /2,0);
+                    rb.velocity = new Vector2(-speed /2,0);
                 }
                 else
                 {
-                    rb.velocity = new Vector2(speed * Time.deltaTime /2, 0);
+                    rb.velocity = new Vector2(speed /2, 0);
                 }
                 sprite.color = new Color(.5f,.5f,.5f,1);
                 dazedTime -= Time.deltaTime;
