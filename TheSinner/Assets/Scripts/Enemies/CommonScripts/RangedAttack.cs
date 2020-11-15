@@ -22,7 +22,6 @@ public class RangedAttack : MonoBehaviour
     public int damage;
 
     private TakeDamage takeDamage;
-    public arrowManager arrowManager;
 
     void Start()
     {

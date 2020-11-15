@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     //Move Begin
     public float speed;
     private float horizontalMove;
+    bool canMove;
     //Move End
 
     //Flip Begin
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     //Flip End
 
     //Jump Begin
+    bool canJump;
     bool isGrounded;
     public Transform groundCheck;
     private float checkRadius;
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump End
 
     //Roll Begin
+    bool canRoll;
     private float rollingSpeed;
     public float startRollingSpeed;
     public float endRollingSpeed;
@@ -67,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
     //Melee attack End
 
     //Take Damage Begin
+    bool canTakeDamage;
     public float currentHealth;
     public float maxHealth;
     
@@ -127,6 +131,12 @@ public class PlayerMovement : MonoBehaviour
         realGravityScale = rb.gravityScale;
         shield.SetActive(false);
         maxHealth = 100;
+        canTakeDamage = true;
+        canMove = true;
+        canJump = true;
+        canRoll = true;
+        canBlock = true;
+        canAttack = true;
     }
 
     void Update()
@@ -189,7 +199,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
+        if (canMove)
+        {
+            rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
+        }
     }
 
     void CountKilling()
@@ -222,22 +235,25 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (canJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            extraJump = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && extraJump)
-        {
-            Instantiate(jumpEffect, transform.position, Quaternion.identity);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            extraJump = false;
-        }
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                extraJump = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && extraJump)
+            {
+                Instantiate(jumpEffect, transform.position, Quaternion.identity);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                extraJump = false;
+            }
+        }     
     }
 
     void Roll()
     {
-        if (rollingCoolDown <= 0)
+        if (rollingCoolDown <= 0 && canRoll)
         {
             if (Input.GetKeyDown(KeyCode.C) && isGrounded && !blocking)
             {
@@ -440,6 +456,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentHealth -= damage;
             daze = true;
+            canTakeDamage = false;
         }
     }
 
@@ -462,6 +479,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                canTakeDamage = true;
                 sprite.color = new Color(1, 1, 1, 1);
                 daze = false;
                 dazedTime = startDazedTime;
