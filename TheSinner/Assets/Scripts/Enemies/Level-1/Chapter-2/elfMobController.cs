@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArcherMobController : MonoBehaviour
+public class elfMobController : MonoBehaviour
 {
     Animator animator;
     private Patrol patrol;
@@ -28,14 +28,8 @@ public class ArcherMobController : MonoBehaviour
     void Update()
     {
         dazeInfo = Physics2D.Raycast(dazeDetection.position, Vector2.down, distance);
-        Animate();
         Daze();
         Death();
-    }
-
-    void Animate()
-    {
-        animator.SetBool("walking", patrol.patrolMovement);
     }
 
     void Daze()

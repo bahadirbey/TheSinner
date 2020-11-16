@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class arrowManager : MonoBehaviour
+public class SkillMovement : MonoBehaviour
 {
     public float speed;
     public GameObject destroyAnimation;
     public int damage;
     internal Vector2 target;
+    float randomX;
+    float randomY;
     private GameObject player;
     Vector3 direction;
     bool reachedToTarget;
@@ -18,8 +20,10 @@ public class arrowManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        target = new Vector2(player.transform.position.x, player.transform.position.y + .5f);
-        direction = transform.position - player.transform.position;
+        randomX = Random.Range(-1f, 1f);
+        randomY = Random.Range(-1f, 1f);
+        target = new Vector2(player.transform.position.x + randomX, player.transform.position.y + .5f + randomY);
+        direction = new Vector2(transform.position.x, transform.position.y) - target;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, angleAxis, 1);
@@ -28,6 +32,7 @@ public class arrowManager : MonoBehaviour
     void Update()
     {
         Move();
+        speed += (Time.deltaTime / 5);
     }
 
     void Move()
@@ -79,7 +84,7 @@ public class arrowManager : MonoBehaviour
 
         if (collision.gameObject.tag == "shield")
         {
-            Destroy(gameObject);                        
+            Destroy(gameObject);
         }
     }
 

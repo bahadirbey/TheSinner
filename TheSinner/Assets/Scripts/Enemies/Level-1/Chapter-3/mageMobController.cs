@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArcherMobController : MonoBehaviour
+public class mageMobController : MonoBehaviour
 {
     Animator animator;
-    private Patrol patrol;
     private TakeDamage takeDamage;
 
     private SpriteRenderer sprite;
     float dazeSpeed;
 
-    public GameObject archerDead;
+    public GameObject mageDead;
 
     internal RaycastHit2D dazeInfo;
     public Transform dazeDetection;
@@ -21,28 +20,20 @@ public class ArcherMobController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        patrol = GetComponent<Patrol>();
         takeDamage = GetComponent<TakeDamage>();
     }
 
     void Update()
     {
         dazeInfo = Physics2D.Raycast(dazeDetection.position, Vector2.down, distance);
-        Animate();
         Daze();
         Death();
-    }
-
-    void Animate()
-    {
-        animator.SetBool("walking", patrol.patrolMovement);
     }
 
     void Daze()
     {
         if (takeDamage.dazed)
         {
-            patrol.canPatrol = false;
             sprite.color = new Color(.5f, .5f, .5f, 1);
             if (takeDamage.dazedTime > 0 && dazeInfo.collider)
             {
@@ -60,7 +51,6 @@ public class ArcherMobController : MonoBehaviour
     public void EndDaze()
     {
         animator.SetBool("getHitBool", false);
-        patrol.canPatrol = true;
         sprite.color = new Color(1, 1, 1, 1);
         takeDamage.dazed = false;
     }
@@ -69,8 +59,8 @@ public class ArcherMobController : MonoBehaviour
     {
         if (takeDamage.dead)
         {
-            archerDead.SetActive(true);
-            Instantiate(archerDead, transform.position, Quaternion.identity);
+            mageDead.SetActive(true);
+            Instantiate(mageDead, transform.position, Quaternion.identity);
             if (transform.eulerAngles == new Vector3(0, 0, 0))
             {
                 MeleeDead.facingRight = true;
