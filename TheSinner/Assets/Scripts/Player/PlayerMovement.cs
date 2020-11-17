@@ -448,16 +448,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (currentHealth - damage < 0)
+        if (canTakeDamage)
         {
-            currentHealth = 0;
-        }
-        else
-        {
-            currentHealth -= damage;
-            daze = true;
-            canTakeDamage = false;
-        }
+            if (currentHealth - damage < 0)
+            {
+                currentHealth = 0;
+            }
+            else
+            {
+                currentHealth -= damage;
+                daze = true;
+                canTakeDamage = false;
+            }
+        }       
     }
 
     void Daze()

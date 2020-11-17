@@ -25,7 +25,6 @@ public class CaptainController : MonoBehaviour
 
     bool canChase;
     Collider2D playerToChase;
-    public LayerMask whatIsToChase;
 
     private TakeDamage takeDamage;
 
@@ -34,6 +33,12 @@ public class CaptainController : MonoBehaviour
 
     bool attackDash;
 
+    public Transform mainPoint;
+    bool turnToMainPoint;
+    float firstAttacTiming;
+    Vector2 target;
+    bool targetDedected;
+    public GameObject captainDead;
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
@@ -41,20 +46,29 @@ public class CaptainController : MonoBehaviour
         readyAttackTime = startReadyAttackTime;
         canChase = true;
         sprite = GetComponent<SpriteRenderer>();
+        firstAttacTiming = 5f;
     }
 
 
     void Update()
     {
         playerToDamage = Physics2D.OverlapBox(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
-        playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
+        playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsEnemies);
         MeleeAttackPrep();
-        Chasing();
         Daze();
+        Chasing();
+        Death();
 
         if (attackDash)
         {
             transform.Translate(Vector2.right * speed * 10f * Time.deltaTime);
+            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 1f)
+            {
+                firstAttacTiming = 5f;
+                attackDash = false;
+                targetDedected = false;
+                animator.SetBool("dashAttackBool", false);
+            }
         }
     }
 
@@ -137,8 +151,41 @@ public class CaptainController : MonoBehaviour
 
     void Chasing()
     {
-        if (playerToChase != null && !attacking)
+        if (playerToChase != null && playerToDamage == null && firstAttacTiming > 0)
         {
+            firstAttacTiming -= Time.deltaTime;
+        }
+        else if (playerToChase != null && playerToDamage != null && firstAttacTiming > 0)
+        {
+            firstAttacTiming = 5f;
+        }
+        else if (playerToChase == null)
+        {
+            firstAttacTiming = 5f;
+        }
+
+        if (firstAttacTiming <= 0)
+        {
+            if (!targetDedected)
+            {
+                if (playerToChase.transform.position.x > transform.position.x)
+                {
+                    target = new Vector2(playerToChase.transform.position.x + 1f, transform.position.y);
+                }else if (playerToChase.transform.position.x < transform.position.x)
+                {
+                    target = new Vector2(playerToChase.transform.position.x - 1f, transform.position.y);
+                }
+                
+                targetDedected = true;
+            }
+            attackDash = true;
+            animator.SetTrigger("dashAttack");
+            animator.SetBool("dashAttackBool", true);
+            animator.SetBool("walking", false);
+        }
+        else if (playerToChase != null && !attacking)
+        {
+            animator.SetBool("dashing", false);
             if (playerToChase.transform.position.x < transform.position.x)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
@@ -148,8 +195,20 @@ public class CaptainController : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
         }
+        else if (playerToChase == null && !attacking)
+        {
+            if (transform.position.x > mainPoint.position.x + chaseRangeX / 2 || transform.position.x < mainPoint.position.x - chaseRangeX / 2)
+            {
+                turnToMainPoint = true;
+            }
 
-        if (playerToChase != null && canChase)
+            if (turnToMainPoint)
+            {
+                DashToMainPoint();
+            }
+        }
+
+        if (playerToChase != null && canChase && firstAttacTiming > 0)
         {
             animator.SetBool("walking", true);
             if (playerToChase.transform.position.x < transform.position.x)
@@ -166,6 +225,29 @@ public class CaptainController : MonoBehaviour
             animator.SetBool("walking", false);
         }
     }
+
+    void DashToMainPoint()
+    {
+        if (mainPoint.transform.position.x < transform.position.x)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+        }
+        else if (mainPoint.transform.position.x > transform.position.x)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (Vector2.Distance(transform.position, mainPoint.transform.position) > 0.2f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, mainPoint.position, speed * 10 * Time.deltaTime);
+            animator.SetBool("dashing", true);
+        }
+        else
+        {
+            animator.SetBool("dashing", false);
+            turnToMainPoint = false;
+        }
+    }
+
 
     void Daze()
     {
@@ -190,6 +272,24 @@ public class CaptainController : MonoBehaviour
         animator.SetBool("getHitBool", false);
         sprite.color = new Color(1, 1, 1, 1);
         takeDamage.dazed = false;
+    }
+
+    void Death()
+    {
+        if (takeDamage.dead)
+        {
+            captainDead.SetActive(true);
+            Instantiate(captainDead, transform.position, Quaternion.identity);
+            if (transform.eulerAngles == new Vector3(0, 0, 0))
+            {
+                MeleeDead.facingRight = true;
+            }
+            else if (transform.eulerAngles == new Vector3(0, 180, 0))
+            {
+                MeleeDead.facingRight = false;
+            }
+            Destroy(gameObject);
+        }
     }
 
     private void OnDrawGizmosSelected()

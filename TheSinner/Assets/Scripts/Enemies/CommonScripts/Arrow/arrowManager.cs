@@ -10,7 +10,6 @@ public class arrowManager : MonoBehaviour
     internal Vector2 target;
     private GameObject player;
     Vector3 direction;
-    bool reachedToTarget;
     public GameObject explosionEffect;
     public float attackRange;
     public LayerMask whatIsEnemy;
@@ -33,13 +32,10 @@ public class arrowManager : MonoBehaviour
     void Move()
     {
         direction.Normalize();
-        if (!reachedToTarget)
+        transform.position = Vector2.MoveTowards(transform.position, target, speed);
+        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 0.2f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, speed);
-            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 0.2f)
-            {
-                Explode();
-            }
+            Explode();
         }
         else
         {
