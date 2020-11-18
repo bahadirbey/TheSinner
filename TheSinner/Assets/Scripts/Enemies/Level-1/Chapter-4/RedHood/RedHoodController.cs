@@ -33,12 +33,13 @@ public class RedHoodController : MonoBehaviour
 
     bool attackDash;
 
-    public Transform mainPoint;
     bool turnToMainPoint;
     float firstAttacTiming;
     Vector2 target;
     bool targetDedected;
-    public GameObject captainDead;
+    public GameObject redHoodDead;
+
+    public GameObject arrow;
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
@@ -56,20 +57,8 @@ public class RedHoodController : MonoBehaviour
         playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsEnemies);
         MeleeAttackPrep();
         Daze();
-        //Chasing();
-        //Death();
-
-        if (attackDash)
-        {
-            transform.Translate(Vector2.right * speed * 10f * Time.deltaTime);
-            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 1f)
-            {
-                firstAttacTiming = 5f;
-                attackDash = false;
-                targetDedected = false;
-                animator.SetBool("dashAttackBool", false);
-            }
-        }
+        Chasing();
+        Death();
     }
 
     void MeleeAttackPrep()
@@ -137,22 +126,20 @@ public class RedHoodController : MonoBehaviour
         }
     }
 
-    public void StartDashAttack()
+    public void StartRangedAttack()
     {
-        attackDash = true;
+        Instantiate(arrow, attackPos.position, Quaternion.identity);
     }
 
-    public void EndDashAttack()
-    {
-        attackDash = false;
-    }
 
     public void AttackEnd()
     {
+        animator.SetBool("rangedAttackBool", false);
         animator.SetBool("attacking", false);
         animator.SetBool("heavyAttacking", false);
         attacking = false;
         readyAttackTime = startReadyAttackTime;
+        canChase = true;
     }
 
     void Chasing()
@@ -185,14 +172,14 @@ public class RedHoodController : MonoBehaviour
 
                 targetDedected = true;
             }
-            attackDash = true;
-            animator.SetTrigger("dashAttack");
-            animator.SetBool("dashAttackBool", true);
-            animator.SetBool("walking", false);
+            attacking = true;
+            canChase = false;
+            animator.SetTrigger("rangedAttack");
+            animator.SetBool("rangedAttackBool", true);
+            firstAttacTiming = 5f;    
         }
         else if (playerToChase != null && !attacking)
         {
-            animator.SetBool("dashing", false);
             if (playerToChase.transform.position.x < transform.position.x)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
@@ -200,18 +187,6 @@ public class RedHoodController : MonoBehaviour
             else if (playerToChase.transform.position.x > transform.position.x)
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-        }
-        else if (playerToChase == null && !attacking)
-        {
-            if (transform.position.x > mainPoint.position.x + chaseRangeX / 2 || transform.position.x < mainPoint.position.x - chaseRangeX / 2)
-            {
-                turnToMainPoint = true;
-            }
-
-            if (turnToMainPoint)
-            {
-                DashToMainPoint();
             }
         }
 
@@ -232,29 +207,6 @@ public class RedHoodController : MonoBehaviour
             animator.SetBool("walking", false);
         }
     }
-
-    void DashToMainPoint()
-    {
-        if (mainPoint.transform.position.x < transform.position.x)
-        {
-            transform.eulerAngles = new Vector3(0, -180, 0);
-        }
-        else if (mainPoint.transform.position.x > transform.position.x)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        if (Vector2.Distance(transform.position, mainPoint.transform.position) > 0.2f)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, mainPoint.position, speed * 10 * Time.deltaTime);
-            animator.SetBool("dashing", true);
-        }
-        else
-        {
-            animator.SetBool("dashing", false);
-            turnToMainPoint = false;
-        }
-    }
-
 
     void Daze()
     {
@@ -285,8 +237,8 @@ public class RedHoodController : MonoBehaviour
     {
         if (takeDamage.dead)
         {
-            captainDead.SetActive(true);
-            Instantiate(captainDead, transform.position, Quaternion.identity);
+            redHoodDead.SetActive(true);
+            Instantiate(redHoodDead, transform.position, Quaternion.identity);
             if (transform.eulerAngles == new Vector3(0, 0, 0))
             {
                 MeleeDead.facingRight = true;

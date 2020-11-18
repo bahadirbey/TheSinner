@@ -37,10 +37,6 @@ public class arrowManager : MonoBehaviour
         {
             Explode();
         }
-        else
-        {
-            Explode();
-        }
     }
 
     void Explode()
