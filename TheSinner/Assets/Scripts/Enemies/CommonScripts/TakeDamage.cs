@@ -31,7 +31,6 @@ public class TakeDamage : MonoBehaviour
     {
         SetSize();
         ShowHealthBar();
-        
     }
 
     public void GetDamage(int damage)
