@@ -20,6 +20,8 @@ public class TakeDamage : MonoBehaviour
 
     internal int hitCounter;
     internal bool hit;
+
+    public float defence;
     void Start()
     {
         startBarHidingTime = 2f;
@@ -35,7 +37,15 @@ public class TakeDamage : MonoBehaviour
 
     public void GetDamage(int damage)
     {
-        currentHealth -= damage;
+        if (damage <= defence)
+        {
+            currentHealth -= 1;
+        }
+        else
+        {
+            currentHealth -= (damage - defence);
+        }
+       
         animator.SetBool("getHitBool", true);
         animator.SetTrigger("getHit");
         healthBar.gameObject.SetActive(true);

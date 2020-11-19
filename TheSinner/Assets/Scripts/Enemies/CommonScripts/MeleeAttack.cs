@@ -135,6 +135,7 @@ public class MeleeAttack : MonoBehaviour
         if (!patrol.groundInfo.collider && playerToChase != null && canChase)
         {
             transform.Translate(Vector2.zero);
+            patrol.patrolMovement = false;
         }
         else if (playerToChase != null && canChase && patrol.groundInfo.collider)
         {
