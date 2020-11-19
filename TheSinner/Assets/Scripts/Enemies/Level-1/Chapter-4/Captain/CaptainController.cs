@@ -62,7 +62,7 @@ public class CaptainController : MonoBehaviour
         if (attackDash)
         {
             transform.Translate(Vector2.right * speed * 10f * Time.deltaTime);
-            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < 1f)
+            if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), target) < .2f)
             {
                 firstAttacTiming = 5f;
                 attackDash = false;
@@ -170,10 +170,10 @@ public class CaptainController : MonoBehaviour
             {
                 if (playerToChase.transform.position.x > transform.position.x)
                 {
-                    target = new Vector2(playerToChase.transform.position.x + 1f, transform.position.y);
+                    target = new Vector2(playerToChase.transform.position.x + 2f, transform.position.y);
                 }else if (playerToChase.transform.position.x < transform.position.x)
                 {
-                    target = new Vector2(playerToChase.transform.position.x - 1f, transform.position.y);
+                    target = new Vector2(playerToChase.transform.position.x - 2f, transform.position.y);
                 }
                 
                 targetDedected = true;

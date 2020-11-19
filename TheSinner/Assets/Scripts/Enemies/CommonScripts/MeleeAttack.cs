@@ -140,11 +140,11 @@ public class MeleeAttack : MonoBehaviour
         else if (playerToChase != null && canChase && patrol.groundInfo.collider)
         {
             patrol.canPatrol = false;
-            if (playerToChase.transform.position.x < transform.position.x)
+            if (playerToChase.transform.position.x < transform.position.x && !attacking)
             {
                 transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
             }
-            else if (playerToChase.transform.position.x > transform.position.x)
+            else if (playerToChase.transform.position.x > transform.position.x && !attacking)
             {
                 transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
             }

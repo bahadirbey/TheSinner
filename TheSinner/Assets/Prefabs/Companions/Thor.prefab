@@ -152,4 +152,4 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
-  damage: 20
+  damage: 10

@@ -61,6 +61,7 @@ public class GrandmaController : MonoBehaviour
         BulletAttack();
         LaserAttack();
         Daze();
+        Death();
 
         if (attackCoolDown > 0)
         {
