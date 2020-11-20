@@ -257,7 +257,7 @@ MonoBehaviour:
   - "Ahmet: Kanka sen DarkSouls oynad\u0131n m\u0131"
   - "Z\xFCbeyr: Ben gamer de\u011Filim nas\u0131l oynuyum"
   - "Ahmet: Do\u011Fru, hakl\u0131s\u0131n"
-  typingspeed: 0.02
+  typingspeed: 0.01
   continueButton: {fileID: 875576813}
   karakter1: {fileID: 1722215391}
   karakterr1: 2
@@ -443,7 +443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &875576814
 RectTransform:
   m_ObjectHideFlags: 0

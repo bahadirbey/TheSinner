@@ -71,6 +71,8 @@ public class Dialog : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+            karakter1.gameObject.SetActive(false);
+            karakter2.gameObject.SetActive(false);
         }
     }
 }
