@@ -341,11 +341,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (facingRight)
         {
-            rb.velocity = new Vector2(speed / 2, 0);
+            rb.velocity = new Vector2(speed / 3, 0);
         }
         else
         {
-            rb.velocity = new Vector2(-speed / 2, 0);
+            rb.velocity = new Vector2(-speed / 3, 0);
         }
     }
 
