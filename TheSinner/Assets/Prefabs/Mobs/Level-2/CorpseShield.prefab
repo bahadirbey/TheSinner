@@ -116,3 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeleton: {fileID: 6615518085855633615, guid: 5d2ac7d6cd5d59543993badb64087b38, type: 3}
+  whatIsToWake:
+    serializedVersion: 2
+    m_Bits: 2048
+  wakeRangeX: 15
+  wakeRangeY: 4

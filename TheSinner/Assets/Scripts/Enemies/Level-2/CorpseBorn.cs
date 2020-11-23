@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class CorpseBorn : MonoBehaviour
 {
-    private GameObject player;
     private Animator animator;
     public GameObject skeleton;
+    Collider2D wakeningPoint;
+    public LayerMask whatIsToWake;
+    public float wakeRangeX;
+    public float wakeRangeY;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         BornController();
+        wakeningPoint = Physics2D.OverlapBox(transform.position, new Vector2(wakeRangeX,wakeRangeY),0, whatIsToWake);
     }
 
     void BornController()
     {
-        if (Vector2.Distance(player.transform.position, transform.position) < 2f)
+        if (wakeningPoint != null)
         {
             animator.SetTrigger("born");
         }
@@ -30,5 +33,10 @@ public class CorpseBorn : MonoBehaviour
     {
         Instantiate(skeleton, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector2(wakeRangeX, wakeRangeY));
     }
 }
