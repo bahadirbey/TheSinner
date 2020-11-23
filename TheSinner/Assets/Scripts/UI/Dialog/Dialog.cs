@@ -20,7 +20,7 @@ public class Dialog : MonoBehaviour
     {
         StartCoroutine(Type());
     }
-    private void Update()
+    void Update()
     {
         if (textDisplay.text == sentences[index])
         {

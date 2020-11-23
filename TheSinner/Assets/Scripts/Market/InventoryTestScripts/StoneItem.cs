@@ -6,6 +6,7 @@ public class StoneItem : MonoBehaviour
 {
     private UsedItemsTest usedItems;
     public GameObject itemButton;
+    public GameObject info1;
 
     void Start()
     {
@@ -15,8 +16,9 @@ public class StoneItem : MonoBehaviour
     public void Use()
     {
         Debug.Log("used");
+        info1.gameObject.SetActive(true);
 
-        for (int i = 0; i < usedItems.slots.Length; i++)
+        /*for (int i = 0; i < usedItems.slots.Length; i++)
         {
             if (usedItems.isFull[i] == false)
             {
@@ -25,7 +27,7 @@ public class StoneItem : MonoBehaviour
                 usedItems.isFull[i] = true;
                 break;
             }
-        }
+        }*/
 
     }
 }
