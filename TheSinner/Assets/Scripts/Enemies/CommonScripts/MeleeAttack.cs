@@ -70,12 +70,6 @@ public class MeleeAttack : MonoBehaviour
                 readyAttackTime -= Time.deltaTime;
             }
         }
-        else if (!attacking)
-        {
-            canChase = true;
-            patrol.canPatrol = true;
-            patrol.patrolMovement = true;
-        }
     }
 
     public void Attack()
@@ -112,8 +106,6 @@ public class MeleeAttack : MonoBehaviour
     public void AttackEnd()
     {
         animator.SetBool("attacking", false);
-        patrol.canPatrol = true;
-        patrol.patrolMovement = true;
         attacking = false;
         readyAttackTime = startReadyAttackTime;
     }
