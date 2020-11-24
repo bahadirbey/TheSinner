@@ -18,7 +18,6 @@ public class PriestManager : MonoBehaviour
 
     private TakeDamage takeDamage;
     public int healthPower;
-    float healthCd;
     public float startHealthCd;
     bool canChase;
     bool canFace;
@@ -162,7 +161,6 @@ public class PriestManager : MonoBehaviour
                             for (int i = 0; i < points.Length; i++)
                             {
                                 Instantiate(explosionEffect, points[i].transform.position, Quaternion.identity);
-                                healthCd = 0f;
                             }
                             hitCounter = 0;
                         }
@@ -257,7 +255,6 @@ public class PriestManager : MonoBehaviour
         animator.SetBool("healBool", false);
         animator.SetBool("healLoopBool", false);
         healing = false;
-        healthCd = startHealthCd;
     }
 
     void Daze()
