@@ -5,6 +5,7 @@ using UnityEngine;
 public class EquipandCloseStone : MonoBehaviour
 {
     private UsedItemsTest usedItems;
+    public GameObject itemtousedBtn;
     public GameObject itemButton;
     public GameObject info1;
     public GameObject item;
@@ -23,8 +24,10 @@ public class EquipandCloseStone : MonoBehaviour
             if (usedItems.isFull[i] == false)
             {
                 Instantiate(itemButton, usedItems.slots[i].transform, false);
+                Instantiate(itemtousedBtn, usedItems.sslots[i].transform, false);
                 Destroy(item);
                 usedItems.isFull[i] = true;
+                usedItems.sisFull[i] = true;
                 break;
                 
             }

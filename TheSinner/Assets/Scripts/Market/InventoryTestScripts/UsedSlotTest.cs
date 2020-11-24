@@ -29,7 +29,7 @@ public class UsedSlotTest : MonoBehaviour
                 foreach (Transform child in transform)
                 {
                     child.GetComponent<SpawnTest>().RemoveItem();
-                    Instantiate(child.gameObject, inventoryTest.slots[i].transform, false);
+                    
                     Destroy(child.gameObject);
                     inventoryTest.isFull[i] = true;
                 }

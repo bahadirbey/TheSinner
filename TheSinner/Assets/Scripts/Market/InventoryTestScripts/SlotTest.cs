@@ -22,9 +22,9 @@ public class SlotTest : MonoBehaviour
 
     public void DropItem()
     {
+        
         foreach(Transform child in transform)
         {
-            child.GetComponent<SpawnTest>().SpawnDroppedItem();
             Destroy(child.gameObject);
         }
     }
