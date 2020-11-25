@@ -13,7 +13,7 @@ public class NecromancerController : MonoBehaviour
     public LayerMask whatIsPlayer;
     public float attackRange;
 
-    private TakeDamage takeDamage;
+    internal TakeDamage takeDamage;
     bool canChase;
     bool canFace;
     float chaseCd;
@@ -39,6 +39,7 @@ public class NecromancerController : MonoBehaviour
     public GameObject necroDead;
     int hitCounter;
 
+    public static bool deadOnce;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -49,6 +50,11 @@ public class NecromancerController : MonoBehaviour
         hitCounter = 0;
         attackCd = startAttackCd;
         meleeCd = startMeleeCd;
+
+        if (deadOnce)
+        {
+            takeDamage.currentHealth = takeDamage.health * 2 / 3;
+        }
     }
 
     void Update()
@@ -182,7 +188,23 @@ public class NecromancerController : MonoBehaviour
 
     public void InstantiateLaveBall()
     {
-        Instantiate(laveBall, laveBallPoints[i].position, Quaternion.identity);
+        if (takeDamage.currentHealth > takeDamage.health * 2 / 3) {
+            if (i == 1)
+            {
+                Instantiate(laveBall, laveBallPoints[i].position, Quaternion.identity);
+            }
+        }else if (takeDamage.currentHealth > takeDamage.health / 3)
+        {
+            if (i == 0 || i == 2)
+            {
+                Instantiate(laveBall, laveBallPoints[i].position, Quaternion.identity);
+            }
+        }
+        else
+        {
+            Instantiate(laveBall, laveBallPoints[i].position, Quaternion.identity);
+        }
+
         i++;
         if (i >= laveBallPoints.Length)
         {
@@ -202,9 +224,25 @@ public class NecromancerController : MonoBehaviour
 
     public void InstantiateSmoke()
     {
-        for(int j = 0; j < smokePoints.Length; j++)
+        for (int j = 0; j < smokePoints.Length; j++)
         {
-            Instantiate(smoke, smokePoints[j].position, Quaternion.identity);
+            if (takeDamage.currentHealth > takeDamage.health * 2 / 3)
+            {
+                if (j == 1)
+                {
+                    Instantiate(smoke, smokePoints[j].position, Quaternion.identity);
+                }
+            }else if (takeDamage.currentHealth > takeDamage.health / 3)
+            {
+                if (j == 0 || j == 2)
+                {
+                    Instantiate(smoke, smokePoints[j].position, Quaternion.identity);
+                }
+            }
+            else
+            {
+                Instantiate(smoke, smokePoints[j].position, Quaternion.identity);
+            }
         }
     }
 

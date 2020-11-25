@@ -11,6 +11,7 @@ TagManager:
   - petPos
   - companionManager
   - Ground
+  - Necromancer
   layers:
   - Default
   - TransparentFX

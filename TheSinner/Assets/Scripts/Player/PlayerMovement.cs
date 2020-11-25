@@ -70,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
     //Melee attack End
 
     //Take Damage Begin
-    bool canTakeDamage;
     public float currentHealth;
     public float maxHealth;
     
@@ -131,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
         realGravityScale = rb.gravityScale;
         shield.SetActive(false);
         maxHealth = 100;
-        canTakeDamage = true;
         canMove = true;
         canJump = true;
         canRoll = true;
@@ -341,11 +339,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (facingRight)
         {
-            rb.velocity = new Vector2(speed / 3, 0);
+            rb.velocity = new Vector2(speed / 2, 0);
         }
         else
         {
-            rb.velocity = new Vector2(-speed / 3, 0);
+            rb.velocity = new Vector2(-speed / 2, 0);
         }
     }
 
@@ -448,7 +446,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (canTakeDamage)
+        if (hittable)
         {
             if (currentHealth - damage < 0)
             {
@@ -458,7 +456,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 currentHealth -= damage;
                 daze = true;
-                canTakeDamage = false;
+                hittable = false;
             }
         }       
     }
@@ -482,7 +480,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                canTakeDamage = true;
+                hittable = true;
                 sprite.color = new Color(1, 1, 1, 1);
                 daze = false;
                 dazedTime = startDazedTime;
