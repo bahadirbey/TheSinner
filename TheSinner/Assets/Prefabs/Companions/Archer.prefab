@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea339f505893d3b4983bd21afe3459c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 8944449494101447170, guid: d30a6477999ca454e98de5451aee11f8, type: 3}
+  arrow: {fileID: 1807283851084737696, guid: d30a6477999ca454e98de5451aee11f8, type: 3}
   destroyingEffect: {fileID: 8652187044171822283, guid: 7c83cfa76aabfdd4abccf3576201d4eb, type: 3}
   arrowPosition: {fileID: 253923124448825990}
   damage: 15
