@@ -174,6 +174,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8959485368446878134, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959485368446878137, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8959485368446878138, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
       propertyPath: laveBallPoints.Array.data[0]
       value: 
@@ -201,6 +209,10 @@ PrefabInstance:
     - target: {fileID: 8959485368446878139, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
       propertyPath: m_Name
       value: Necromancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959485368446878139, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dbb527a040983e4393958bd4f7daed8, type: 3}
@@ -667,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319200367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.87, y: -3.25, z: 0}
+  m_LocalPosition: {x: 3.148, y: -3.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1747364455}
@@ -790,7 +802,7 @@ GameObject:
   - component: {fileID: 342211230}
   m_Layer: 0
   m_Name: point (4)
-  m_TagString: Untagged
+  m_TagString: SmokePoint1
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2460,6 +2472,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!1001 &604524763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 868695273483146720, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
 --- !u!1 &658288199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2653,7 @@ GameObject:
   - component: {fileID: 896296935}
   m_Layer: 0
   m_Name: point (6)
-  m_TagString: Untagged
+  m_TagString: SmokePoint3
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2970,11 +3039,12 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   warrior: {fileID: 799782727628556881, guid: 10df996e116da6b43b2efbd914165187, type: 3}
   player: {fileID: 319200367}
-  coolDown: 5
-  viewRadius: 6
+  coolDown: 7
+  viewRadiusX: 25
+  viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 12800
 --- !u!114 &1260511461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,11 +3060,18 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   ninja: {fileID: 2062158495054637289, guid: 71a892755e650224bb314b3280ff9493, type: 3}
   player: {fileID: 319200367}
-  coolDown: 8
-  viewRadius: 10
+  coolDown: 17
+  viewRadiusX: 25
+  viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
+  whatIsMiniBoss:
+    serializedVersion: 2
+    m_Bits: 4096
+  whatIsBoss:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!114 &1260511462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3002,7 +3079,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b55b5416b0cb214dad31e0b53744381, type: 3}
   m_Name: 
@@ -3010,11 +3087,12 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
   player: {fileID: 319200367}
-  coolDown: 11
-  viewRadius: 11
+  coolDown: 19
+  viewRadiusX: 25
+  viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 12800
 --- !u!114 &1260511463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3030,11 +3108,12 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   archer: {fileID: 3654750545995434531, guid: 322adfaddfbdd44468da47055c8bc750, type: 3}
   player: {fileID: 319200367}
-  coolDown: 5
-  viewRadius: 15
+  coolDown: 11
+  viewRadiusX: 30
+  viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 12800
 --- !u!114 &1260511464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3042,7 +3121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0b333d38df752c48b441701b19af0b0, type: 3}
   m_Name: 
@@ -3051,7 +3130,8 @@ MonoBehaviour:
   swordGuy: {fileID: 4628744228396282631, guid: 67fe1ae0c4985ec46af2b7666e17c362, type: 3}
   player: {fileID: 319200367}
   coolDown: 13
-  viewRadius: 7
+  viewRadiusX: 15
+  viewRadiusY: 8
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
@@ -3091,7 +3171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260511458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78bc3784747d45242a71993bd967f3a4, type: 3}
   m_Name: 
@@ -3099,8 +3179,9 @@ MonoBehaviour:
   spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
   thor: {fileID: 5185329966996840226, guid: 5f0d643a5658ece41b0d08053e7e0c17, type: 3}
   player: {fileID: 319200367}
-  coolDown: 7
-  viewRadius: 8.11
+  coolDown: 23
+  viewRadiusX: 20
+  viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 512
@@ -3115,7 +3196,7 @@ GameObject:
   - component: {fileID: 1298814662}
   m_Layer: 0
   m_Name: point (2)
-  m_TagString: Untagged
+  m_TagString: LavePoint2
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3145,7 +3226,7 @@ GameObject:
   - component: {fileID: 1301531874}
   m_Layer: 0
   m_Name: point (5)
-  m_TagString: Untagged
+  m_TagString: SmokePoint2
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3345,7 +3426,7 @@ GameObject:
   - component: {fileID: 1526040849}
   m_Layer: 0
   m_Name: point (1)
-  m_TagString: Untagged
+  m_TagString: LavePoint1
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3405,7 +3486,7 @@ GameObject:
   - component: {fileID: 1757497779}
   m_Layer: 0
   m_Name: point (3)
-  m_TagString: Untagged
+  m_TagString: LavePoint3
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3441,7 +3522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1783765302
 Animator:
   serializedVersion: 3

@@ -40,6 +40,13 @@ public class NecromancerController : MonoBehaviour
     int hitCounter;
 
     public static bool deadOnce;
+
+    private GameObject lavePoint1;
+    private GameObject lavePoint2;
+    private GameObject lavePoint3;
+    private GameObject smokePoint1;
+    private GameObject smokePoint2;
+    private GameObject smokePoint3;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -50,10 +57,23 @@ public class NecromancerController : MonoBehaviour
         hitCounter = 0;
         attackCd = startAttackCd;
         meleeCd = startMeleeCd;
+        lavePoint1 = GameObject.FindGameObjectWithTag("LavePoint1");
+        lavePoint2 = GameObject.FindGameObjectWithTag("LavePoint2");
+        lavePoint3 = GameObject.FindGameObjectWithTag("LavePoint3");
+        smokePoint1 = GameObject.FindGameObjectWithTag("SmokePoint1");
+        smokePoint2 = GameObject.FindGameObjectWithTag("SmokePoint2");
+        smokePoint3 = GameObject.FindGameObjectWithTag("SmokePoint3");
+
+        laveBallPoints[0] = lavePoint1.transform;
+        laveBallPoints[1] = lavePoint2.transform;
+        laveBallPoints[2] = lavePoint3.transform;
+        smokePoints[0] = smokePoint1.transform;
+        smokePoints[1] = smokePoint2.transform;
+        smokePoints[2] = smokePoint3.transform;
 
         if (deadOnce)
         {
-            takeDamage.currentHealth = takeDamage.health * 2 / 3;
+            takeDamage.currentHealth = takeDamage.health / 3;
         }
     }
 

@@ -12,6 +12,12 @@ TagManager:
   - companionManager
   - Ground
   - Necromancer
+  - LavePoint1
+  - LavePoint2
+  - LavePoint3
+  - SmokePoint1
+  - SmokePoint2
+  - SmokePoint3
   layers:
   - Default
   - TransparentFX
@@ -25,8 +31,8 @@ TagManager:
   - Mob
   - FlyingMob
   - Player
-  - 
-  - 
+  - MiniBoss
+  - Boss
   - 
   - 
   - 

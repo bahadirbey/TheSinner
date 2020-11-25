@@ -48,7 +48,6 @@ public class TakeDamage : MonoBehaviour
        
         animator.SetBool("getHitBool", true);
         animator.SetTrigger("getHit");
-        healthBar.gameObject.SetActive(true);
         barHidingTime = startBarHidingTime;
         dazed = true;
         dazedTime = startDazedTime;
@@ -78,8 +77,9 @@ public class TakeDamage : MonoBehaviour
 
     void ShowHealthBar()
     {
-        if (barHidingTime > 0)
+        if (barHidingTime > 0 && currentHealth > 0)
         {
+            healthBar.gameObject.SetActive(true);
             barHidingTime -= Time.deltaTime;
         }
         else

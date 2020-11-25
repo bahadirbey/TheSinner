@@ -15,7 +15,7 @@ public class arrowMovement : MonoBehaviour
 
     void Move()
     {
-        if (WarriorManager.facingRight)
+        if (ArcherManager.facingRight)
         {
             transform.eulerAngles = new Vector3(0,0,-135);
             transform.position = new Vector2(transform.position.x + speed, transform.position.y);
@@ -29,7 +29,7 @@ public class arrowMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<TakeDamage>().GetDamage(damage);
             Instantiate(destroyAnimation, transform.position, Quaternion.identity);

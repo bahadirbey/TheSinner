@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  damage: 10
+  damage: 15
   viewRadius: 6
   whatIsEnemies:
     serializedVersion: 2

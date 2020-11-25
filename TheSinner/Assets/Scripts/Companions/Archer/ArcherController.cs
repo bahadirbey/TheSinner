@@ -45,7 +45,7 @@ public class ArcherController : MonoBehaviour
 
     void Facing()
     {
-        if (WarriorManager.facingRight)
+        if (ArcherManager.facingRight)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }

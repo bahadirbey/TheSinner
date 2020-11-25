@@ -13,7 +13,8 @@ public class WarriorManager : MonoBehaviour
     Vector2 whereToSpawn;
 
     Collider2D[] enemies;
-    public float viewRadius;
+    public float viewRadiusX;
+    public float viewRadiusY;
     public LayerMask whatIsEnemies;
     internal static Transform closestEnemy;
 
@@ -77,7 +78,7 @@ public class WarriorManager : MonoBehaviour
 
     void FindClosestEnemy()
     {
-        enemies = Physics2D.OverlapCircleAll(transform.position, viewRadius, whatIsEnemies);
+        enemies = Physics2D.OverlapBoxAll(transform.position, new Vector2(viewRadiusX,viewRadiusY), 0, whatIsEnemies);
         closestEnemy = null;
         for (int i = 0; i < enemies.Length; i++)
         {
@@ -95,6 +96,6 @@ public class WarriorManager : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(player.transform.position, viewRadius);
+        Gizmos.DrawWireCube(player.transform.position, new Vector2(viewRadiusX, viewRadiusY));
     }
 }

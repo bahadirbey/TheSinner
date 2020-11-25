@@ -13,7 +13,8 @@ public class SamuraiManager : MonoBehaviour
     Vector2 whereToSpawn;
 
     internal static Collider2D[] enemies;
-    public float viewRadius;
+    public float viewRadiusX;
+    public float viewRadiusY;
     public LayerMask whatIsEnemies;
 
     internal static bool facingRight;
@@ -80,12 +81,12 @@ public class SamuraiManager : MonoBehaviour
 
     void FindTargetEnemy()
     {
-        enemies = Physics2D.OverlapCircleAll(transform.position, viewRadius, whatIsEnemies);
+        enemies = Physics2D.OverlapBoxAll(transform.position, new Vector2(viewRadiusX,viewRadiusY), 0, whatIsEnemies);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(player.transform.position, viewRadius);
+        Gizmos.DrawWireCube(player.transform.position, new Vector2(viewRadiusX, viewRadiusY));
     }
 }

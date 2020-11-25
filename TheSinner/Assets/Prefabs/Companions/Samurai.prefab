@@ -117,4 +117,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodEffect: {fileID: 556489918216084205, guid: beb559a6b5f168848a5137042301c701, type: 3}
   destroyingEffect: {fileID: 8652187044171822283, guid: 7c83cfa76aabfdd4abccf3576201d4eb, type: 3}
-  damage: 5
+  damage: 8

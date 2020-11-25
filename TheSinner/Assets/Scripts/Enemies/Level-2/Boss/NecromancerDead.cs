@@ -18,7 +18,7 @@ public class NecromancerDead : MonoBehaviour
         }
     }
 
-    void Update()
+    public void CheckReborn()
     {
         if (!NecromancerController.deadOnce)
         {

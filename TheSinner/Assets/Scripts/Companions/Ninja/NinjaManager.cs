@@ -13,13 +13,19 @@ public class NinjaManager : MonoBehaviour
     Vector2 whereToSpawn;
 
     Collider2D[] enemies;
-    public float viewRadius;
+    Collider2D[] miniBoss;
+    Collider2D[] boss;
+    public float viewRadiusX;
+    public float viewRadiusY;
     public LayerMask whatIsEnemies;
+    public LayerMask whatIsMiniBoss;
+    public LayerMask whatIsBoss;
     internal static Transform targetEnemy;
 
     internal static bool facingRight;
     bool playerLeft;
 
+    bool assasinated;
     private void Start()
     {
         coolDownTimer = coolDown;
@@ -39,6 +45,7 @@ public class NinjaManager : MonoBehaviour
     {
         if (coolDownTimer <= 0)
         {
+            assasinated = false;
             FindSpawningPlace();
             if (targetEnemy != null)
             {
@@ -79,18 +86,59 @@ public class NinjaManager : MonoBehaviour
 
     void FindTargetEnemy()
     {
-        enemies = Physics2D.OverlapCircleAll(transform.position, viewRadius, whatIsEnemies);
+        enemies = Physics2D.OverlapBoxAll(transform.position, new Vector2(viewRadiusX, viewRadiusY), 0, whatIsEnemies);
+        miniBoss = Physics2D.OverlapBoxAll(transform.position, new Vector2(viewRadiusX, viewRadiusY), 0, whatIsMiniBoss);
+        boss = Physics2D.OverlapBoxAll(transform.position, new Vector2(viewRadiusX, viewRadiusY), 0, whatIsBoss);
         targetEnemy = null;
-        for (int i = 0; i < enemies.Length; i++)
+
+        if (!assasinated)
         {
-            if (enemies[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 2))
+            for (int i = 0; i < miniBoss.Length; i++)
             {
-                targetEnemy = enemies[i].transform;
-                break;
+                if (miniBoss[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 4))
+                {
+                    assasinated = true;
+                    targetEnemy = miniBoss[i].transform;
+                    break;
+                }
+                else
+                {
+                    targetEnemy = null;
+                }
             }
-            else
+        }
+
+        if (!assasinated)
+        {
+            for (int i = 0; i < boss.Length; i++)
             {
-                targetEnemy = null;
+                if (boss[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 8))
+                {
+                    assasinated = true;
+                    targetEnemy = boss[i].transform;
+                    break;
+                }
+                else
+                {
+                    targetEnemy = null;
+                }
+            }
+        }
+
+        if (!assasinated)
+        {
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                if (enemies[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 2))
+                {
+                    assasinated = true;
+                    targetEnemy = enemies[i].transform;
+                    break;
+                }
+                else
+                {
+                    targetEnemy = null;
+                }
             }
         }
     }
@@ -98,6 +146,6 @@ public class NinjaManager : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(player.transform.position, viewRadius);
+        Gizmos.DrawWireCube(player.transform.position, new Vector2(viewRadiusX, viewRadiusY));
     }
 }
