@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class MeleeAttack : MonoBehaviour
 {
     private Animator animator;
@@ -28,7 +27,6 @@ public class MeleeAttack : MonoBehaviour
     public LayerMask whatIsToChase;
 
     private TakeDamage takeDamage;
-
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
