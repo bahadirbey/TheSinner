@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VikingAttack : MonoBehaviour
+public class VikingAssassinAttack : MonoBehaviour
 {
     private Animator animator;
     private Patrol patrol;
@@ -31,6 +31,13 @@ public class VikingAttack : MonoBehaviour
     public CapsuleCollider2D collider2D;
     public bool canRoll;
     bool rolling;
+
+    bool canDash;
+    Vector2 target;
+    bool reachedToTarget;
+    GameObject player;
+    bool targetDedected;
+    bool dashing;
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
@@ -38,19 +45,37 @@ public class VikingAttack : MonoBehaviour
         patrol = GetComponent<Patrol>();
         readyAttackTime = startReadyAttackTime;
         canRoll = true;
+        canDash = true;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
+
 
     void Update()
     {
         playerToDamage = Physics2D.OverlapBox(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
         playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
+        if (!targetDedected)
+        {
+            target = new Vector2(player.transform.position.x, transform.position.y);
+            targetDedected = true;
+        }
         MeleeAttackPrep();
         Chasing();
         Roll();
+        Dash();
     }
 
     void MeleeAttackPrep()
     {
+
+        if (canChase && canDash && playerToChase != null)
+        {
+            animator.SetBool("dashing", true);
+            animator.SetTrigger("dash");
+            canDash = false;
+            dashing = true;
+        }
+        
         if (takeDamage.hit && canRoll)
         {
             rolling = true;
@@ -73,7 +98,7 @@ public class VikingAttack : MonoBehaviour
             if (readyAttackTime <= 0 && !rolling)
             {
                 readyAttackTime = startReadyAttackTime;
-                animator.SetBool("attacking", true);
+                animator.SetBool("attacking1", true);
                 attacking = true;
                 canRoll = true;
             }
@@ -93,7 +118,24 @@ public class VikingAttack : MonoBehaviour
     {
         if (rolling)
         {
-            transform.Translate(Vector2.right* 2 * patrol.speed * Time.deltaTime);
+            transform.Translate(Vector2.right * 2 * patrol.speed * Time.deltaTime);
+        }
+    }
+
+    void Dash()
+    {
+        if (Vector2.Distance(transform.position, target) < .2f && !reachedToTarget)
+        {
+            reachedToTarget = true;
+            animator.SetBool("dashing", false);
+            canDash = false;
+            animator.SetBool("attacking2", true);
+            attacking = true;
+            dashing = false;
+        }
+        else if(!reachedToTarget)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, patrol.speed * 10 * Time.deltaTime);
         }
     }
 
@@ -131,7 +173,8 @@ public class VikingAttack : MonoBehaviour
 
     public void AttackEnd()
     {
-        animator.SetBool("attacking", false);
+        animator.SetBool("attacking1", false);
+        animator.SetBool("attacking2", false);
         attacking = false;
         readyAttackTime = startReadyAttackTime;
     }
@@ -147,7 +190,7 @@ public class VikingAttack : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        animator.SetBool("attacking", true);  
+        animator.SetBool("attacking2", true);
         attacking = true;
         canRoll = false;
         collider2D.enabled = true;
@@ -156,7 +199,7 @@ public class VikingAttack : MonoBehaviour
 
     void Chasing()
     {
-        if (playerToChase != null && !attacking && !rolling)
+        if (playerToChase != null && !attacking && !rolling && !dashing)
         {
             if (playerToChase.transform.position.x < transform.position.x)
             {
@@ -177,7 +220,7 @@ public class VikingAttack : MonoBehaviour
         {
             patrol.canPatrol = false;
             animator.SetBool("walking", true);
-            if (playerToChase.transform.position.x < transform.position.x && !attacking &&!rolling)
+            if (playerToChase.transform.position.x < transform.position.x && !attacking && !rolling)
             {
                 transform.Translate(Vector2.right * patrol.speed * Time.deltaTime);
             }
