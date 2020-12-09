@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VikingController : MonoBehaviour
+public class VikingAssassinController : MonoBehaviour
 {
     Animator animator;
     private Patrol patrol;
     private TakeDamage takeDamage;
-    private VikingAttack meleeAttack;
+    private VikingAssassinAttack meleeAttack;
 
     private SpriteRenderer sprite;
     float dazeSpeed;
@@ -24,7 +24,7 @@ public class VikingController : MonoBehaviour
         animator = GetComponent<Animator>();
         patrol = GetComponent<Patrol>();
         takeDamage = GetComponent<TakeDamage>();
-        meleeAttack = GetComponent<VikingAttack>();
+        meleeAttack = GetComponent<VikingAssassinAttack>();
     }
 
     void Update()

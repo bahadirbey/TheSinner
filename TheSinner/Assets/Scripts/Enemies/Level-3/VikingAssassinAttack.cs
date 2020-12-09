@@ -54,7 +54,7 @@ public class VikingAssassinAttack : MonoBehaviour
     {
         playerToDamage = Physics2D.OverlapBox(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
         playerToChase = Physics2D.OverlapBox(new Vector2(chasingPoint.position.x, chasingPoint.position.y + 1f), new Vector2(chaseRangeX, chaseRangeY), 0, whatIsToChase);
-        if (!targetDedected)
+        if (!targetDedected && playerToChase != null)
         {
             target = new Vector2(player.transform.position.x, transform.position.y);
             targetDedected = true;
@@ -67,7 +67,6 @@ public class VikingAssassinAttack : MonoBehaviour
 
     void MeleeAttackPrep()
     {
-
         if (canChase && canDash && playerToChase != null)
         {
             animator.SetBool("dashing", true);
@@ -124,7 +123,7 @@ public class VikingAssassinAttack : MonoBehaviour
 
     void Dash()
     {
-        if (Vector2.Distance(transform.position, target) < .2f && !reachedToTarget)
+        if (Vector2.Distance(transform.position, target) < .2f && !reachedToTarget && playerToChase != null)
         {
             reachedToTarget = true;
             animator.SetBool("dashing", false);
@@ -133,7 +132,7 @@ public class VikingAssassinAttack : MonoBehaviour
             attacking = true;
             dashing = false;
         }
-        else if(!reachedToTarget)
+        else if(!reachedToTarget && playerToChase != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, patrol.speed * 10 * Time.deltaTime);
         }
