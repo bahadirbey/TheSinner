@@ -61,11 +61,6 @@ public class VikingBossController : MonoBehaviour
         playerToLeap = Physics2D.OverlapCircle(leapPoint.position, attackRange, whatIsPlayer);
         playerToSpin = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y + .5f), spinRange, whatIsPlayer);
 
-        if (!attacking)
-        {
-            tauntCd += Time.deltaTime;
-        }
-
         Chase();
         AttackPrep();
         Daze();
@@ -122,7 +117,7 @@ public class VikingBossController : MonoBehaviour
             chaseCd = chaseCoolDown;
             canFace = false;
         }
-        else
+        else if(playerToDamage != null)
         {
             attackCd -= Time.deltaTime;
         }
@@ -149,7 +144,14 @@ public class VikingBossController : MonoBehaviour
 
     public void AttackEnd()
     {
-        attackCd = attackCoolDown;
+        if (takeDamage.currentHealth <= takeDamage.health / 2)
+        {
+            attackCd = attackCoolDown/2;
+        }
+        else
+        {
+            attackCd = attackCoolDown;
+        } 
         animator.SetBool("attackBool", false);
         attacking = false;
         canChase = true;
@@ -195,7 +197,14 @@ public class VikingBossController : MonoBehaviour
 
     public void LeapAttackEnd()
     {
-        leapCd = leapCoolDown;
+        if (takeDamage.currentHealth <= takeDamage.health / 2)
+        {
+            leapCd = leapCoolDown / 2;
+        }
+        else
+        {
+            leapCd = leapCoolDown;
+        }  
         animator.SetBool("leapAttackBool", false);
         attacking = false;
         gameObject.transform.position = new Vector2(leapPoint.position.x, transform.position.y);
@@ -239,7 +248,15 @@ public class VikingBossController : MonoBehaviour
 
     public void SpinEnd()
     {
-        spinCd = spinCoolDown;
+        if (takeDamage.currentHealth <= takeDamage.health / 2)
+        {
+            spinCd = spinCoolDown / 2;
+        }
+        else
+        {
+            spinCd = spinCoolDown;
+        }
+        
         animator.SetBool("spinAttackBool", false);
         attacking = false;
         gameObject.transform.position = new Vector2(attackPos.position.x, transform.position.y);
@@ -258,6 +275,10 @@ public class VikingBossController : MonoBehaviour
             attacking = true;
             canFace = false;
         }
+        else if (!attacking)
+        {
+            tauntCd += Time.deltaTime;
+        }
     }
 
     public void CreateThunder()
@@ -267,7 +288,15 @@ public class VikingBossController : MonoBehaviour
 
     public void TauntEnd()
     {
-        tauntCd = 0f;
+        if (takeDamage.currentHealth <= takeDamage.health / 2)
+        {
+            tauntCd = 1.5f;
+        }
+        else
+        {
+            tauntCd = 0f;
+        }
+        
         animator.SetBool("tauntBool", false);
         attacking = false;
         canChase = true;
