@@ -230,6 +230,8 @@ MonoBehaviour:
   itemButton: {fileID: 3870866232616092699, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
   info1: {fileID: 5615649645542771213}
   item: {fileID: 7744042344034919893}
+  stoneName: attack
+  level: 1
 --- !u!1 &5615649645542771213
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +460,8 @@ MonoBehaviour:
   itemButton: {fileID: 3870866232616092699, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
   info1: {fileID: 5615649645542771213}
   item: {fileID: 7744042344034919893}
+  stoneName: 
+  level: 0
 --- !u!1 &7651324270587908740
 GameObject:
   m_ObjectHideFlags: 0

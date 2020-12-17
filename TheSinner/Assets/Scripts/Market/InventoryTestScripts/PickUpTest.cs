@@ -11,12 +11,6 @@ public class PickUpTest : MonoBehaviour
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void PickUp()
     {
         for (int i = 0; i < inventoryTest.slots.Length ;i++)

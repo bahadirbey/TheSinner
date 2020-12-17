@@ -294,6 +294,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && canAttack)
             {
+                
                 attacking = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
@@ -308,8 +309,6 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("attack1", true);
                 }
                 noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
-
-                
             }
             if (attackTime > 0)
             {
@@ -411,6 +410,12 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetTrigger("block");
                 canFlip = false;
                 canBlock = false;
+
+                Debug.Log(PlayerPrefs.GetInt("savunma1"));
+                if (PlayerPrefs.GetInt("savunma1") == 1)
+                {
+                    Debug.Log("savunma taşı etkin");
+                }
             }
             if (blockTime > 0)
             {
