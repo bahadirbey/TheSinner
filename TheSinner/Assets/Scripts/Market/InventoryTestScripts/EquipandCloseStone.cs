@@ -13,6 +13,8 @@ public class EquipandCloseStone : MonoBehaviour
     public string stoneName;
     public int level;
 
+    public int whichStone;
+
     void Start()
     {
         usedItems = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();

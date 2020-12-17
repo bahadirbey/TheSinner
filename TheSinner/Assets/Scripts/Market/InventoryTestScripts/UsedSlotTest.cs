@@ -11,7 +11,6 @@ public class UsedSlotTest : MonoBehaviour
         usedItem = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.childCount <= 0)

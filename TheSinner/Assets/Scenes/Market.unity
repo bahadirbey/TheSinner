@@ -1400,6 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 3
+  saveSystem: {fileID: 1673342715}
 --- !u!114 &479486687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,6 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 2
+  saveSystem: {fileID: 1673342715}
 --- !u!114 &518021284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2206,6 +2208,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.0057098
       objectReference: {fileID: 0}
+    - target: {fileID: 4065270973257766014, guid: 1e5e6e7375cae0240b790407682a4678, type: 3}
+      propertyPath: stoneName
+      value: star
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065270973257766014, guid: 1e5e6e7375cae0240b790407682a4678, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4065270973257766015, guid: 1e5e6e7375cae0240b790407682a4678, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2216,7 +2226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4065270973257766272, guid: 1e5e6e7375cae0240b790407682a4678, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5e6e7375cae0240b790407682a4678, type: 3}
@@ -4191,6 +4201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 4
+  saveSystem: {fileID: 1673342715}
 --- !u!114 &996869114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4648,7 +4659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1049865693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 1
+  saveSystem: {fileID: 1673342715}
 --- !u!114 &1156189381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6961,6 +6973,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666394240}
   m_CullTransparentMesh: 0
+--- !u!1 &1673342714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673342716}
+  - component: {fileID: 1673342715}
+  m_Layer: 0
+  m_Name: Save&LoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673342715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673342714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1202d9d571bbe0340ab05b1893092758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotStones:
+  - {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+  - {fileID: 1853895641545234279, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  equipSlotStones: []
+--- !u!4 &1673342716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673342714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.4330635, y: -1.1854553, z: -0.25779605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1716179434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 521023968060905654, guid: 981a4735c2eeec24d8e7cc0bf069860e, type: 3}
@@ -6998,6 +7082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 0
+  saveSystem: {fileID: 1673342715}
 --- !u!114 &1754251496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9853,7 +9938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 122502822895478183, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 172398672190779803, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
       propertyPath: m_Sprite
@@ -9861,7 +9946,7 @@ PrefabInstance:
       objectReference: {fileID: -3093967614968558297, guid: 98fa46b7510978f459b80df543549264, type: 3}
     - target: {fileID: 507311568836499767, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -342.96747
+      value: -342.37
       objectReference: {fileID: 0}
     - target: {fileID: 507311568836499767, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9915,6 +10000,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 1853895641545234279, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+    - target: {fileID: 3562777294020627022, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
+      propertyPath: whichStone
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7102c0f018a30ba40968dc807bf98d39, type: 3}
 --- !u!1001 &7372068191187386875

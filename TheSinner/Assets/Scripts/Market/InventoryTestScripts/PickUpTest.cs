@@ -6,6 +6,9 @@ public class PickUpTest : MonoBehaviour
 {
     private InventoryTest inventoryTest;
     public GameObject itemButton;
+
+    public int whichStone;
+
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
@@ -20,6 +23,8 @@ public class PickUpTest : MonoBehaviour
                 Destroy(gameObject);
                 Instantiate(itemButton, inventoryTest.slots[i].transform, false);
                 inventoryTest.isFull[i] = true;
+                PlayerPrefs.SetInt("inventoryTest" + i, 1);
+                PlayerPrefs.SetInt("slotTestItem" + i, whichStone);
                 break;
             }
         }
