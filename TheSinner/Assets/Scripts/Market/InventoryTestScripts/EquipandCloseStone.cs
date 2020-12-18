@@ -14,7 +14,6 @@ public class EquipandCloseStone : MonoBehaviour
     public int level;
 
     public int whichStone;
-
     void Start()
     {
         usedItems = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
@@ -31,10 +30,15 @@ public class EquipandCloseStone : MonoBehaviour
             {
                 PlayerPrefs.SetInt(stoneName + level, 1);
                 Instantiate(itemButton, usedItems.slots[i].transform, false);
-                Instantiate(itemtousedBtn, usedItems.sslots[i].transform, false);
+                //Instantiate(itemtousedBtn, usedItems.sslots[i].transform, false);
+
+                PlayerPrefs.SetInt("inventoryUsedTest" + i, 1);
+                PlayerPrefs.SetInt("slotUsedTestItem" + i, whichStone);
+                PlayerPrefs.SetInt("inventoryTest" + transform.parent.parent.parent.GetComponent<SlotTest>().i, 0);
+
                 Destroy(item);
                 usedItems.isFull[i] = true;
-                usedItems.sisFull[i] = true;
+                //usedItems.sisFull[i] = true;
                 break; 
             }    
         }

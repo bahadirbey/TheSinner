@@ -5,5 +5,5 @@ using UnityEngine;
 public class SaveSystem : MonoBehaviour
 {
     public GameObject[] slotStones;
-    public GameObject[] equipSlotStones;
+    public GameObject[] usedSlotStones;
 }
