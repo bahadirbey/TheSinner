@@ -506,9 +506,9 @@ MonoBehaviour:
   itemButton: {fileID: 8942430272559719720, guid: f20ad4833f980404388ce76995d22c08, type: 3}
   info1: {fileID: 3957104518070735488}
   item: {fileID: 1853895641545234279}
-  stoneName: 
-  level: 0
-  whichStone: 0
+  stoneName: heal
+  level: 1
+  whichStone: 1
 --- !u!1 &6837878826320898906
 GameObject:
   m_ObjectHideFlags: 0

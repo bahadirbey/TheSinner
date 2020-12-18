@@ -51,6 +51,7 @@ public class UsedSlotTest : MonoBehaviour
         {
             usedItem.isFull[i] = true;
             Instantiate(saveSystem.usedSlotStones[PlayerPrefs.GetInt("slotUsedTestItem" + i)], usedItem.slots[i].transform, false);
+            Instantiate(saveSystem.sUsedSlotStones[PlayerPrefs.GetInt("slotUsedTestItem" + i)], usedItem.sslots[i].transform, false);
         }
     }
 }
