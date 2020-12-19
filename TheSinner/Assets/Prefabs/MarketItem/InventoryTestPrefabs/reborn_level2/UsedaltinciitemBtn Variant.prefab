@@ -107,5 +107,9 @@ PrefabInstance:
       propertyPath: level
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9090919540308254336, guid: 1c08bba0b138ed54894aeaf979cb26a2, type: 3}
+      propertyPath: whichStone
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c08bba0b138ed54894aeaf979cb26a2, type: 3}

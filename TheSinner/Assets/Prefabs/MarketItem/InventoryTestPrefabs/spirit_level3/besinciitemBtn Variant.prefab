@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6897448900569931959, guid: 8c1ab2c9df8c19f4ab5b61e4336d6bdf, type: 3}
+    - target: {fileID: 4917176017428810739, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: whichStone
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 7116637396813790823, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_Name
       value: besinciitemBtn Variant
@@ -135,5 +139,9 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6897448900569931959, guid: 8c1ab2c9df8c19f4ab5b61e4336d6bdf, type: 3}
+    - target: {fileID: 8377798102092477714, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: whichStone
+      value: 22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}

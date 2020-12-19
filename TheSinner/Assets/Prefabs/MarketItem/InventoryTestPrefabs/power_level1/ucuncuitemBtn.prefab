@@ -232,6 +232,7 @@ MonoBehaviour:
   item: {fileID: 7744042344034919893}
   stoneName: power
   level: 1
+  whichStone: 2
 --- !u!1 &5615649645542771213
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +463,7 @@ MonoBehaviour:
   item: {fileID: 7744042344034919893}
   stoneName: 'power '
   level: 1
+  whichStone: 2
 --- !u!1 &7651324270587908740
 GameObject:
   m_ObjectHideFlags: 0

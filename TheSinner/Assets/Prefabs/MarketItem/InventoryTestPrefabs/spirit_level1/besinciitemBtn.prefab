@@ -270,6 +270,7 @@ MonoBehaviour:
   item: {fileID: 7116637396813790823}
   stoneName: spirit
   level: 1
+  whichStone: 4
 --- !u!1 &6568059242934998666
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,3 +741,4 @@ MonoBehaviour:
   item: {fileID: 7116637396813790823}
   stoneName: spirit
   level: 1
+  whichStone: 4

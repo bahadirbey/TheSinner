@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6119290679247038555, guid: d6700b01628c83943a3c630e02778a4e, type: 3}
+    - target: {fileID: 925723797468861198, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: whichStone
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2596707371221559586, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: itemButton
       value: 
@@ -47,6 +51,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6119290679247038555, guid: d6700b01628c83943a3c630e02778a4e, type: 3}
+    - target: {fileID: 4175787812443657366, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: whichStone
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_Name
       value: stoneButton Variant

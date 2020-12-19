@@ -440,6 +440,8 @@ MonoBehaviour:
   item: {fileID: 2832428740183551576, guid: fede1f75908f94c409052f7f14981013, type: 3}
   name: crit
   level: 1
+  whichStone: 8
+  usedSlotTest: {fileID: 0}
 --- !u!1 &7746040499718676444
 GameObject:
   m_ObjectHideFlags: 0

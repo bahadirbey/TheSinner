@@ -508,6 +508,7 @@ MonoBehaviour:
   item: {fileID: 2646350641056949544}
   stoneName: def
   level: 1
+  whichStone: 7
 --- !u!1 &8001136299540289801
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,3 +739,4 @@ MonoBehaviour:
   item: {fileID: 2646350641056949544}
   stoneName: def
   level: 1
+  whichStone: 7

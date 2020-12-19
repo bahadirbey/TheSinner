@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3267653229197007210, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: whichStone
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 4543954116130733692, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

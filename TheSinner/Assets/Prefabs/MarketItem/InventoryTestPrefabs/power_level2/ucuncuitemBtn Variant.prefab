@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 9063024076853012594, guid: 7e481921322c77c448ae0839b4c88107, type: 3}
+    - target: {fileID: 2615603493968682293, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: whichStone
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3856538566814446512, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -131,6 +135,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 9063024076853012594, guid: 7e481921322c77c448ae0839b4c88107, type: 3}
+    - target: {fileID: 7060346024339554333, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: whichStone
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7744042344034919893, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_Name
       value: ucuncuitemBtn Variant

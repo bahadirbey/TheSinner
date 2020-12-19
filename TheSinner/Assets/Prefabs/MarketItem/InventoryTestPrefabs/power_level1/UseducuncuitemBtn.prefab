@@ -266,6 +266,8 @@ MonoBehaviour:
   item: {fileID: 7744042344034919893, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
   name: power
   level: 1
+  whichStone: 2
+  usedSlotTest: {fileID: 0}
 --- !u!1 &4243532370939599502
 GameObject:
   m_ObjectHideFlags: 0

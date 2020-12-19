@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 3952539535169843636, guid: 1a2283861ccae2b47a23b11e79ea4585, type: 3}
+    - target: {fileID: 4473929985827127256, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: whichStone
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5280879182940492410, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -139,5 +143,9 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 8316832355356086914, guid: b60f557a2c8d17b46b81a8d531987fce, type: 3}
+    - target: {fileID: 6135332144292648740, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: whichStone
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}

@@ -227,6 +227,8 @@ MonoBehaviour:
   item: {fileID: 5456820595196549428, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
   name: reborn
   level: 1
+  whichStone: 5
+  usedSlotTest: {fileID: 0}
 --- !u!1 &3821300149404566258
 GameObject:
   m_ObjectHideFlags: 0

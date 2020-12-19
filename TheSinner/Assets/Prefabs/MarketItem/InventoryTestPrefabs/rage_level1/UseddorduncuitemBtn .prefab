@@ -227,6 +227,8 @@ MonoBehaviour:
   item: {fileID: 1796601869433378955, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
   name: rage
   level: 1
+  whichStone: 3
+  usedSlotTest: {fileID: 0}
 --- !u!1 &4494338733393197383
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6801925477167908652, guid: b3eeaadd7f1ce5d4c8f930f1e9889c72, type: 3}
+    - target: {fileID: 2883461440111896603, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: whichStone
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 5456820595196549428, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: m_Name
       value: altinciitemBtn Variant
@@ -51,6 +55,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 6801925477167908652, guid: b3eeaadd7f1ce5d4c8f930f1e9889c72, type: 3}
+    - target: {fileID: 6513784898905565208, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: whichStone
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 7210207160947025196, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

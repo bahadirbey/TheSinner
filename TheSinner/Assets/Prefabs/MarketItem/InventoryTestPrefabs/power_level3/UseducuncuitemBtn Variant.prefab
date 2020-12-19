@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -7973999202850210603, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
+      propertyPath: whichStone
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3870866232616092699, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
       propertyPath: m_Name
       value: UseducuncuitemBtn Variant

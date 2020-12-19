@@ -151,6 +151,7 @@ MonoBehaviour:
   item: {fileID: 1796601869433378955}
   stoneName: rage
   level: 1
+  whichStone: 3
 --- !u!1 &1796601869433378955
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +622,7 @@ MonoBehaviour:
   item: {fileID: 1796601869433378955}
   stoneName: rage
   level: 1
+  whichStone: 3
 --- !u!1 &8714480133320707874
 GameObject:
   m_ObjectHideFlags: 0

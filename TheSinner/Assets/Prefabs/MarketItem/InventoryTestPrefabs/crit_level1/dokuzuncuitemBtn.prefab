@@ -391,6 +391,7 @@ MonoBehaviour:
   item: {fileID: 2832428740183551576}
   stoneName: crit
   level: 1
+  whichStone: 8
 --- !u!1 &4054688468651712795
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +660,7 @@ MonoBehaviour:
   item: {fileID: 2832428740183551576}
   stoneName: crit
   level: 1
+  whichStone: 8
 --- !u!1 &8522693862542962685
 GameObject:
   m_ObjectHideFlags: 0

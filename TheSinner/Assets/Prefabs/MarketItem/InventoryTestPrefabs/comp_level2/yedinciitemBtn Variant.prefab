@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 1420534769092121659, guid: d8ea6eb1db65b0f419733f7dd8cd5f3a, type: 3}
+    - target: {fileID: 3425382469671493889, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+      propertyPath: whichStone
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4412160744143093602, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -131,6 +135,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 1420534769092121659, guid: d8ea6eb1db65b0f419733f7dd8cd5f3a, type: 3}
+    - target: {fileID: 5216381117985112640, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+      propertyPath: whichStone
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9218773110879396029, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
       propertyPath: m_Sprite
       value: 

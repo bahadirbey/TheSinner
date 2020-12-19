@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 8919303066563577863, guid: c38c2dc5ece519044aece0eeee0b3b85, type: 3}
+    - target: {fileID: 925083928258386911, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: whichStone
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2557044604210673690, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: level
       value: 2
@@ -39,6 +43,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 8919303066563577863, guid: c38c2dc5ece519044aece0eeee0b3b85, type: 3}
+    - target: {fileID: 2557044604210673690, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: whichStone
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2646350641056949544, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: m_Name
       value: sekizinciitemBtn Variant

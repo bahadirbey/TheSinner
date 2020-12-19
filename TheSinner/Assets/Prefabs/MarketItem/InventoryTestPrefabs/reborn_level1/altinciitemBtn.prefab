@@ -311,6 +311,7 @@ MonoBehaviour:
   item: {fileID: 5456820595196549428}
   stoneName: reborn
   level: 1
+  whichStone: 5
 --- !u!1 &4805700931339300976
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,3 +727,4 @@ MonoBehaviour:
   item: {fileID: 5456820595196549428}
   stoneName: reborn
   level: 1
+  whichStone: 5

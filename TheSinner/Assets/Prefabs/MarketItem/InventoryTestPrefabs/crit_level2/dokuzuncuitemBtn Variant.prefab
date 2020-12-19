@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 4291005988915739518, guid: 6db844c08bbb9f5468907429c28394a7, type: 3}
+    - target: {fileID: 5912988342332850543, guid: fede1f75908f94c409052f7f14981013, type: 3}
+      propertyPath: whichStone
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 7498929750378330980, guid: fede1f75908f94c409052f7f14981013, type: 3}
       propertyPath: level
       value: 2
@@ -131,6 +135,10 @@ PrefabInstance:
       propertyPath: itemtousedBtn
       value: 
       objectReference: {fileID: 4291005988915739518, guid: 6db844c08bbb9f5468907429c28394a7, type: 3}
+    - target: {fileID: 7498929750378330980, guid: fede1f75908f94c409052f7f14981013, type: 3}
+      propertyPath: whichStone
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 8564904869749106633, guid: fede1f75908f94c409052f7f14981013, type: 3}
       propertyPath: itemButton
       value: 

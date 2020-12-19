@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 5558477388353991099, guid: d955bc06e7e29fe4584ea9326f008f9e, type: 3}
+    - target: {fileID: 4587868449717632608, guid: 2af32397c1518ba41980b24b0601adb2, type: 3}
+      propertyPath: whichStone
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5825673267576418921, guid: 2af32397c1518ba41980b24b0601adb2, type: 3}
       propertyPath: m_Sprite
       value: 
