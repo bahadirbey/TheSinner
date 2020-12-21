@@ -151,6 +151,7 @@ MonoBehaviour:
   item: {fileID: 6317127183613913838}
   stoneName: star
   level: 1
+  whichStone: 0
 --- !u!1 &3324864465315246659
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +420,7 @@ MonoBehaviour:
   item: {fileID: 0}
   stoneName: star
   level: 1
+  whichStone: 0
 --- !u!1 &6298163466262520387
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5139785899746405554, guid: 98fa46b7510978f459b80df543549264, type: 3}
+  m_Sprite: {fileID: -2409175414230184963, guid: b83778a156f42b54396476025f63b37f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

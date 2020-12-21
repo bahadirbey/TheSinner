@@ -228,7 +228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5139785899746405554, guid: 98fa46b7510978f459b80df543549264, type: 3}
+  m_Sprite: {fileID: -2409175414230184963, guid: b83778a156f42b54396476025f63b37f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -308,6 +308,8 @@ MonoBehaviour:
   item: {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
   name: star
   level: 1
+  whichStone: 0
+  usedSlotTest: {fileID: 0}
 --- !u!1 &5160794993110639756
 GameObject:
   m_ObjectHideFlags: 0

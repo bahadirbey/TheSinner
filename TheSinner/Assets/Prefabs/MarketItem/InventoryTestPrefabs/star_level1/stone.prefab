@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5139785899746405554, guid: 98fa46b7510978f459b80df543549264, type: 3}
+  m_Sprite: {fileID: -2409175414230184963, guid: b83778a156f42b54396476025f63b37f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+  whichStone: 0
 --- !u!58 &4065270973257766273
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8772380495191185330, guid: 98fa46b7510978f459b80df543549264, type: 3}
+  m_Sprite: {fileID: -4171726889105646409, guid: b83778a156f42b54396476025f63b37f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 484952734222486126, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+  whichStone: 0
