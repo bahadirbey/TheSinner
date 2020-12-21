@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2952053984021864804}
   - component: {fileID: 2952053984021864807}
   m_Layer: 0
-  m_Name: red-pixel-heart-xfl
+  m_Name: FirstPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1581776036221471475, guid: efd1622210261af42927aa13f32c898b, type: 3}
+  whichCompanion: 0

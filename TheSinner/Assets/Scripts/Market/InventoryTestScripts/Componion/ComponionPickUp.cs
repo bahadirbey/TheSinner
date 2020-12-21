@@ -6,26 +6,24 @@ public class ComponionPickUp : MonoBehaviour
 {
     private InventoryTest inventoryTest;
     public GameObject itemButton;
+
+    public int whichCompanion;
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void PickUp()
     {
-        for (int i = 0; i < inventoryTest.componionslots.Length; i++)
+        for (int i = 0; i < inventoryTest.companionslots.Length; i++)
         {
             if (inventoryTest.cisFull[i] == false)
             {
                 Destroy(gameObject);
-                Instantiate(itemButton, inventoryTest.componionslots[i].transform, false);
+                Instantiate(itemButton, inventoryTest.companionslots[i].transform, false);
                 inventoryTest.cisFull[i] = true;
+                //PlayerPrefs.SetInt("inventoryTest" + i, 1);
+                //PlayerPrefs.SetInt("slotTestItem" + i, whichStone);
                 break;
             }
         }

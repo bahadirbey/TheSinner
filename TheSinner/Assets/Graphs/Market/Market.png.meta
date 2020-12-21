@@ -41,6 +41,33 @@ TextureImporter:
   - first:
       213: 7286517594233586420
     second: Market_12
+  - first:
+      213: -2243107999424951603
+    second: Market_0
+  - first:
+      213: -6028436088949540153
+    second: Market_1
+  - first:
+      213: -8568978780802208740
+    second: Market_4
+  - first:
+      213: -3069492230552966036
+    second: Market_6
+  - first:
+      213: -5556598305655580355
+    second: Market_7
+  - first:
+      213: -7433224456291740053
+    second: Market_8
+  - first:
+      213: 8636502527057377862
+    second: Market_11
+  - first:
+      213: -3971307130720682665
+    second: Market_12
+  - first:
+      213: -6669857715928277536
+    second: Market_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

@@ -12,10 +12,8 @@ GameObject:
   - component: {fileID: 6369874251071257676}
   - component: {fileID: 2454643919363775695}
   - component: {fileID: 5042772128757674599}
-  - component: {fileID: 3336572778030867489}
-  - component: {fileID: 1770685785589461096}
   m_Layer: 5
-  m_Name: HeartBtn
+  m_Name: FourthPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,42 +118,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2454643919363775695}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1770685785589461096}
-        m_TargetAssemblyTypeName: HeartItem, Assembly-CSharp
-        m_MethodName: Use
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &3336572778030867489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581776036221471475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ea2acd80a50fc341ba8d6ecc9ba6d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 2952053984021864806, guid: 7c7b58429cd20af4d9fc730007709ace, type: 3}
---- !u!114 &1770685785589461096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581776036221471475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 309816c5f3ba52d4abe505080a7bb6d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 1581776036221471475}
+      m_Calls: []

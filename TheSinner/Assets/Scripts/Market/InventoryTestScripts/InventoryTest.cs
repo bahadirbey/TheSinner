@@ -6,8 +6,11 @@ public class InventoryTest : MonoBehaviour
 {
     public bool[] isFull;
     public GameObject[] slots;
-    public bool[] cisFull;
-    public GameObject[] componionslots;
     public bool[] showItem;
     public GameObject[] showSlots;
+    
+    public bool[] cisFull;
+    public GameObject[] companionslots;
+    public bool[] showCompanion;
+    public GameObject[] showCompanionSlots;
 }

@@ -20,12 +20,12 @@ public class BoneBought : MonoBehaviour
 
     public void PickUp()
     {
-        for (int i = 0; i < inventoryTest.componionslots.Length; i++)
+        for (int i = 0; i < inventoryTest.companionslots.Length; i++)
         {
             if (inventoryTest.cisFull[i] == false)
             {
                 Destroy(bone);
-                Instantiate(itemButton, inventoryTest.componionslots[i].transform, false);
+                Instantiate(itemButton, inventoryTest.companionslots[i].transform, false);
                 inventoryTest.cisFull[i] = true;
                 break;
             }

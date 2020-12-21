@@ -10,4 +10,6 @@ public class UsedItemsTest : MonoBehaviour
     public GameObject[] cslots;
     public bool[] sisFull;
     public GameObject[] sslots;
+    public bool[] csisFull;
+    public GameObject[] csslots;
 }
