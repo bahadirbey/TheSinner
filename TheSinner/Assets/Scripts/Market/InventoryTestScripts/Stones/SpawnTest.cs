@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnTestCompanion : MonoBehaviour
+public class SpawnTest : MonoBehaviour
 {
-    public GameObject companion;
+    public GameObject item;
     private UsedItemsTest useditemtest;
     private InventoryTest inventoryTest;
 
     public string name;
+    public int level;
 
-    public int whichCompanion;
+    public int whichStone;
 
-    public UsedSlotTest usedSlotTestCompanion;
+    public UsedSlotTest usedSlotTest;
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
@@ -27,19 +28,19 @@ public class SpawnTestCompanion : MonoBehaviour
     public void RemoveItem()
     {
         Debug.Log("removed");
-        for (int i = 0; i < inventoryTest.companionslots.Length; i++)
+        for (int i = 0; i < inventoryTest.slots.Length; i++)
         {
-            if (inventoryTest.cisFull[i] == false)
+            if (inventoryTest.isFull[i] == false)
             {
                 foreach (Transform child in transform)
                 {
                     //PlayerPrefs.SetInt(name + level, 0);
-                    Instantiate(companion, inventoryTest.companionslots[i].transform, false);
-                    Destroy(useditemtest.csslots[transform.parent.GetComponent<UsedComponionSlotTest>().i].transform.GetChild(0).gameObject);
+                    Instantiate(item, inventoryTest.slots[i].transform, false);
+                    Destroy(useditemtest.sslots[transform.parent.GetComponent<UsedSlotTest>().i].transform.GetChild(0).gameObject);
                 }
 
                 break;
             }
-        }
+        }  
     }
 }

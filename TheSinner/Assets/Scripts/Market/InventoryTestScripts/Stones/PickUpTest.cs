@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComponionPickUp : MonoBehaviour
+public class PickUpTest : MonoBehaviour
 {
     private InventoryTest inventoryTest;
     public GameObject itemButton;
 
-    public int whichCompanion;
+    public int whichStone;
+
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
@@ -15,15 +16,15 @@ public class ComponionPickUp : MonoBehaviour
 
     void PickUp()
     {
-        for (int i = 0; i < inventoryTest.companionslots.Length; i++)
+        for (int i = 0; i < inventoryTest.slots.Length ;i++)
         {
-            if (inventoryTest.cisFull[i] == false)
+            if (inventoryTest.isFull[i] == false)
             {
                 Destroy(gameObject);
-                Instantiate(itemButton, inventoryTest.companionslots[i].transform, false);
-                inventoryTest.cisFull[i] = true;
-                PlayerPrefs.SetInt("cinventoryTest" + i, 1);
-                PlayerPrefs.SetInt("cslotTestItem" + i, whichCompanion);
+                Instantiate(itemButton, inventoryTest.slots[i].transform, false);
+                inventoryTest.isFull[i] = true;
+                PlayerPrefs.SetInt("inventoryTest" + i, 1);
+                PlayerPrefs.SetInt("slotTestItem" + i, whichStone);
                 break;
             }
         }

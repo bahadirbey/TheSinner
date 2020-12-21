@@ -7,4 +7,8 @@ public class SaveSystem : MonoBehaviour
     public GameObject[] slotStones;
     public GameObject[] usedSlotStones;
     public GameObject[] sUsedSlotStones;
+
+    public GameObject[] slotCompanions;
+    public GameObject[] usedSlotCompanions;
+    public GameObject[] sUsedSlotCompanions;
 }

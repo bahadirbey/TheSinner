@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComponionSlotTest : MonoBehaviour
+public class SlotTest : MonoBehaviour
 {
     private InventoryTest inventory;
     public int i;
@@ -17,31 +17,30 @@ public class ComponionSlotTest : MonoBehaviour
         CheckItem();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.childCount <= 0)
         {
-            inventory.cisFull[i] = false;
+            inventory.isFull[i] = false;
         }
     }
 
     public void DropItem()
-    {
-        foreach (Transform child in transform)
+    {    
+        foreach(Transform child in transform)
         {
             Destroy(child.gameObject);
-            PlayerPrefs.SetInt("cinventoryTest" + i, 0);
-            inventory.cisFull[i] = false;
+            PlayerPrefs.SetInt("inventoryTest" + i, 0);
+            inventory.isFull[i] = false;
         }
     }
 
     public void CheckItem()
     {
-        if (PlayerPrefs.GetInt("cinventoryTest" + i) == 1)
+        if (PlayerPrefs.GetInt("inventoryTest" + i) == 1)
         {
-            inventory.cisFull[i] = true;
-            Instantiate(saveSystem.slotCompanions[PlayerPrefs.GetInt("cslotTestItem" + i)], inventoryTest.companionslots[i].transform, false);
+            inventory.isFull[i] = true;
+            Instantiate(saveSystem.slotStones[PlayerPrefs.GetInt("slotTestItem" + i)], inventoryTest.slots[i].transform, false);
         }
     }
 }

@@ -13,7 +13,7 @@ public class UsedSlotTestCompanion : MonoBehaviour
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
         usedItem = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
-        //CheckItem();
+        CheckItem();
     }
 
     void Update()
@@ -34,10 +34,10 @@ public class UsedSlotTestCompanion : MonoBehaviour
                 {
                     child.GetComponent<SpawnTest>().RemoveItem();
 
-                    //PlayerPrefs.SetInt("inventoryUsedTest" + this.i, 0);
-                    //
-                    //PlayerPrefs.SetInt("inventoryTest" + i, 1);
-                    //PlayerPrefs.SetInt("slotTestItem" + i, child.GetComponent<SpawnTest>().whichStone);
+                    PlayerPrefs.SetInt("cinventoryUsedTest" + this.i, 0);
+                    
+                    PlayerPrefs.SetInt("cinventoryTest" + i, 1);
+                    PlayerPrefs.SetInt("cslotTestItem" + i, child.GetComponent<SpawnTestCompanion>().whichCompanion);
 
                     Destroy(child.gameObject);
                     inventoryTest.cisFull[i] = true;
@@ -49,10 +49,10 @@ public class UsedSlotTestCompanion : MonoBehaviour
 
     public void CheckItem()
     {
-        if (PlayerPrefs.GetInt("inventoryUsedTest" + i) == 1)
+        if (PlayerPrefs.GetInt("cinventoryUsedTest" + i) == 1)
         {
-            usedItem.isFull[i] = true;
-            Instantiate(saveSystem.usedSlotStones[PlayerPrefs.GetInt("slotUsedTestItem" + i)], usedItem.slots[i].transform, false);
+            usedItem.cisFull[i] = true;
+            Instantiate(saveSystem.usedSlotCompanions[PlayerPrefs.GetInt("cslotUsedTestItem" + i)], usedItem.cslots[i].transform, false);
         }
     }
 }

@@ -10,10 +10,9 @@ public class EquipAndCloseCompanion : MonoBehaviour
     public GameObject info1;
     public GameObject companion;
 
-    public string stoneName;
-    public int level;
+    public string companionName;
 
-    public int whichStone;
+    public int whichCompanion;
     void Start()
     {
         usedItems = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
@@ -28,18 +27,17 @@ public class EquipAndCloseCompanion : MonoBehaviour
         {
             if (usedItems.cisFull[i] == false)
             {
-                //PlayerPrefs.SetInt(stoneName + level, 1);
+                //PlayerPrefs.SetInt(companionName + level, 1);
                 Instantiate(companionButton, usedItems.cslots[i].transform, false);
-                /**/
                 Instantiate(companiontousedBtn, usedItems.csslots[i].transform, false);
 
-                //PlayerPrefs.SetInt("inventoryUsedTest" + i, 1);
-                //PlayerPrefs.SetInt("slotUsedTestItem" + i, whichStone);
-                //PlayerPrefs.SetInt("inventoryTest" + transform.parent.parent.parent.GetComponent<SlotTest>().i, 0);
+                PlayerPrefs.SetInt("cinventoryUsedTest" + i, 1);
+                PlayerPrefs.SetInt("cslotUsedTestItem" + i, whichCompanion);
+                PlayerPrefs.SetInt("cinventoryTest" + transform.parent.parent.parent.GetComponent<ComponionSlotTest>().i, 0);
 
                 Destroy(companion);
+
                 usedItems.cisFull[i] = true;
-                /**/
                 usedItems.csisFull[i] = true;
                 break;
             }
