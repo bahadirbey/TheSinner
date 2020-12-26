@@ -126,6 +126,9 @@ public class PlayerMovement : MonoBehaviour
     //star stone
     public GameObject star;
 
+    //crit stone
+    public static float critChance;
+
     //STONES END---------------------
     void Start()
     {
@@ -306,7 +309,20 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && canAttack)
             {
-                
+                #region CritStone
+                critChance = Random.Range(0, 50);
+                if (PlayerPrefs.GetInt("crit3") == 1)
+                {
+                    critChance += 30;
+                }else if (PlayerPrefs.GetInt("crit2") == 1)
+                {
+                    critChance += 20;
+                }else if (PlayerPrefs.GetInt("crit1") == 1)
+                {
+                    critChance += 10;
+                }
+                #endregion
+
                 attacking = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
@@ -345,7 +361,15 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
+            if (critChance > 50)
+            {
+                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage*2);
+            }
+            else
+            {
+                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
+            }
+            
         }
 
         if (facingRight)
