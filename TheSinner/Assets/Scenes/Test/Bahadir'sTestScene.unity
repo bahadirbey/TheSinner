@@ -579,8 +579,11 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &69243005
 =======
+=======
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 --- !u!4 &319200373
 Transform:
   m_ObjectHideFlags: 0
@@ -602,6 +605,9 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327438747
+<<<<<<< HEAD
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+=======
 >>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +628,8 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &327438748
+<<<<<<< HEAD
+=======
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -639,6 +647,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &327438749
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -646,6 +655,42 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327438747}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &327438749
+MonoBehaviour:
+=======
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &327438750
+Canvas:
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327438747}
+  m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -662,12 +707,7 @@ MonoBehaviour:
   m_DynamicPixelsPerUnit: 1
 --- !u!223 &327438750
 Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327438747}
-  m_Enabled: 1
+=======
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 658288201}
@@ -704,10 +744,83 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &442128017
 GameObject:
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 327438747}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 658288201}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &327438751
+RectTransform:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442128018}
+  - component: {fileID: 442128019}
+  m_Layer: 0
+  m_Name: shield
+  m_TagString: shield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &442128018
+Transform:
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 327438747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1415120405}
+  - {fileID: 900277308}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &442128017
+GameObject:
+=======
+  m_GameObject: {fileID: 442128017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 319200373}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &442128019
+BoxCollider2D:
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442128018}
@@ -739,6 +852,8 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_GameObject: {fileID: 442128017}
   m_Enabled: 1
   m_Density: 1
@@ -866,6 +981,7 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492671550}
   m_Enabled: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3054,6 +3170,20 @@ Tilemap:
       m_AllTileFlags: 1073741827
   - first: {x: -16, y: -6, z: 0}
     second:
+=======
+  m_Tiles:
+  - first: {x: -17, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741827
+  - first: {x: -16, y: -6, z: 0}
+    second:
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 7
@@ -4228,6 +4358,7 @@ Tilemap:
     e33: 1
 --- !u!66 &492671555
 CompositeCollider2D:
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11537,6 +11668,8 @@ RectTransform:
 MonoBehaviour:
 =======
 >>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+=======
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11544,6 +11677,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 492671550}
   m_Enabled: 1
   m_Density: 1
+<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -11834,6 +11968,298 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+=======
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 492671552}
+    m_ColliderPaths:
+    - - X: 0
+        Y: 14687500
+      - X: 10000000
+        Y: 14687500
+      - X: 10000000
+        Y: 18593750
+      - X: 9843750
+        Y: 19375000
+      - X: 2500000
+        Y: 19375000
+      - X: 0
+        Y: 19218750
+      - X: 0
+        Y: 19375000
+      - X: -10000000
+        Y: 19375000
+      - X: -10000000
+        Y: 19218750
+      - X: -20000000
+        Y: 19218750
+      - X: -20000000
+        Y: 14843750
+      - X: -19687500
+        Y: 14843750
+      - X: -18593750
+        Y: 14687500
+      - X: -10000000
+        Y: 14687500
+      - X: -8125000
+        Y: 14531250
+      - X: 0
+        Y: 14531250
+    - - X: 40000000
+        Y: -5312500
+      - X: 41875000
+        Y: -5468750
+      - X: 50000000
+        Y: -5468750
+      - X: 50000000
+        Y: -5312500
+      - X: 51875000
+        Y: -5468750
+      - X: 60000000
+        Y: -5468750
+      - X: 60000000
+        Y: -5312500
+      - X: 61875000
+        Y: -5468750
+      - X: 70000000
+        Y: -5468750
+      - X: 70000000
+        Y: -5312500
+      - X: 80000000
+        Y: -5312500
+      - X: 80000000
+        Y: -1406250
+      - X: 79843752
+        Y: -625000
+      - X: 72500000
+        Y: -625000
+      - X: 70000000
+        Y: -781250
+      - X: 70000000
+        Y: -625000
+      - X: 30000000
+        Y: -625000
+      - X: 30000000
+        Y: -781250
+      - X: 20000000
+        Y: -781250
+      - X: 20000000
+        Y: -5156250
+      - X: 20312500
+        Y: -5156250
+      - X: 21406250
+        Y: -5312500
+      - X: 30000000
+        Y: -5312500
+      - X: 31875000
+        Y: -5468750
+      - X: 40000000
+        Y: -5468750
+    - - X: -70000000
+        Y: -5312500
+      - X: -68125000
+        Y: -5468750
+      - X: -60000000
+        Y: -5468750
+      - X: -60000000
+        Y: -5312500
+      - X: -58125000
+        Y: -5468750
+      - X: -50000000
+        Y: -5468750
+      - X: -50000000
+        Y: -5312500
+      - X: -48125000
+        Y: -5468750
+      - X: -40000000
+        Y: -5468750
+      - X: -40000000
+        Y: -5312500
+      - X: -30000000
+        Y: -5312500
+      - X: -30000000
+        Y: -1406250
+      - X: -30156250
+        Y: -625000
+      - X: -37500000
+        Y: -625000
+      - X: -40000000
+        Y: -781250
+      - X: -40000000
+        Y: -625000
+      - X: -80000000
+        Y: -625000
+      - X: -80000000
+        Y: -781250
+      - X: -90000000
+        Y: -781250
+      - X: -90000000
+        Y: -5156250
+      - X: -89687504
+        Y: -5156250
+      - X: -88593752
+        Y: -5312500
+      - X: -80000000
+        Y: -5312500
+      - X: -78125000
+        Y: -5468750
+      - X: -70000000
+        Y: -5468750
+    - - X: 0
+        Y: -15312500
+      - X: 10000000
+        Y: -15312500
+      - X: 10000000
+        Y: -11406250
+      - X: 9843750
+        Y: -10625000
+      - X: 2500000
+        Y: -10625000
+      - X: 0
+        Y: -10781250
+      - X: 0
+        Y: -10625000
+      - X: -10000000
+        Y: -10625000
+      - X: -10000000
+        Y: -10781250
+      - X: -20000000
+        Y: -10781250
+      - X: -20000000
+        Y: -15156250
+      - X: -19687500
+        Y: -15156250
+      - X: -18593750
+        Y: -15312500
+      - X: -10000000
+        Y: -15312500
+      - X: -8125000
+        Y: -15468750
+      - X: 0
+        Y: -15468750
+    - - X: 170000000
+        Y: -30312500
+      - X: -170000000
+        Y: -30312500
+      - X: -170000000
+        Y: -50000000
+      - X: 170000000
+        Y: -50000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -0.9999994, y: 1.46875}
+      - {x: -0.8124982, y: 1.453125}
+      - {x: 0, y: 1.4531543}
+      - {x: 0.0000294, y: 1.46875}
+      - {x: 1, y: 1.4687793}
+      - {x: 0.9999995, y: 1.8593773}
+      - {x: 0.9843518, y: 1.9375}
+      - {x: 0.2499984, y: 1.9375}
+      - {x: 0, y: 1.9219066}
+      - {x: -0.000029300001, y: 1.9375}
+      - {x: -1, y: 1.9374708}
+      - {x: -1.0000294, y: 1.921875}
+      - {x: -2, y: 1.9218457}
+      - {x: -1.9999708, y: 1.484375}
+      - {x: -1.968748, y: 1.4843748}
+      - {x: -1.8593729, y: 1.46875}
+    - - {x: 3.0000007, y: -0.53125}
+      - {x: 3.187502, y: -0.546875}
+      - {x: 4, y: -0.54684573}
+      - {x: 4.0000324, y: -0.5312526}
+      - {x: 4.1875014, y: -0.546875}
+      - {x: 5, y: -0.54684573}
+      - {x: 5.0000324, y: -0.5312526}
+      - {x: 5.1875014, y: -0.546875}
+      - {x: 6, y: -0.54684573}
+      - {x: 6.0000324, y: -0.5312526}
+      - {x: 6.187502, y: -0.546875}
+      - {x: 7, y: -0.54684573}
+      - {x: 7.0000296, y: -0.53125}
+      - {x: 8, y: -0.53122073}
+      - {x: 7.9999995, y: -0.1406228}
+      - {x: 7.984352, y: -0.0625}
+      - {x: 7.2499986, y: -0.0625}
+      - {x: 7, y: -0.0780934}
+      - {x: 6.9999704, y: -0.0625}
+      - {x: 3, y: -0.0625293}
+      - {x: 2.9999707, y: -0.078125}
+      - {x: 2, y: -0.0781543}
+      - {x: 2.0000293, y: -0.515625}
+      - {x: 2.031252, y: -0.5156253}
+      - {x: 2.1406271, y: -0.53125}
+    - - {x: -7.9999995, y: -0.53125}
+      - {x: -7.8124986, y: -0.546875}
+      - {x: -7, y: -0.54684573}
+      - {x: -6.999968, y: -0.5312526}
+      - {x: -6.8124986, y: -0.546875}
+      - {x: -6, y: -0.54684573}
+      - {x: -5.9999676, y: -0.5312526}
+      - {x: -5.8124986, y: -0.546875}
+      - {x: -5, y: -0.54684573}
+      - {x: -4.9999676, y: -0.5312526}
+      - {x: -4.8124986, y: -0.546875}
+      - {x: -4, y: -0.54684573}
+      - {x: -3.9999704, y: -0.53125}
+      - {x: -3, y: -0.53122073}
+      - {x: -3.0000005, y: -0.1406228}
+      - {x: -3.0156481, y: -0.0625}
+      - {x: -3.7500017, y: -0.0625}
+      - {x: -4, y: -0.0780934}
+      - {x: -4.000029, y: -0.0625}
+      - {x: -8, y: -0.0625293}
+      - {x: -8.00003, y: -0.078125}
+      - {x: -9, y: -0.0781543}
+      - {x: -8.99997, y: -0.515625}
+      - {x: -8.968749, y: -0.5156253}
+      - {x: -8.859373, y: -0.53125}
+    - - {x: -0.9999994, y: -1.53125}
+      - {x: -0.8124982, y: -1.546875}
+      - {x: 0, y: -1.5468457}
+      - {x: 0.0000294, y: -1.53125}
+      - {x: 1, y: -1.5312207}
+      - {x: 0.9999995, y: -1.1406229}
+      - {x: 0.9843518, y: -1.0625}
+      - {x: 0.2499984, y: -1.0625}
+      - {x: 0, y: -1.0780934}
+      - {x: -0.000029300001, y: -1.0625}
+      - {x: -1, y: -1.0625293}
+      - {x: -1.0000294, y: -1.078125}
+      - {x: -2, y: -1.0781543}
+      - {x: -1.9999708, y: -1.515625}
+      - {x: -1.968748, y: -1.5156254}
+      - {x: -1.8593729, y: -1.53125}
+    - - {x: 16.999971, y: -5}
+      - {x: 16.999971, y: -3.03125}
+      - {x: -17, y: -3.0312793}
+      - {x: -16.999971, y: -5}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &492671556
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492671550}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -12056,6 +12482,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 4621885137091312973, guid: f135403d37ea934428da7c0346a0bcc9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -12094,6 +12521,9 @@ RectTransform:
   m_SizeDelta: {x: 70.174774, y: 48.75699}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &1984845395
+=======
+--- !u!1 &936825835
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 =======
 --- !u!1 &936825835
 >>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
@@ -12195,6 +12625,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!224 &2002461747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12215,6 +12646,9 @@ RectTransform:
   m_SizeDelta: {x: 37.708694, y: 39.642105}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2002461748
+=======
+--- !u!114 &1053824340
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 =======
 --- !u!114 &1053824340
 >>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
@@ -12253,6 +12687,7 @@ MonoBehaviour:
   m_DragThreshold: 10
 --- !u!4 &1053824342
 Transform:
+<<<<<<< HEAD
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12283,10 +12718,13 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &1178444057
 Transform:
+=======
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1178444056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.396, y: 0.65, z: 0}
@@ -12301,6 +12739,156 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sprite: {fileID: 236261391}
+  m_Color: {r: 0.80200386, g: 0.3281617, b: 0.37419108, a: 1}
+  m_Transform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_InstancedGameObject: {fileID: 0}
+  m_Flags: 3
+  m_ColliderType: 1
+--- !u!1 &1260511458
+=======
+  m_GameObject: {fileID: 1053824339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1178444056
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 1260511459}
+  - component: {fileID: 1260511460}
+  - component: {fileID: 1260511461}
+  - component: {fileID: 1260511462}
+  - component: {fileID: 1260511463}
+  - component: {fileID: 1260511464}
+  - component: {fileID: 1260511465}
+  - component: {fileID: 1260511466}
+  - component: {fileID: 1260511467}
+  m_Layer: 11
+  m_Name: CompanionManager
+=======
+  - component: {fileID: 1178444057}
+  m_Layer: 11
+  m_Name: attackPos
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &1260511459
+=======
+--- !u!4 &1178444057
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1260511458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009, y: 0.511, z: -11.0373125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 319200373}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1260511460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11dcb79d0bac3a4c87d4e8d225cc092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  warrior: {fileID: 799782727628556881, guid: 10df996e116da6b43b2efbd914165187, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 7
+  viewRadiusX: 25
+  viewRadiusY: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 12800
+--- !u!114 &1260511461
+=======
+  m_GameObject: {fileID: 1178444056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.396, y: 0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 319200373}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216494169
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf99267e2a09bb14ca3c9b8fffc8e718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  ninja: {fileID: 2062158495054637289, guid: 71a892755e650224bb314b3280ff9493, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 17
+  viewRadiusX: 25
+  viewRadiusY: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
+  whatIsMiniBoss:
+    serializedVersion: 2
+    m_Bits: 4096
+  whatIsBoss:
+    serializedVersion: 2
+    m_Bits: 8192
+--- !u!114 &1260511462
+=======
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12368,6 +12956,7 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1260511460
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12376,6 +12965,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260511458}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 8b55b5416b0cb214dad31e0b53744381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 19
+=======
   m_Script: {fileID: 11500000, guid: e11dcb79d0bac3a4c87d4e8d225cc092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12383,12 +12981,17 @@ MonoBehaviour:
   warrior: {fileID: 799782727628556881, guid: 10df996e116da6b43b2efbd914165187, type: 3}
   player: {fileID: 319200367}
   coolDown: 7
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   viewRadiusX: 25
   viewRadiusY: 10
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 12800
+<<<<<<< HEAD
+--- !u!114 &1260511463
+=======
 --- !u!114 &1260511461
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12397,6 +13000,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260511458}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 91803e72cda98b94495cd3968cfa8bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  archer: {fileID: 3654750545995434531, guid: 322adfaddfbdd44468da47055c8bc750, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 10
+  viewRadiusX: 30
+  viewRadiusY: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 12800
+--- !u!114 &1260511464
+=======
   m_Script: {fileID: 11500000, guid: cf99267e2a09bb14ca3c9b8fffc8e718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12416,6 +13034,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
 --- !u!114 &1260511462
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12424,48 +13043,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260511458}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b55b5416b0cb214dad31e0b53744381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
-  samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
-  player: {fileID: 319200367}
-  coolDown: 19
-  viewRadiusX: 25
-  viewRadiusY: 10
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 12800
---- !u!114 &1260511463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260511458}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91803e72cda98b94495cd3968cfa8bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
-  archer: {fileID: 3654750545995434531, guid: 322adfaddfbdd44468da47055c8bc750, type: 3}
-  player: {fileID: 319200367}
-  coolDown: 10
-  viewRadiusX: 30
-  viewRadiusY: 10
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 12800
---- !u!114 &1260511464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260511458}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: f0b333d38df752c48b441701b19af0b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12479,6 +13057,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
 --- !u!114 &1260511465
+=======
+  m_Script: {fileID: 11500000, guid: 8b55b5416b0cb214dad31e0b53744381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  samurai: {fileID: 7723930173735458403, guid: 2c3bcdaa18972354aa56da55a3c5bbe6, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 19
+  viewRadiusX: 25
+  viewRadiusY: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 12800
+--- !u!114 &1260511463
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12487,6 +13080,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260511458}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 39570be8cc35f4f499694bafc992868d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healerPet: {fileID: 1394172138021121884, guid: 65caec74a69ad9c43a91b4f273750d8b, type: 3}
+  player: {fileID: 319200367}
+--- !u!114 &1260511466
+=======
+  m_Script: {fileID: 11500000, guid: 91803e72cda98b94495cd3968cfa8bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  archer: {fileID: 3654750545995434531, guid: 322adfaddfbdd44468da47055c8bc750, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 10
+  viewRadiusX: 30
+  viewRadiusY: 10
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 12800
+--- !u!114 &1260511464
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: b6f07ab0112aae740aef3e4f39711b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackerPet: {fileID: 7472775480778880940, guid: 1cc1de6bf48ec514c9de85073d3dcdc5, type: 3}
+  target: {fileID: 0}
+  coolDown: 10
+--- !u!114 &1260511467
+=======
+  m_Script: {fileID: 11500000, guid: f0b333d38df752c48b441701b19af0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  swordGuy: {fileID: 4628744228396282631, guid: 67fe1ae0c4985ec46af2b7666e17c362, type: 3}
+  player: {fileID: 319200367}
+  coolDown: 13
+  viewRadiusX: 15
+  viewRadiusY: 8
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &1260511465
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260511458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+=======
   m_Script: {fileID: 11500000, guid: 39570be8cc35f4f499694bafc992868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12516,6 +13172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260511458}
   m_Enabled: 0
   m_EditorHideFlags: 0
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_Script: {fileID: 11500000, guid: 78bc3784747d45242a71993bd967f3a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12863,6 +13520,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 494.69998, y: 119.10002}
@@ -12884,12 +13542,17 @@ MonoBehaviour:
   saveSystem: {fileID: 976859942}
 --- !u!114 &2128922002
 =======
+=======
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2019247118
+<<<<<<< HEAD
+>>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
+=======
 >>>>>>> parent of 2b3a544... sahne aktarımı yapıldı
 MonoBehaviour:
   m_ObjectHideFlags: 0
