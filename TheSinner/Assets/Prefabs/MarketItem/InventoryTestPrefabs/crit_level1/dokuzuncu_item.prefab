@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0163f539e4b675842b399ff369313af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 2832428740183551576, guid: fede1f75908f94c409052f7f14981013, type: 3}
-  whichStone: 8
+  itemButton: {fileID: 0}
+  whichStone: 0

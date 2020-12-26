@@ -71,9 +71,5 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 7985913512718924763, guid: 9a2b3f3547da962419d6d63e00b95a7a, type: 3}
-    - target: {fileID: 8907658919182650262, guid: d6aa7d5dae1d6374f85190fc40812ec6, type: 3}
-      propertyPath: whichStone
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6aa7d5dae1d6374f85190fc40812ec6, type: 3}

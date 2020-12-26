@@ -11,10 +11,6 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 801309136869540963, guid: b80b2f4f6e89c744c92780d5f42643df, type: 3}
-    - target: {fileID: 4723378348438749711, guid: 154c779f840cddc40b345db9bc0910a4, type: 3}
-      propertyPath: whichStone
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 6704712475231496220, guid: 154c779f840cddc40b345db9bc0910a4, type: 3}
       propertyPath: m_Name
       value: altinci_item Variant

@@ -63,10 +63,6 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 1913391989637852214, guid: 79363f474155c434db250fee1e3c4f8e, type: 3}
-    - target: {fileID: 5497547202521846184, guid: 2c67467a46be2804485161d77c475555, type: 3}
-      propertyPath: whichStone
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 7546993142506897549, guid: 2c67467a46be2804485161d77c475555, type: 3}
       propertyPath: m_Name
       value: dorduncu_item Variant
