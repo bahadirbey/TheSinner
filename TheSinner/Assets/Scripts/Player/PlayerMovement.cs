@@ -80,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
     float dazedTime;
     public float startDazedTime;
     internal static bool dazeRight;
+
+    public int def;
     //Take Damage End
 
     //Block Begin
@@ -411,10 +413,24 @@ public class PlayerMovement : MonoBehaviour
                 canFlip = false;
                 canBlock = false;
 
-                Debug.Log(PlayerPrefs.GetInt("savunma1"));
-                if (PlayerPrefs.GetInt("savunma1") == 1)
+                if (PlayerPrefs.GetInt("def3") == 1)
                 {
-                    Debug.Log("savunma taşı etkin");
+                    hittable = false;
+                    def = 4;
+                }else if (PlayerPrefs.GetInt("def2") == 1)
+                {
+                    hittable = false;
+                    def = 2;
+                    
+                }
+                else if (PlayerPrefs.GetInt("def1") == 1)
+                {
+                    hittable = false;
+                }
+                else
+                {
+                    def = 0;
+                    hittable = true;
                 }
             }
             if (blockTime > 0)
@@ -442,6 +458,7 @@ public class PlayerMovement : MonoBehaviour
         blocking = false;
         canFlip = true;
         rb.gravityScale = realGravityScale;
+        hittable = false;
 
         if (!isGrounded)
         {
@@ -453,13 +470,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hittable)
         {
-            if (currentHealth - damage < 0)
+            if ((currentHealth - (damage - def)) < 0)
             {
                 currentHealth = 0;
             }
             else
             {
-                currentHealth -= damage;
+                if (currentHealth - (damage - def) < 0)
+                {
+                    currentHealth -= 1;
+                }
+                else
+                {
+                    currentHealth -= (damage - def);
+                }
+                
                 daze = true;
                 hittable = false;
             }
