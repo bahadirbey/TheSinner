@@ -123,6 +123,9 @@ public class PlayerMovement : MonoBehaviour
     //def stone
     public GameObject barrier;
 
+    //star stone
+    public GameObject star;
+
     //STONES END---------------------
     void Start()
     {
@@ -185,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
                 Block();
                 CountKilling();
                 MeleeAttack();
+                CheckStar();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -419,13 +423,12 @@ public class PlayerMovement : MonoBehaviour
                 canFlip = false;
                 canBlock = false;
 
-                
+                #region Def Stone
                 if (PlayerPrefs.GetInt("def3") == 1)
                 {
                     hittable = false;
                     def = 4;
                     Instantiate(barrier, transform.position, Quaternion.identity);
-                    Debug.Log("Here3");
                 }
                 else
                 if (PlayerPrefs.GetInt("def2") == 1)
@@ -433,18 +436,17 @@ public class PlayerMovement : MonoBehaviour
                     hittable = false;
                     def = 2;
                     Instantiate(barrier, transform.position, Quaternion.identity);
-                    Debug.Log("Here2");
                 }
                 else if (PlayerPrefs.GetInt("def1") == 1)
                 {
                     hittable = false;
                     Instantiate(barrier, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
-                    Debug.Log("Here");
                 }
                 else
                 {
                     hittable = true;
                 }
+                #endregion
             }
             if (blockTime > 0)
             {
@@ -471,6 +473,7 @@ public class PlayerMovement : MonoBehaviour
         blocking = false;
         canFlip = true;
         rb.gravityScale = realGravityScale;
+        hittable = true;
 
         if (!isGrounded)
         {
@@ -561,6 +564,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void CheckStar()
+    {
+        if (PlayerPrefs.GetInt("star3") == 1)
+        {
+            star.SetActive(true);
+            star.GetComponent<Renderer>().material.color = new Color(0,0,0);
+            StarDamage.damage = 10;
+           
+        }else if (PlayerPrefs.GetInt("star2") == 1)
+        {
+            star.SetActive(true);
+            star.GetComponent<Renderer>().material.color = new Color(255,255,255);
+            StarDamage.damage = 7;
+        }
+        else if (PlayerPrefs.GetInt("star1") == 1)
+        {
+            star.SetActive(true);
+            star.GetComponent<Renderer>().material.color = new Color(255,255,0);
+            StarDamage.damage = 4;
+        }
+        else
+        {
+            star.SetActive(false);
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
