@@ -80,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
     float dazedTime;
     public float startDazedTime;
     internal static bool dazeRight;
+
+    public int def;
     //Take Damage End
 
     //Block Begin
@@ -116,6 +118,12 @@ public class PlayerMovement : MonoBehaviour
     }
     //States End
 
+    //STONES BEGIN-------------------
+
+    //def stone
+    public GameObject barrier;
+
+    //STONES END---------------------
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -411,10 +419,31 @@ public class PlayerMovement : MonoBehaviour
                 canFlip = false;
                 canBlock = false;
 
-                Debug.Log(PlayerPrefs.GetInt("savunma1"));
-                if (PlayerPrefs.GetInt("savunma1") == 1)
+                
+                if (PlayerPrefs.GetInt("def3") == 1)
                 {
-                    Debug.Log("savunma taşı etkin");
+                    hittable = false;
+                    def = 4;
+                    Instantiate(barrier, transform.position, Quaternion.identity);
+                    Debug.Log("Here3");
+                }
+                else
+                if (PlayerPrefs.GetInt("def2") == 1)
+                {
+                    hittable = false;
+                    def = 2;
+                    Instantiate(barrier, transform.position, Quaternion.identity);
+                    Debug.Log("Here2");
+                }
+                else if (PlayerPrefs.GetInt("def1") == 1)
+                {
+                    hittable = false;
+                    Instantiate(barrier, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
+                    Debug.Log("Here");
+                }
+                else
+                {
+                    hittable = true;
                 }
             }
             if (blockTime > 0)
@@ -453,13 +482,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hittable)
         {
-            if (currentHealth - damage < 0)
+            if (currentHealth == 1 || currentHealth - (damage- def) < 0)
             {
                 currentHealth = 0;
             }
             else
             {
-                currentHealth -= damage;
+                if (currentHealth - (damage - def) <= 0)
+                {
+                    currentHealth -= 1;
+                }
+                else
+                {
+                    currentHealth -= (damage - def);
+                }
+
                 daze = true;
                 hittable = false;
             }

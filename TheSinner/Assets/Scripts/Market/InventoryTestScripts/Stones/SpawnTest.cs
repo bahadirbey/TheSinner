@@ -34,7 +34,7 @@ public class SpawnTest : MonoBehaviour
             {
                 foreach (Transform child in transform)
                 {
-                    //PlayerPrefs.SetInt(name + level, 0);
+                    PlayerPrefs.SetInt(name + level, 0);
                     Instantiate(item, inventoryTest.slots[i].transform, false);
                     Destroy(useditemtest.sslots[transform.parent.GetComponent<UsedSlotTest>().i].transform.GetChild(0).gameObject);
                 }

@@ -1925,11 +1925,13 @@ MonoBehaviour:
   maxHealth: 10
   hittable: 0
   startDazedTime: 0.1
+  def: 0
   startBlockTime: 0.7
   startTimeBtwBlocks: 1
   companionCD: {fileID: 1783765301}
   dead: 0
   deathPanel: {fileID: 1415120404}
+  barrier: {fileID: 2901148295932309245, guid: 930987f61e91db54085e9494652de892, type: 3}
 --- !u!70 &319200369
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2476,7 +2478,7 @@ RectTransform:
   - {fileID: 1651539222}
   - {fileID: 334476986}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7144,7 +7146,7 @@ Transform:
   m_Children:
   - {fileID: 492671551}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &939549983
 GameObject:
@@ -7564,7 +7566,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992472345
 GameObject:
@@ -7748,7 +7750,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055320696
 GameObject:
@@ -8707,7 +8709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1260511459
 Transform:
   m_ObjectHideFlags: 0
