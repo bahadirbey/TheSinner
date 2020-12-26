@@ -28,7 +28,7 @@ public class EquipandCloseStone : MonoBehaviour
         {
             if (usedItems.isFull[i] == false)
             {
-                PlayerPrefs.SetInt(stoneName + level, 1);
+                //PlayerPrefs.SetInt(stoneName + level, 1);
                 Instantiate(itemButton, usedItems.slots[i].transform, false);
                 Instantiate(itemtousedBtn, usedItems.sslots[i].transform, false);
 
