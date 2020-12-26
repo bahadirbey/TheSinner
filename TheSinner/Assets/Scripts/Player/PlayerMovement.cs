@@ -129,6 +129,10 @@ public class PlayerMovement : MonoBehaviour
     //crit stone
     public static float critChance;
 
+    //power stone
+    public static float powerCd;
+    public static float powerLastCd;
+    Color color;
     //STONES END---------------------
     void Start()
     {
@@ -149,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
         canBlock = true;
         canAttack = true;
+        powerLastCd = -1f;
+        color = sprite.color;
     }
 
     void Update()
@@ -192,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
                 CountKilling();
                 MeleeAttack();
                 CheckStar();
+                ActivatePower();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -509,13 +516,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hittable)
         {
-            if (currentHealth == 1 || currentHealth - (damage- def) < 0)
+            if (currentHealth == 1 || currentHealth - (damage - def) < 0)
             {
                 currentHealth = 0;
             }
             else
             {
-                if (currentHealth - (damage - def) <= 0)
+                if (damage - def <= 0)
                 {
                     currentHealth -= 1;
                 }
@@ -611,6 +618,31 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             star.SetActive(false);
+        }
+    }
+
+    public void ActivatePower()
+    {
+        if (powerLastCd >= 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().material.color = Color.yellow;
+            damage = 20;
+
+            if (def > 3)
+            {
+                def *= 2;
+            }
+            else
+            {
+                def = 5;
+            }
+
+            powerLastCd -= Time.deltaTime;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            powerCd -= Time.deltaTime;
         }
     }
 
