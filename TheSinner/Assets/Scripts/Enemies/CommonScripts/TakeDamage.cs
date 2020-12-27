@@ -73,6 +73,7 @@ public class TakeDamage : MonoBehaviour
     {
         dead = true;
         PlayerMovement.killCounter += 1;
+        PlayerMovement.stoneKillCounter += 1;
     }
 
     void ShowHealthBar()

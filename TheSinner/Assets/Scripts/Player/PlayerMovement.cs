@@ -133,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
     public static float powerCd;
     public static float powerLastCd;
     Color color;
+
+    //heal stone
+    public static int stoneKillCounter;
+    public GameObject healEffect;
+
     //STONES END---------------------
     void Start()
     {
@@ -199,6 +204,7 @@ public class PlayerMovement : MonoBehaviour
                 MeleeAttack();
                 CheckStar();
                 ActivatePower();
+                HealStoneCounter();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -217,6 +223,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("attacking", attacking);
         animator.SetBool("blocking", blocking);
     }
+
     void Move()
     {
         if (canMove)
@@ -516,6 +523,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hittable)
         {
+            stoneKillCounter = 0;
+
             if (currentHealth == 1 || currentHealth - (damage - def) < 0)
             {
                 currentHealth = 0;
@@ -585,6 +594,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetHeal(int heal)
     {
+        Instantiate(healEffect, transform.position, Quaternion.identity);
         if (currentHealth + heal > maxHealth)
         {
             currentHealth = maxHealth;
@@ -643,6 +653,34 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().material.color = color;
             powerCd -= Time.deltaTime;
+        }
+    }
+
+    public void HealStoneCounter()
+    {
+        if (PlayerPrefs.GetInt("heal3") == 1)
+        {
+            if (stoneKillCounter >= 3)
+            {
+                GetHeal(stoneKillCounter);
+                stoneKillCounter = 0;
+            }
+        }
+        else if (PlayerPrefs.GetInt("heal2") == 1)
+        {
+            if (stoneKillCounter >= 6)
+            {
+                GetHeal(stoneKillCounter);
+                stoneKillCounter = 0;
+            }
+        }
+        else if (PlayerPrefs.GetInt("heal1") == 1)
+        {
+            if (stoneKillCounter >= 9)
+            {
+                GetHeal(stoneKillCounter);
+                stoneKillCounter = 0;
+            }
         }
     }
 
