@@ -144,6 +144,10 @@ public class PlayerMovement : MonoBehaviour
     public static float rageCd;
 
     //STONES END---------------------
+
+    //COMPANIONS BEGIN---------------
+    public GameObject companionManager;
+    //COMPANIONS END-----------------
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -212,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
                 ActivatePower();
                 HealStoneCounter();
                 RageStoneCoolDown();
+                CheckCompanions();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -697,10 +702,87 @@ public class PlayerMovement : MonoBehaviour
         {
             canBeDamaged = true;
             rageCd -= Time.deltaTime;
+            gameObject.GetComponent<SpriteRenderer>().material.color = color;
         }
         else
         {
             rageLastCd -= Time.deltaTime;
+            gameObject.GetComponent<SpriteRenderer>().material.color = Color.red;
+        }
+    }
+
+    public void CheckCompanions()
+    {
+        if (PlayerPrefs.GetInt("archer") == 1)
+        {
+            companionManager.GetComponent<ArcherManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<ArcherManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("warrior") == 1)
+        {
+            companionManager.GetComponent<WarriorManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<WarriorManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("ninja") == 1)
+        {
+            companionManager.GetComponent<NinjaManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<NinjaManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("samurai") == 1)
+        {
+            companionManager.GetComponent<SamuraiManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<SamuraiManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("swordguy") == 1)
+        {
+            companionManager.GetComponent<SwordGuyManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<SwordGuyManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("healerpet") == 1)
+        {
+            companionManager.GetComponent<HealerManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<HealerManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("attackerpet") == 1)
+        {
+            companionManager.GetComponent<AttackerPetManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<AttackerPetManager>().enabled = false;
+        }
+
+        if (PlayerPrefs.GetInt("thor") == 1)
+        {
+            companionManager.GetComponent<ThorManager>().enabled = true;
+        }
+        else
+        {
+            companionManager.GetComponent<ThorManager>().enabled = false;
         }
     }
 

@@ -33,7 +33,7 @@ public class SpawnTestCompanion : MonoBehaviour
             {
                 foreach (Transform child in transform)
                 {
-                    //PlayerPrefs.SetInt(name + level, 0);
+                    PlayerPrefs.SetInt(name, 0);
                     Instantiate(companion, inventoryTest.companionslots[i].transform, false);
                     Destroy(useditemtest.csslots[transform.parent.GetComponent<UsedComponionSlotTest>().i].transform.GetChild(0).gameObject);
                 }

@@ -16,7 +16,6 @@ public class UsedComponionSlotTest : MonoBehaviour
         CheckItem();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.childCount <= 0)

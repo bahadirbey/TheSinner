@@ -27,7 +27,7 @@ public class EquipAndCloseCompanion : MonoBehaviour
         {
             if (usedItems.cisFull[i] == false)
             {
-                //PlayerPrefs.SetInt(companionName + level, 1);
+                PlayerPrefs.SetInt(companionName, 1);
                 Instantiate(companionButton, usedItems.cslots[i].transform, false);
                 Instantiate(companiontousedBtn, usedItems.csslots[i].transform, false);
 
