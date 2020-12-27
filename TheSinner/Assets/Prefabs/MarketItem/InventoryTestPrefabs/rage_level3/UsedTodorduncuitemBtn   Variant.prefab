@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 470950329236448171, guid: cbd264f6d0282994b942c56fde6e01b4, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2174200400175401475, guid: cbd264f6d0282994b942c56fde6e01b4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -97,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3510567484414948206, guid: cbd264f6d0282994b942c56fde6e01b4, type: 3}
       propertyPath: m_Name
-      value: 'UsedTodorduncuitemBtn  '
+      value: UsedTodorduncuitemBtn   Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbd264f6d0282994b942c56fde6e01b4, type: 3}

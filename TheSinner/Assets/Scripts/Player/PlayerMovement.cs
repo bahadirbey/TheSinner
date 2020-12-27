@@ -138,6 +138,11 @@ public class PlayerMovement : MonoBehaviour
     public static int stoneKillCounter;
     public GameObject healEffect;
 
+    //rage stone
+    public static bool canBeDamaged;
+    public static float rageLastCd;
+    public static float rageCd;
+
     //STONES END---------------------
     void Start()
     {
@@ -160,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
         canAttack = true;
         powerLastCd = -1f;
         color = sprite.color;
+        canBeDamaged = true;
     }
 
     void Update()
@@ -205,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
                 CheckStar();
                 ActivatePower();
                 HealStoneCounter();
+                RageStoneCoolDown();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -521,7 +528,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (hittable)
+        if (hittable && canBeDamaged)
         {
             stoneKillCounter = 0;
 
@@ -681,6 +688,19 @@ public class PlayerMovement : MonoBehaviour
                 GetHeal(stoneKillCounter);
                 stoneKillCounter = 0;
             }
+        }
+    }
+
+    public void RageStoneCoolDown()
+    {
+        if (rageLastCd <= 0)
+        {
+            canBeDamaged = true;
+            rageCd -= Time.deltaTime;
+        }
+        else
+        {
+            rageLastCd -= Time.deltaTime;
         }
     }
 
