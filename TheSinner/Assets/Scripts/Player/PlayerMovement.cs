@@ -143,6 +143,15 @@ public class PlayerMovement : MonoBehaviour
     public static float rageLastCd;
     public static float rageCd;
 
+    //spirit stone
+    public static float spiritLastCd;
+    public static float spiritCd;
+    public static int spiritLife;
+    public static bool turnedBack;
+    public GameObject spirit;
+    public static bool canDestroySpirit;
+    Vector3 turningPoint;
+
     //STONES END---------------------
 
     //COMPANIONS BEGIN---------------
@@ -217,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
                 HealStoneCounter();
                 RageStoneCoolDown();
                 CheckCompanions();
+                ActivateSpirit();
                 Death();
                 break;
             case State.DodgeRollSliding:
@@ -533,7 +543,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (hittable && canBeDamaged)
+        if (spiritLastCd > 0)
+        {
+            if (hittable && canBeDamaged)
+            {
+                if (currentHealth - damage < 0)
+                {
+                    spiritLife = 0;
+                }
+                else
+                {
+                    spiritLife -= damage;
+                }
+
+                daze = true;
+                hittable = false;
+            } 
+        }else if (hittable && canBeDamaged)
         {
             stoneKillCounter = 0;
 
@@ -783,6 +809,37 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             companionManager.GetComponent<ThorManager>().enabled = false;
+        }
+    }
+
+    public void ActivateSpirit()
+    {
+        if (spiritLastCd <= 0)
+        {
+            spiritCd -= Time.deltaTime;
+            canBeDamaged = true;
+            gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            if (!turnedBack)
+            {
+                transform.position = turningPoint;
+                turnedBack = true;
+                canDestroySpirit = true;
+            }
+        }
+        else
+        {
+            if (turnedBack)
+            {
+                Instantiate(spirit, transform.position, Quaternion.identity);
+                turningPoint = transform.position;
+                turnedBack = false;
+            }
+            gameObject.GetComponent<SpriteRenderer>().material.color = Color.grey;
+            spiritLastCd -= Time.deltaTime;
+            if (spiritLife <= 0)
+            {
+                spiritLastCd = 0;
+            }
         }
     }
 

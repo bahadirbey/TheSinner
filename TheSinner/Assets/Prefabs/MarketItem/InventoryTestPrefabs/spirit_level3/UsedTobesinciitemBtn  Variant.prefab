@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4631365349162987052, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095795663228175177, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1454999661860763047}
+    - target: {fileID: 1095795663228175177, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095795663228175177, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpiritToClick, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1830739976160962576, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -97,7 +113,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8373192813112804548, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
       propertyPath: m_Name
-      value: 'UsedTobesinciitemBtn '
+      value: UsedTobesinciitemBtn  Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+--- !u!114 &1454999661860763047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4631365349162987052, guid: 49687b8c02dc55b4c9fd8bb49caee172, type: 3}
+  m_PrefabInstance: {fileID: 3137645249700062323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9843d08cf3aad43802a8edefc68bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

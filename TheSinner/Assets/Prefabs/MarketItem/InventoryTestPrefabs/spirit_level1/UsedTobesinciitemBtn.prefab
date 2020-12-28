@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4956505918696661222}
   - component: {fileID: 1830739976160962576}
   - component: {fileID: 1095795663228175177}
-  - component: {fileID: 938885873357029381}
+  - component: {fileID: -4631365349162987052}
   m_Layer: 5
-  m_Name: 'UsedTobesinciitemBtn '
+  m_Name: UsedTobesinciitemBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 938885873357029381}
-        m_TargetAssemblyTypeName: StoneToClick, Assembly-CSharp
+      - m_Target: {fileID: -4631365349162987052}
+        m_TargetAssemblyTypeName: SpiritToClick, Assembly-CSharp
         m_MethodName: click
         m_Mode: 1
         m_Arguments:
@@ -132,7 +132,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &938885873357029381
+--- !u!114 &-4631365349162987052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8373192813112804548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db73aa4c0efc6cd41bb301ee0b5784df, type: 3}
+  m_Script: {fileID: 11500000, guid: be9843d08cf3aad43802a8edefc68bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
