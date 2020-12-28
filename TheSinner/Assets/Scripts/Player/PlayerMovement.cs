@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     //General elements Begin
     public static PlayerMovement instance;
     private Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
     public GameObject shield;
     SpriteRenderer sprite;
     //General elements End
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     //Take Damage Begin
     public float currentHealth;
     public float maxHealth;
-    
+
     public bool hittable;
     public static bool blocking;
 
@@ -152,6 +152,10 @@ public class PlayerMovement : MonoBehaviour
     public static bool canDestroySpirit;
     Vector3 turningPoint;
 
+    //reborn stone
+    public static bool canReborn;
+    public bool canCheckReborn;
+
     //STONES END---------------------
 
     //COMPANIONS BEGIN---------------
@@ -179,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
         powerLastCd = -1f;
         color = sprite.color;
         canBeDamaged = true;
+        canCheckReborn = true;
     }
 
     void Update()
@@ -187,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         horizontalMove = Input.GetAxis("Horizontal");
 
@@ -197,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
             if (!blocking)
             {
                 canBlock = true;
-            }           
+            }
             rb.gravityScale = realGravityScale;
         }
 
@@ -214,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Move();
                     Flip();
-                    Jump();  
+                    Jump();
                     Daze();
                 }
                 Roll();
@@ -271,7 +276,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 facingRight = false;
                 transform.eulerAngles = new Vector3(0, 180, 0);
-                companionCD.transform.eulerAngles = new Vector3(0,0,0);
+                companionCD.transform.eulerAngles = new Vector3(0, 0, 0);
             }
             else if (!facingRight && horizontalMove > 0)
             {
@@ -297,7 +302,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 extraJump = false;
             }
-        }     
+        }
     }
 
     void Roll()
@@ -315,28 +320,28 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rollingCoolDown -= Time.deltaTime;
-        }   
+        }
     }
 
     void RollSliding()
     {
-            if (facingRight)
-            {
-                rb.velocity = new Vector2(rollingSpeed, rb.velocity.y);
-            }
-            else
-            {
-                rb.velocity = new Vector2(-rollingSpeed, rb.velocity.y);
-            }
+        if (facingRight)
+        {
+            rb.velocity = new Vector2(rollingSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-rollingSpeed, rb.velocity.y);
+        }
 
-            hittable = false;
-            rollingSpeed -= rollingSpeed * slindingTime;
+        hittable = false;
+        rollingSpeed -= rollingSpeed * slindingTime;
 
-            if (rollingSpeed < endRollingSpeed)
-            {
-                hittable = true;
-                state = State.Normal;
-            }
+        if (rollingSpeed < endRollingSpeed)
+        {
+            hittable = true;
+            state = State.Normal;
+        }
     }
 
     void MeleeAttack()
@@ -350,10 +355,12 @@ public class PlayerMovement : MonoBehaviour
                 if (PlayerPrefs.GetInt("crit3") == 1)
                 {
                     critChance += 30;
-                }else if (PlayerPrefs.GetInt("crit2") == 1)
+                }
+                else if (PlayerPrefs.GetInt("crit2") == 1)
                 {
                     critChance += 20;
-                }else if (PlayerPrefs.GetInt("crit1") == 1)
+                }
+                else if (PlayerPrefs.GetInt("crit1") == 1)
                 {
                     critChance += 10;
                 }
@@ -386,7 +393,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         else
-        { 
+        {
             rb.gravityScale = realGravityScale;
             timeBtwAttack -= Time.deltaTime;
         }
@@ -399,13 +406,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (critChance > 50)
             {
-                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage*2);
+                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage * 2);
             }
             else
             {
                 enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
             }
-            
+
         }
 
         if (facingRight)
@@ -558,8 +565,9 @@ public class PlayerMovement : MonoBehaviour
 
                 daze = true;
                 hittable = false;
-            } 
-        }else if (hittable && canBeDamaged)
+            }
+        }
+        else if (hittable && canBeDamaged)
         {
             stoneKillCounter = 0;
 
@@ -581,7 +589,7 @@ public class PlayerMovement : MonoBehaviour
                 daze = true;
                 hittable = false;
             }
-        }       
+        }
     }
 
     void Daze()
@@ -592,13 +600,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!dazeRight)
                 {
-                    rb.velocity = new Vector2(-speed /2,0);
+                    rb.velocity = new Vector2(-speed / 2, 0);
                 }
                 else
                 {
-                    rb.velocity = new Vector2(speed /2, 0);
+                    rb.velocity = new Vector2(speed / 2, 0);
                 }
-                sprite.color = new Color(.5f,.5f,.5f,1);
+                sprite.color = new Color(.5f, .5f, .5f, 1);
                 dazedTime -= Time.deltaTime;
             }
             else
@@ -613,20 +621,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Death()
     {
-        if(currentHealth <= 0)
-        {
-            if (!dead)
-            {
-                animator.SetTrigger("death");
-                animator.SetBool("dead", true);
-            }
+        animator.SetBool("reborn", false);
 
-            state = State.Death;
-            dead = true;
-            deathPanel.SetActive(true);
-            canFlip = false;
-            rb.velocity = Vector2.zero;
-            rb.gravityScale = 0;
+        if (currentHealth <= 0)
+        {
+            RebornDeath();
+
+            if (!canReborn)
+            {
+                if (!dead)
+                {
+                    animator.SetTrigger("death");
+                    animator.SetBool("dead", true);
+                }
+
+                state = State.Death;
+                dead = true;
+                deathPanel.SetActive(true);
+                canFlip = false;
+                rb.velocity = Vector2.zero;
+                rb.gravityScale = 0;
+            }
+            else
+            {
+                canReborn = false;
+            }
         }
     }
 
@@ -648,19 +667,20 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerPrefs.GetInt("star3") == 1)
         {
             star.SetActive(true);
-            star.GetComponent<Renderer>().material.color = new Color(0,0,0);
+            star.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
             StarDamage.damage = 10;
-           
-        }else if (PlayerPrefs.GetInt("star2") == 1)
+
+        }
+        else if (PlayerPrefs.GetInt("star2") == 1)
         {
             star.SetActive(true);
-            star.GetComponent<Renderer>().material.color = new Color(255,255,255);
+            star.GetComponent<Renderer>().material.color = new Color(255, 255, 255);
             StarDamage.damage = 7;
         }
         else if (PlayerPrefs.GetInt("star1") == 1)
         {
             star.SetActive(true);
-            star.GetComponent<Renderer>().material.color = new Color(255,255,0);
+            star.GetComponent<Renderer>().material.color = new Color(255, 255, 0);
             StarDamage.damage = 4;
         }
         else
@@ -841,6 +861,50 @@ public class PlayerMovement : MonoBehaviour
                 spiritLastCd = 0;
             }
         }
+    }
+
+    public void RebornDeath()
+    {
+        if (PlayerPrefs.GetInt("reborn3") == 1)
+        {
+            if (canCheckReborn)
+            {
+                canReborn = true;
+                canCheckReborn = false;
+            }
+
+            if (canReborn)
+            {
+                currentHealth = maxHealth / 2;
+            }            
+        }
+        else if (PlayerPrefs.GetInt("reborn2") == 1)
+        {
+            if (canCheckReborn)
+            {
+                canReborn = true;
+                canCheckReborn = false;
+            }
+
+            if (canReborn)
+            {
+                currentHealth = maxHealth / 3;
+            }
+        }
+        else if (PlayerPrefs.GetInt("reborn1") == 1)
+        {
+            if (canCheckReborn)
+            {
+                canReborn = true;
+                canCheckReborn = false;
+            }
+
+            if (canReborn)
+            {
+                currentHealth = maxHealth / 4;
+            }
+        }
+        
     }
 
     private void OnDrawGizmosSelected()

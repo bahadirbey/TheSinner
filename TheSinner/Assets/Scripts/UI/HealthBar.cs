@@ -17,10 +17,10 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(slider.value <= slider.minValue)
-        {
-            fillimage.enabled = false;
-        }
+        //if(slider.value <= slider.minValue)
+        //{
+        //    fillimage.enabled = false;
+        //}
         float fillValue = playerr.currentHealth / playerr.maxHealth;
         slider.value = fillValue;
     }

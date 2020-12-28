@@ -1900,6 +1900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea89e9f64dfd624da601cf3fd9e0e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   shield: {fileID: 442128017}
   speed: 6
   groundCheck: {fileID: 1747364455}
@@ -1921,7 +1922,7 @@ MonoBehaviour:
   damage: 10
   maxComboDelay: 0.4
   startAttackTime: 0.4
-  currentHealth: 200
+  currentHealth: 10
   maxHealth: 10
   hittable: 0
   startDazedTime: 0.1
@@ -1935,6 +1936,7 @@ MonoBehaviour:
   star: {fileID: 1783765301}
   healEffect: {fileID: 1298206551861352172, guid: 57b3dd0e2fa293640a491eaacaac877d, type: 3}
   spirit: {fileID: 1605419318957029679, guid: 7dcfc87558e702141b1bee9889d0e5fc, type: 3}
+  canCheckReborn: 0
   companionManager: {fileID: 1260511458}
 --- !u!70 &319200369
 CapsuleCollider2D:
@@ -2144,7 +2146,7 @@ GameObject:
   - component: {fileID: 327438749}
   - component: {fileID: 327438748}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PlayerHealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6857,7 +6859,7 @@ GameObject:
   - component: {fileID: 900277310}
   - component: {fileID: 900277309}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9596,7 +9598,7 @@ GameObject:
   - component: {fileID: 1415120407}
   - component: {fileID: 1415120406}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DeathPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
