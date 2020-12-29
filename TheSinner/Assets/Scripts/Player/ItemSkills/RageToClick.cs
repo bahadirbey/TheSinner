@@ -5,6 +5,12 @@ using UnityEngine;
 public class RageToClick : MonoBehaviour
 {
     public int level;
+    int i;
+
+    private void Start()
+    {
+        i = transform.parent.GetComponent<LoadItemsToClick>().i;
+    }
 
     public void click()
     {
@@ -12,6 +18,7 @@ public class RageToClick : MonoBehaviour
         {
             PlayerMovement.canBeDamaged = false;
 
+            //Skill cd
             if (level == 3)
             {
                 PlayerMovement.rageCd = 8f;
@@ -25,6 +32,23 @@ public class RageToClick : MonoBehaviour
             {
                 PlayerMovement.rageCd = 14f;
                 PlayerMovement.rageLastCd = 6f;
+            }
+
+            //Ability cd apperance
+            if (i == 0)
+            {
+                AbilityCooldowns.cooldown1 = 20;
+                AbilityCooldowns.canActivateAbility1 = true;
+            }
+            else if (i == 1)
+            {
+                AbilityCooldowns.cooldown2 = 20;
+                AbilityCooldowns.canActivateAbility2 = true;
+            }
+            else if (i == 2)
+            {
+                AbilityCooldowns.cooldown3 = 20;
+                AbilityCooldowns.canActivateAbility3 = true;
             }
         }
     }

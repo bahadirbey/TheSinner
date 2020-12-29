@@ -133,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
     public static float powerCd;
     public static float powerLastCd;
     Color color;
+    bool canColorPower;
 
     //heal stone
     public static int stoneKillCounter;
@@ -142,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool canBeDamaged;
     public static float rageLastCd;
     public static float rageCd;
+    bool canColorRage;
 
     //spirit stone
     public static float spiritLastCd;
@@ -151,11 +153,13 @@ public class PlayerMovement : MonoBehaviour
     public GameObject spirit;
     public static bool canDestroySpirit;
     Vector3 turningPoint;
+    bool canColorSpirit;
 
     //reborn stone
     public static bool canReborn;
     public bool canCheckReborn;
 
+    int tempDef;
     //STONES END---------------------
 
     //COMPANIONS BEGIN---------------
@@ -184,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
         color = sprite.color;
         canBeDamaged = true;
         canCheckReborn = true;
+        tempDef = def;
     }
 
     void Update()
@@ -651,7 +656,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetHeal(int heal)
     {
-        Instantiate(healEffect, transform.position, Quaternion.identity);
+        Instantiate(healEffect, new Vector2(transform.position.x + .2f, transform.position.y + 1f), Quaternion.identity);
         if (currentHealth + heal > maxHealth)
         {
             currentHealth = maxHealth;
@@ -694,6 +699,7 @@ public class PlayerMovement : MonoBehaviour
         if (powerLastCd >= 0)
         {
             gameObject.GetComponent<SpriteRenderer>().material.color = Color.yellow;
+            canColorPower = true;
             damage = 20;
 
             if (def > 3)
@@ -709,7 +715,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            if (canColorPower)
+            {
+                gameObject.GetComponent<SpriteRenderer>().material.color = color;
+                canColorPower = false;
+            }
+            damage = 10;
+            def = tempDef;
             powerCd -= Time.deltaTime;
         }
     }
@@ -748,12 +760,17 @@ public class PlayerMovement : MonoBehaviour
         {
             canBeDamaged = true;
             rageCd -= Time.deltaTime;
-            gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            if (canColorRage)
+            {
+                gameObject.GetComponent<SpriteRenderer>().material.color = color;
+                canColorRage = false;
+            }
         }
         else
         {
             rageLastCd -= Time.deltaTime;
             gameObject.GetComponent<SpriteRenderer>().material.color = Color.red;
+            canColorRage = true;
         }
     }
 
@@ -838,7 +855,11 @@ public class PlayerMovement : MonoBehaviour
         {
             spiritCd -= Time.deltaTime;
             canBeDamaged = true;
-            gameObject.GetComponent<SpriteRenderer>().material.color = color;
+            if (canColorSpirit)
+            {
+                gameObject.GetComponent<SpriteRenderer>().material.color = color;
+                canColorSpirit = false;
+            }        
             if (!turnedBack)
             {
                 transform.position = turningPoint;
@@ -854,7 +875,11 @@ public class PlayerMovement : MonoBehaviour
                 turningPoint = transform.position;
                 turnedBack = false;
             }
-            gameObject.GetComponent<SpriteRenderer>().material.color = Color.grey;
+            Color colorSpirit;
+            colorSpirit = color;
+            colorSpirit.a = .6f;
+            gameObject.GetComponent<SpriteRenderer>().material.color = colorSpirit;
+            canColorSpirit = true;
             spiritLastCd -= Time.deltaTime;
             if (spiritLife <= 0)
             {

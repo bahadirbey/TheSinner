@@ -21,7 +21,6 @@ public class EquipandCloseStone : MonoBehaviour
 
     public void Equip()
     {
-        Debug.Log("used");
         Close();
 
         for (int i = 0; i < usedItems.slots.Length; i++)
@@ -36,9 +35,9 @@ public class EquipandCloseStone : MonoBehaviour
                 PlayerPrefs.SetInt("slotUsedTestItem" + i, whichStone);
                 PlayerPrefs.SetInt("inventoryTest" + transform.parent.parent.parent.GetComponent<SlotTest>().i, 0);
 
-                Destroy(item);
                 usedItems.isFull[i] = true;
                 usedItems.sisFull[i] = true;
+                Destroy(item);
                 break; 
             }    
         }

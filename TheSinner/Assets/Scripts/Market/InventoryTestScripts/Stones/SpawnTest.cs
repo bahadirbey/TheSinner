@@ -27,7 +27,6 @@ public class SpawnTest : MonoBehaviour
 
     public void RemoveItem()
     {
-        Debug.Log("removed");
         for (int i = 0; i < inventoryTest.slots.Length; i++)
         {
             if (inventoryTest.isFull[i] == false)
@@ -36,7 +35,19 @@ public class SpawnTest : MonoBehaviour
                 {
                     PlayerPrefs.SetInt(name + level, 0);
                     Instantiate(item, inventoryTest.slots[i].transform, false);
-                    Destroy(useditemtest.sslots[transform.parent.GetComponent<UsedSlotTest>().i].transform.GetChild(0).gameObject);
+                    Destroy(useditemtest.sslots[transform.parent.GetComponent<UsedSlotTest>().i].transform.GetChild(1).gameObject);
+
+                    if (i == 0)
+                    {
+                        AbilityCooldowns.cooldown1 = 0f;
+                    }else if(i == 1)
+                    {
+                        AbilityCooldowns.cooldown2 = 0f;
+                    }
+                    else
+                    {
+                        AbilityCooldowns.cooldown3 = 0f;
+                    }
                 }
 
                 break;
