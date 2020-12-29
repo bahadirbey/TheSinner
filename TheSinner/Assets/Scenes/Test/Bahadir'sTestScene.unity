@@ -2120,7 +2120,7 @@ MonoBehaviour:
   damage: 10
   maxComboDelay: 0.4
   startAttackTime: 0.4
-  currentHealth: 100
+  currentHealth: 10
   maxHealth: 100
   hittable: 0
   startDazedTime: 0.1
@@ -2132,9 +2132,13 @@ MonoBehaviour:
   deathPanel: {fileID: 1415120404}
   barrier: {fileID: 2901148295932309245, guid: 930987f61e91db54085e9494652de892, type: 3}
   star: {fileID: 1783765301}
+  critEffect: {fileID: 344196199170530202, guid: 327dbe260a7367c46a24c6feb9a9f265, type: 3}
   healEffect: {fileID: 1298206551861352172, guid: 57b3dd0e2fa293640a491eaacaac877d, type: 3}
   spirit: {fileID: 8295830043817841027, guid: e0e82325a6b89c14fbd0d5beaf7e7336, type: 3}
   canCheckReborn: 0
+  rebornEffect: {fileID: 5093129207778431609, guid: 4b1363b41d4cb044eadff23195e80336, type: 3}
+  rebornEffect2: {fileID: 8554092237230658185, guid: 3153fc33f10d86b41b7b255f46ba8005, type: 3}
+  rebornEffect3: {fileID: 3358915894243382295, guid: a88f328d7c1699c4fa799af1fa9bbf5f, type: 3}
   companionManager: {fileID: 1260511458}
 --- !u!70 &319200369
 CapsuleCollider2D:
@@ -5781,7 +5785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 868695273483146649, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
       propertyPath: health
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 868695273483146720, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
       propertyPath: m_Name
@@ -5821,7 +5825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 868695273483146725, guid: 26a552b51f58a604699bd10ff5fd1616, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7772,7 +7776,7 @@ Transform:
   m_Children:
   - {fileID: 492671551}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &939549983
 GameObject:
@@ -8253,7 +8257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992472345
 GameObject:
@@ -8437,7 +8441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055320696
 GameObject:

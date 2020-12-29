@@ -128,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
     //crit stone
     public static float critChance;
+    public GameObject critEffect;
 
     //power stone
     public static float powerCd;
@@ -158,6 +159,9 @@ public class PlayerMovement : MonoBehaviour
     //reborn stone
     public static bool canReborn;
     public bool canCheckReborn;
+    public GameObject rebornEffect;
+    public GameObject rebornEffect2;
+    public GameObject rebornEffect3;
 
     int tempDef;
     //STONES END---------------------
@@ -412,6 +416,15 @@ public class PlayerMovement : MonoBehaviour
             if (critChance > 50)
             {
                 enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage * 2);
+                if (facingRight)
+                {
+                    Instantiate(critEffect, new Vector2(attackPos.position.x + .5f, attackPos.position.y + .2f), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(critEffect, new Vector2(attackPos.position.x - .5f, attackPos.position.y + .2f), Quaternion.identity);
+                }
+                
             }
             else
             {
@@ -901,6 +914,8 @@ public class PlayerMovement : MonoBehaviour
             if (canReborn)
             {
                 currentHealth = maxHealth / 2;
+                Instantiate(rebornEffect3, new Vector2(transform.position.x, transform.position.y + .75f), Quaternion.identity);
+                Time.timeScale = 0.1f;
             }            
         }
         else if (PlayerPrefs.GetInt("reborn2") == 1)
@@ -914,6 +929,8 @@ public class PlayerMovement : MonoBehaviour
             if (canReborn)
             {
                 currentHealth = maxHealth / 3;
+                Instantiate(rebornEffect2, new Vector2(transform.position.x, transform.position.y + .75f), Quaternion.identity);
+                Time.timeScale = 0.1f;
             }
         }
         else if (PlayerPrefs.GetInt("reborn1") == 1)
@@ -927,6 +944,8 @@ public class PlayerMovement : MonoBehaviour
             if (canReborn)
             {
                 currentHealth = maxHealth / 4;
+                Instantiate(rebornEffect, new Vector2(transform.position.x, transform.position.y + .75f), Quaternion.identity);
+                Time.timeScale = 0.1f;
             }
         }
         
