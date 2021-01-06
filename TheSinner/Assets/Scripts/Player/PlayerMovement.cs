@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Jump Begin
     bool canJump;
-    bool isGrounded;
+    internal bool isGrounded;
     public Transform groundCheck;
     private float checkRadius;
     public LayerMask whatIsGround;
@@ -193,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
         canBeDamaged = true;
         canCheckReborn = true;
         tempDef = def;
+        turningPoint = transform.position;
     }
 
     void Update()
