@@ -20,6 +20,9 @@ public class MonkManManager : MonoBehaviour
     private GameObject player;
 
     public GameObject ice;
+    public GameObject air;
+    public GameObject fire;
+    public GameObject earth;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -109,13 +112,18 @@ public class MonkManManager : MonoBehaviour
                 } 
             }else if (str == "air")
             {
-                
-            }else if (str == "earth")
+                Instantiate(air, new Vector2(transform.position.x + 2f, transform.position.y + 1f), Quaternion.identity);
+                skillCd = 10f;
+            }
+            else if (str == "earth")
             {
-
-            }else if (str == "fire")
+                Instantiate(earth, transform.position, Quaternion.identity);
+                skillCd = 4f;
+            }
+            else if (str == "fire")
             {
-
+                Instantiate(fire, new Vector2(player.transform.position.x, player.transform.position.y), Quaternion.identity);
+                skillCd = 1f;
             }
         }
         else

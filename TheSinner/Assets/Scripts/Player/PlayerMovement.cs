@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     public bool hittable;
     public static bool blocking;
 
-    bool daze;
+    internal bool daze;
     float dazedTime;
     public float startDazedTime;
     internal static bool dazeRight;
