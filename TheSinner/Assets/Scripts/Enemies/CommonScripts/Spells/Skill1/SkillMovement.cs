@@ -17,6 +17,8 @@ public class SkillMovement : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemy;
 
+    public float angleToMines;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,7 +26,7 @@ public class SkillMovement : MonoBehaviour
         randomY = Random.Range(-1f, 1f);
         target = new Vector2(player.transform.position.x + randomX, player.transform.position.y + .5f + randomY);
         direction = new Vector2(transform.position.x, transform.position.y) - target;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - angleToMines;
         Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, angleAxis, 1);
     }

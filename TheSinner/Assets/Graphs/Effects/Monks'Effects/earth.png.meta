@@ -176,34 +176,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: earth_3
-      rect:
-        serializedVersion: 2
-        x: 1500
-        y: 2096
-        width: 500
-        height: 404
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e031bb67900c9d00800000000000000
-      internalID: 980659469206761698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: earth_4
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2084
         y: 2148
-        width: 500
-        height: 352
+        width: 108
+        height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +200,10 @@ TextureImporter:
       name: earth_5
       rect:
         serializedVersion: 2
-        x: 0
+        x: 98
         y: 1650
-        width: 500
-        height: 350
+        width: 73
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,10 +221,10 @@ TextureImporter:
       name: earth_6
       rect:
         serializedVersion: 2
-        x: 500
+        x: 611
         y: 1650
-        width: 500
-        height: 350
+        width: 47
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +242,10 @@ TextureImporter:
       name: earth_7
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1115
         y: 1650
-        width: 500
-        height: 350
+        width: 43
+        height: 261
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +263,10 @@ TextureImporter:
       name: earth_8
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1618
         y: 1650
-        width: 500
-        height: 350
+        width: 35
+        height: 258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,12 +284,12 @@ TextureImporter:
       name: earth_9
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1500
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2164
+        y: 1764
+        width: 85
+        height: 53
+      alignment: 9
+      pivot: {x: 0.76670784, y: 0.22502856}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,12 +305,12 @@ TextureImporter:
       name: earth_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1000
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 150
+        y: 1265
+        width: 98
+        height: 65
+      alignment: 9
+      pivot: {x: 0.8428798, y: 0.1887132}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -347,12 +326,12 @@ TextureImporter:
       name: earth_11
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1000
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 641
+        y: 1263
+        width: 109
+        height: 82
+      alignment: 9
+      pivot: {x: 0.8370025, y: 0.16662896}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -368,12 +347,12 @@ TextureImporter:
       name: earth_12
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1138
+        y: 1262
+        width: 112
+        height: 87
+      alignment: 9
+      pivot: {x: 0.86045295, y: 0.17068797}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -389,12 +368,12 @@ TextureImporter:
       name: earth_13
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1000
-        width: 500
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1634
+        y: 1264
+        width: 116
+        height: 90
+      alignment: 9
+      pivot: {x: 0.88232, y: 0.10721164}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

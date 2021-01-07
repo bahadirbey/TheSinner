@@ -23,35 +23,61 @@ public class MonkManManager : MonoBehaviour
     public GameObject air;
     public GameObject fire;
     public GameObject earth;
+
+    public GameObject earthPoint;
+
+    public static bool earthActive;
+    public static bool activateUltimate;
+    private TakeDamage takeDamage;
+    bool earthCreated;
+
+    public static bool monkDefeated;
     void Start()
     {
         animator = GetComponent<Animator>();
+        takeDamage = GetComponent<TakeDamage>();
         player = GameObject.FindGameObjectWithTag("Player");
         changeElementCd = startChangeElementCd;
         skillCd = startSkillCd;
     }
 
-    
+
     void Update()
     {
         ChangeElement();
         ArrangeMeditationElement();
+
+        if (takeDamage.currentHealth <= takeDamage.health * 3 / 5)
+        {
+            activateUltimate = true;
+        }else if (takeDamage.currentHealth <= takeDamage.health * 1 / 5)
+        {
+            monkDefeated = true;
+            //Load Scene or detroy all objects
+        }
     }
 
     void ArrangeMeditationElement()
     {
-        if (meditationElement == 0)
+        if (activateUltimate)
+        {
+            str = "ultimate";
+            CheckMeditationChange(str);
+            CreateElementAttack(str);
+        }
+        else if (meditationElement == 0)
         {
             str = "ice";
             CheckMeditationChange(str);
             CreateElementAttack(str);
-        }else if (meditationElement == 1)
+        }
+        else if (meditationElement == 1)
         {
             str = "air";
             CheckMeditationChange(str);
             CreateElementAttack(str);
         }
-        else if(meditationElement == 2)
+        else if (meditationElement == 2)
         {
             str = "earth";
             CheckMeditationChange(str);
@@ -67,7 +93,10 @@ public class MonkManManager : MonoBehaviour
 
     void ChangeElement()
     {
-        if (changeElementCd <= 0)
+        if (activateUltimate)
+        {
+
+        }else if (changeElementCd <= 0)
         {
             checkMeditationChange = true;
             changeElementCd = startChangeElementCd;
@@ -103,27 +132,56 @@ public class MonkManManager : MonoBehaviour
     {
         if (skillCd <= 0)
         {
-            if (str == "ice")
+            if (str == "ultimate")
+            {
+                if (player.GetComponent<PlayerMovement>().isGrounded)
+                {
+                    int random = Random.Range(0,2);
+                    if (random < 1)
+                    {
+                        Instantiate(fire, new Vector2(player.transform.position.x, player.transform.position.y + 1f), Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(ice, new Vector2(player.transform.position.x, player.transform.position.y + .75f), Quaternion.identity);
+                    }
+                    skillCd = 3f;
+                }
+                if (!earthCreated)
+                {
+                    Instantiate(earth, earthPoint.transform.position, Quaternion.identity);
+                    Instantiate(air, new Vector2(transform.position.x + 2f, transform.position.y + 1f), Quaternion.identity);
+                    earthActive = true;
+                    earthCreated = true;
+                }
+            }
+            else if (str == "ice")
             {
                 if (player.GetComponent<PlayerMovement>().isGrounded)
                 {
                     Instantiate(ice, new Vector2(player.transform.position.x, player.transform.position.y + .75f), Quaternion.identity);
-                    skillCd = 3f;
-                } 
-            }else if (str == "air")
+                    skillCd = 10f / 3f;
+                }
+            }
+            else if (str == "air")
             {
                 Instantiate(air, new Vector2(transform.position.x + 2f, transform.position.y + 1f), Quaternion.identity);
                 skillCd = 10f;
             }
             else if (str == "earth")
             {
-                Instantiate(earth, transform.position, Quaternion.identity);
-                skillCd = 4f;
+                earthActive = true;
+                Instantiate(earth, earthPoint.transform.position, Quaternion.identity);
+                skillCd = 10f;
             }
             else if (str == "fire")
             {
-                Instantiate(fire, new Vector2(player.transform.position.x, player.transform.position.y), Quaternion.identity);
-                skillCd = 1f;
+                earthActive = false;
+                if (player.GetComponent<PlayerMovement>().isGrounded)
+                {
+                    Instantiate(fire, new Vector2(player.transform.position.x, player.transform.position.y + 1f), Quaternion.identity);
+                    skillCd = 1f;
+                }
             }
         }
         else
