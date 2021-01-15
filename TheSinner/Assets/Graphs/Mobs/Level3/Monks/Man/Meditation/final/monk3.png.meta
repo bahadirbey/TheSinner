@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 690b25fe1a6a4c3469b051f1a34d08ee
+guid: 699d6bd39bc22f342bcd601e4300a8a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1407640934532902168
-    second: UpAttack_0
+      213: 1288443919833614346
+    second: monk3_0
   - first:
-      213: -8084452742579723493
-    second: UpAttack_1
+      213: 2692354650982182363
+    second: monk3_1
   - first:
-      213: -9083836491040384835
-    second: UpAttack_2
+      213: 8755293243276276177
+    second: monk3_2
   - first:
-      213: 8220671023991184161
-    second: UpAttack_3
+      213: 5521959103020727526
+    second: monk3_3
   - first:
-      213: -2922414782682613923
-    second: UpAttack_4
+      213: -4636265027138192136
+    second: monk3_4
   - first:
-      213: 922511833914035770
-    second: UpAttack_5
+      213: 399001170965748758
+    second: monk3_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -94,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -106,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UpAttack_0
+      name: monk3_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 256
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e21edd270e077ce0800000000000000
-      internalID: -1407640934532902168
+      spriteID: a08c1ba2be871e110800000000000000
+      internalID: 1288443919833614346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpAttack_1
+      name: monk3_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 256
+        x: 336
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b136a1b50114ecf80800000000000000
-      internalID: -8084452742579723493
+      spriteID: bdde9255a4a2d5520800000000000000
+      internalID: 2692354650982182363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpAttack_2
+      name: monk3_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 512
-        height: 256
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db89ec1f6dabfe180800000000000000
-      internalID: -9083836491040384835
+      spriteID: 1d13cd531dc018970800000000000000
+      internalID: 8755293243276276177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpAttack_3
+      name: monk3_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 512
-        height: 256
+        x: 336
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12b5758cdb0b51270800000000000000
-      internalID: 8220671023991184161
+      spriteID: 6ecf8cf2c80f1ac40800000000000000
+      internalID: 5521959103020727526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpAttack_4
+      name: monk3_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d573adf1d3f7177d0800000000000000
-      internalID: -2922414782682613923
+      spriteID: 8fc7cd4958da8afb0800000000000000
+      internalID: -4636265027138192136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpAttack_5
+      name: monk3_5
       rect:
         serializedVersion: 2
-        x: 512
+        x: 336
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e4a8110ab6dcc00800000000000000
-      internalID: 922511833914035770
+      spriteID: 61cd0647379898500800000000000000
+      internalID: 399001170965748758
       vertices: []
       indices: 
       edges: []

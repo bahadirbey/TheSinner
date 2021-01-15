@@ -1,37 +1,25 @@
 fileFormatVersion: 2
-guid: 845e08ad2c117ff4a8ec5c493cf8099a
+guid: 52fceac6dbe6f3442ab8913e64345d51
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2141188580037841102
-    second: Aura_0
+      213: 6136190289181091549
+    second: monk6_0
   - first:
-      213: 2120041081805082778
-    second: Aura_1
+      213: 5470506484455481724
+    second: monk6_1
   - first:
-      213: 7294571028295922015
-    second: Aura_2
+      213: -9157049144542077262
+    second: monk6_2
   - first:
-      213: -4074739354530446202
-    second: Aura_3
+      213: 1192835335937082236
+    second: monk6_3
   - first:
-      213: -1957441268430715084
-    second: Aura_4
+      213: 3044404830092489237
+    second: monk6_4
   - first:
-      213: 1386344854509471645
-    second: Aura_5
-  - first:
-      213: -7419764591993641037
-    second: Aura_6
-  - first:
-      213: 8654538635558515733
-    second: Aura_7
-  - first:
-      213: -7755772896456330151
-    second: Aura_8
-  - first:
-      213: -1302364513852824838
-    second: Aura_9
+      213: -8331315704008287944
+    second: monk6_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -76,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -106,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -118,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -131,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aura_0
+      name: monk6_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
-        width: 512
-        height: 256
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec057464ba707bd10800000000000000
-      internalID: 2141188580037841102
+      spriteID: dd627dc9e80282550800000000000000
+      internalID: 6136190289181091549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura_1
+      name: monk6_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 256
+        x: 336
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,62 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a901a36a126eb6d10800000000000000
-      internalID: 2120041081805082778
+      spriteID: c71a073e9a42beb40800000000000000
+      internalID: 5470506484455481724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f513f62b3b58b3560800000000000000
-      internalID: 7294571028295922015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura_3
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68488ec552e9377c0800000000000000
-      internalID: -4074739354530446202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura_4
+      name: monk6_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 256
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4374f7e8985c5d4e0800000000000000
-      internalID: -1957441268430715084
+      spriteID: 2be56c4b150abe080800000000000000
+      internalID: -9157049144542077262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura_5
+      name: monk6_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 256
+        x: 336
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,62 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d974a3dcc494d3310800000000000000
-      internalID: 1386344854509471645
+      spriteID: c73401a0b6dcd8010800000000000000
+      internalID: 1192835335937082236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b7a2394a63b70990800000000000000
-      internalID: -7419764591993641037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura_7
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 514fb5b09091b1870800000000000000
-      internalID: 8654538635558515733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura_8
+      name: monk6_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9543e1c74a5fd5490800000000000000
-      internalID: -7755772896456330151
+      spriteID: 51275222016ef3a20800000000000000
+      internalID: 3044404830092489237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura_9
+      name: monk6_5
       rect:
         serializedVersion: 2
-        x: 512
+        x: 336
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af26ab7ff521dede0800000000000000
-      internalID: -1302364513852824838
+      spriteID: 839d3f62288316c80800000000000000
+      internalID: -8331315704008287944
       vertices: []
       indices: 
       edges: []

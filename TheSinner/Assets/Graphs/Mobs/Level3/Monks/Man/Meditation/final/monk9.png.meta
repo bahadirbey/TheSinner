@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 6198c9a2923b33d4ea90b6d4d4cef74d
+guid: f456209d8d8e24c4b8d1a6c5ff3fef8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4944230376442633554
-    second: Run_0
+      213: -8886334049476375778
+    second: monk9_0
   - first:
-      213: -2274363484027164459
-    second: Run_1
+      213: -845401258815408668
+    second: monk9_1
   - first:
-      213: 8284087734974297348
-    second: Run_2
+      213: -6642991746165847718
+    second: monk9_2
   - first:
-      213: 5304202850863732263
-    second: Run_3
+      213: -910621417642707327
+    second: monk9_3
   - first:
-      213: 2833043080597125133
-    second: Run_4
+      213: 2834123407411552464
+    second: monk9_4
   - first:
-      213: -2217414122262695004
-    second: Run_5
+      213: 4964557303401822667
+    second: monk9_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -94,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -106,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run_0
+      name: monk9_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d1f8be45f6d9440800000000000000
-      internalID: 4944230376442633554
+      spriteID: e1b808983466da480800000000000000
+      internalID: -8886334049476375778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_1
+      name: monk9_1
       rect:
         serializedVersion: 2
         x: 336
@@ -154,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8e07c1676df60e0800000000000000
-      internalID: -2274363484027164459
+      spriteID: 4e5b3a3c8088444f0800000000000000
+      internalID: -845401258815408668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_2
+      name: monk9_2
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405305b67edf6f270800000000000000
-      internalID: 8284087734974297348
+      spriteID: a59cee3f33a5fc3a0800000000000000
+      internalID: -6642991746165847718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_3
+      name: monk9_3
       rect:
         serializedVersion: 2
         x: 336
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 726d856d3605c9940800000000000000
-      internalID: 5304202850863732263
+      spriteID: 1863b8435a2dc53f0800000000000000
+      internalID: -910621417642707327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_4
+      name: monk9_4
       rect:
         serializedVersion: 2
         x: 0
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d08be54fbadf05720800000000000000
-      internalID: 2833043080597125133
+      spriteID: 0d0a2642934d45720800000000000000
+      internalID: 2834123407411552464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_5
+      name: monk9_5
       rect:
         serializedVersion: 2
         x: 336
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3f89aaa992a31e0800000000000000
-      internalID: -2217414122262695004
+      spriteID: bc936586096a5e440800000000000000
+      internalID: 4964557303401822667
       vertices: []
       indices: 
       edges: []

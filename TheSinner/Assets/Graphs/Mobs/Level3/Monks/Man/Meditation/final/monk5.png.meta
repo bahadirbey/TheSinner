@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 0a6f5fee285de3344b81a20d2149692e
+guid: c336fd4a595b5b942bcb53bd1efa20a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2537882373423050008
-    second: Block_0
+      213: 312936606989809633
+    second: monk5_0
   - first:
-      213: 2189487477073400709
-    second: Block_1
+      213: 5792741041487443068
+    second: monk5_1
   - first:
-      213: -1470946536411257380
-    second: Block_2
+      213: -7652375946894941661
+    second: monk5_2
+  - first:
+      213: 8331736063909442033
+    second: monk5_3
+  - first:
+      213: 226066807186399356
+    second: monk5_4
+  - first:
+      213: 7786813205479363646
+    second: monk5_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -85,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -97,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -110,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block_0
+      name: monk5_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 256
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81d2b95829e583320800000000000000
-      internalID: 2537882373423050008
+      spriteID: 1e7f7d0af26c75400800000000000000
+      internalID: 312936606989809633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_1
+      name: monk5_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 512
-        height: 256
+        x: 336
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +154,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 583502f824f926e10800000000000000
-      internalID: 2189487477073400709
+      spriteID: c747fa53943f36050800000000000000
+      internalID: 5792741041487443068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_2
+      name: monk5_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322659dce9c4dc590800000000000000
+      internalID: -7652375946894941661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk5_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f132a38ec540a370800000000000000
+      internalID: 8331736063909442033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk5_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd5ad952be5269be0800000000000000
-      internalID: -1470946536411257380
+      spriteID: c702ad93096232300800000000000000
+      internalID: 226066807186399356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk5_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e341be4aa51501c60800000000000000
+      internalID: 7786813205479363646
       vertices: []
       indices: 
       edges: []

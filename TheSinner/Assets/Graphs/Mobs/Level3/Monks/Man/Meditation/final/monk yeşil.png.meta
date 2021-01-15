@@ -1,64 +1,67 @@
 fileFormatVersion: 2
-guid: 56b257dec5ec1884b8d5ce555d336031
+guid: 274b1fc60425e4245b1f2f5ef79c2901
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4875550202295362856
-    second: Kick_0
+      213: 7815143434987684044
+    second: "monk ye\u015Fil_0"
   - first:
-      213: 7382034801322492081
-    second: Kick_1
+      213: 8044196952779766039
+    second: "monk ye\u015Fil_1"
   - first:
-      213: 3640076384215072705
-    second: Kick_2
+      213: -4352887158230529090
+    second: "monk ye\u015Fil_2"
   - first:
-      213: -5744143365864270874
-    second: Kick_3
+      213: -3491903344843964168
+    second: "monk ye\u015Fil_3"
   - first:
-      213: -7484144780416948975
-    second: Kick_4
+      213: -4370408755145253728
+    second: "monk ye\u015Fil_4"
   - first:
-      213: -4347578519165869139
-    second: Kick_5
+      213: -1461051093576444899
+    second: "monk ye\u015Fil_5"
   - first:
-      213: -6500147261662118090
-    second: Kick_6
+      213: 5754965957426095077
+    second: "monk ye\u015Fil_6"
   - first:
-      213: -4513392813365026625
-    second: Kick_7
+      213: -1136958427652073802
+    second: "monk ye\u015Fil_7"
   - first:
-      213: 2373574331434663591
-    second: Kick_8
+      213: 6383220379141195302
+    second: "monk ye\u015Fil_8"
   - first:
-      213: -694122209341000648
-    second: Kick_9
+      213: -732542178532883701
+    second: "monk ye\u015Fil_9"
   - first:
-      213: -3130122043592584391
-    second: Kick_10
+      213: -7290408731240973334
+    second: "monk ye\u015Fil_10"
   - first:
-      213: -1184338038214779424
-    second: Kick_11
+      213: -9144753492672648137
+    second: "monk ye\u015Fil_11"
   - first:
-      213: -6278379700893849238
-    second: Kick_12
+      213: 7760658914289229609
+    second: "monk ye\u015Fil_12"
   - first:
-      213: -2329759627579760923
-    second: Kick_13
+      213: -6270330886527280604
+    second: "monk ye\u015Fil_13"
   - first:
-      213: -8731451342485663347
-    second: Kick_14
+      213: 5039008815687552915
+    second: "monk ye\u015Fil_14"
   - first:
-      213: 1758862618882075845
-    second: Kick_15
+      213: 4683196190580108135
+    second: "monk ye\u015Fil_15"
   - first:
-      213: -4739176893017749648
-    second: Kick_16
+      213: -7456055246472518403
+    second: "monk ye\u015Fil_16"
   - first:
-      213: -7587724472594246672
-    second: Kick_17
+      213: -3997967723500541315
+    second: "monk ye\u015Fil_17"
   - first:
-      213: 3925823642134178883
-    second: Kick_18
+      213: -711623274651403243
+    second: "monk ye\u015Fil_18"
+  - first:
+      213: 8497194322101406400
+    second: "monk ye\u015Fil_19"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +106,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +124,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -133,7 +136,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -145,7 +148,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -158,7 +161,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kick_0
+      name: "monk ye\u015Fil_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -172,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8252664c31f69a340800000000000000
-      internalID: 4875550202295362856
+      spriteID: cc0ca273c87f47c60800000000000000
+      internalID: 7815143434987684044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kick_1
+      name: "monk ye\u015Fil_1"
       rect:
         serializedVersion: 2
         x: 336
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b006644a81427660800000000000000
-      internalID: 7382034801322492081
+      spriteID: 719b7b1328ab2af60800000000000000
+      internalID: 8044196952779766039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kick_2
+      name: "monk ye\u015Fil_2"
       rect:
         serializedVersion: 2
         x: 0
@@ -214,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cf7d6c7f26248230800000000000000
-      internalID: 3640076384215072705
+      spriteID: ebb4f4231307793c0800000000000000
+      internalID: -4352887158230529090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kick_3
+      name: "monk ye\u015Fil_3"
       rect:
         serializedVersion: 2
         x: 336
@@ -235,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e35eb2ea04b840b0800000000000000
-      internalID: -5744143365864270874
+      spriteID: 8f0c394a8644a8fc0800000000000000
+      internalID: -3491903344843964168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kick_4
+      name: "monk ye\u015Fil_4"
       rect:
         serializedVersion: 2
         x: 0
@@ -256,14 +259,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11567a399f9f22890800000000000000
-      internalID: -7484144780416948975
+      spriteID: 0ac5f4284603953c0800000000000000
+      internalID: -4370408755145253728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kick_5
+      name: "monk ye\u015Fil_5"
       rect:
         serializedVersion: 2
         x: 336
@@ -277,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da3effb0f5c4aa3c0800000000000000
-      internalID: -4347578519165869139
+      spriteID: d141ea875cd49bbe0800000000000000
+      internalID: -1461051093576444899
       vertices: []
       indices: 
       edges: []

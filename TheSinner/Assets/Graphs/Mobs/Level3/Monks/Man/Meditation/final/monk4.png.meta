@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: ba2dc54b31fe85442957bed345cd0fc0
+guid: 2e71e1aa24896c14ea149a83c682fcc0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3671054838003646960
-    second: MagicAttack_0
+      213: 18313798015592004
+    second: monk4_0
   - first:
-      213: -7641546913801118834
-    second: MagicAttack_1
+      213: 4045974025935119606
+    second: monk4_1
   - first:
-      213: -6684075272500058210
-    second: MagicAttack_2
+      213: 1842796399212599923
+    second: monk4_2
   - first:
-      213: 3737831697838479272
-    second: MagicAttack_3
+      213: 4443728833268893335
+    second: monk4_3
   - first:
-      213: 8511152761047654699
-    second: MagicAttack_4
+      213: -4825376779904754907
+    second: monk4_4
   - first:
-      213: -4355003974756042155
-    second: MagicAttack_5
-  - first:
-      213: 5771088309359966164
-    second: MagicAttack_6
-  - first:
-      213: -2331090224768675222
-    second: MagicAttack_7
-  - first:
-      213: -4488467979960086632
-    second: MagicAttack_8
+      213: 7405897035995204667
+    second: monk4_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -103,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -115,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -128,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagicAttack_0
+      name: monk4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
-        width: 512
-        height: 256
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f1cf22dce432f230800000000000000
-      internalID: 3671054838003646960
+      spriteID: 44625316d40114000800000000000000
+      internalID: 18313798015592004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicAttack_1
+      name: monk4_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 256
+        x: 336
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,62 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8bd66c8195c3f590800000000000000
-      internalID: -7641546913801118834
+      spriteID: 6f4e15aa0ff262830800000000000000
+      internalID: 4045974025935119606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicAttack_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 768
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9769a214f46d33a0800000000000000
-      internalID: -6684075272500058210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagicAttack_3
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a79bd310227fd330800000000000000
-      internalID: 3737831697838479272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagicAttack_4
+      name: monk4_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 256
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b21a4579750bd1670800000000000000
-      internalID: 8511152761047654699
+      spriteID: 37a9f60cf8de29910800000000000000
+      internalID: 1842796399212599923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicAttack_5
+      name: monk4_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 256
+        x: 336
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,62 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55a704175faef83c0800000000000000
-      internalID: -4355003974756042155
+      spriteID: 796472974db4bad30800000000000000
+      internalID: 4443728833268893335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagicAttack_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d77fc6ad36071050800000000000000
-      internalID: 5771088309359966164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagicAttack_7
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 512
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a62174d8acd46afd0800000000000000
-      internalID: -2331090224768675222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagicAttack_8
+      name: monk4_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89f83c43722c5b1c0800000000000000
-      internalID: -4488467979960086632
+      spriteID: 52bdb567261d80db0800000000000000
+      internalID: -4825376779904754907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk4_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ccc99bd1807c660800000000000000
+      internalID: 7405897035995204667
       vertices: []
       indices: 
       edges: []

@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 25acc7d84333a1141900fe13f3fa5f0f
+guid: 4069944b4b068db4291bbe45fe92497c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8127037786863984386
-    second: FallAttack_0
+      213: 4278139451285173792
+    second: monk8_0
   - first:
-      213: 1415131559677925518
-    second: FallAttack_1
+      213: 8501884602871111726
+    second: monk8_1
   - first:
-      213: -3801209485785485118
-    second: FallAttack_2
+      213: -5152010549513839731
+    second: monk8_2
   - first:
-      213: -2726559529674900750
-    second: FallAttack_3
+      213: 7617315203146471750
+    second: monk8_3
   - first:
-      213: 6577536313681504780
-    second: FallAttack_4
+      213: -8386428639751959360
+    second: monk8_4
+  - first:
+      213: -3166906536138699043
+    second: monk8_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -91,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -103,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FallAttack_0
+      name: monk8_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 256
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f543aeec909c070800000000000000
-      internalID: 8127037786863984386
+      spriteID: 026ff651a210f5b30800000000000000
+      internalID: 4278139451285173792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FallAttack_1
+      name: monk8_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 256
+        x: 336
+        y: 480
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e881c05e7ae83a310800000000000000
-      internalID: 1415131559677925518
+      spriteID: e20ee7b5003ccf570800000000000000
+      internalID: 8501884602871111726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FallAttack_2
+      name: monk8_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 512
-        height: 256
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c039e2cc146f3bc0800000000000000
-      internalID: -3801209485785485118
+      spriteID: d8b9925a3b16088b0800000000000000
+      internalID: -5152010549513839731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FallAttack_3
+      name: monk8_3
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 512
-        height: 256
+        x: 336
+        y: 240
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fa75cebd80592ad0800000000000000
-      internalID: -2726559529674900750
+      spriteID: 6495ab9a1d326b960800000000000000
+      internalID: 7617315203146471750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FallAttack_4
+      name: monk8_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 256
+        width: 336
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ae7329d6a184b50800000000000000
-      internalID: 6577536313681504780
+      spriteID: 0cc0c69d59b6d9b80800000000000000
+      internalID: -8386428639751959360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk8_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde079cc843ec04d0800000000000000
+      internalID: -3166906536138699043
       vertices: []
       indices: 
       edges: []

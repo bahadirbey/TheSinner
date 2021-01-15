@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: a1cbc72c13df64b44a9bd6f16d2ce6f7
+guid: 887c23a698afba5409d65ba32bd91aca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2928212667995565158
-    second: Meditation_0
+      213: 5852462324974744721
+    second: monk7_0
   - first:
-      213: 7729673024527935970
-    second: Meditation_1
+      213: 5459261247996093594
+    second: monk7_1
   - first:
-      213: -4967177970727232626
-    second: Meditation_2
+      213: 2114403363918238749
+    second: monk7_2
   - first:
-      213: 6962898747507935087
-    second: Meditation_3
+      213: 3991399330686391820
+    second: monk7_3
   - first:
-      213: -5893875281258705744
-    second: Meditation_4
+      213: -5242894697720113553
+    second: monk7_4
   - first:
-      213: -3518168683485451783
-    second: Meditation_5
+      213: -2292995224976849789
+    second: monk7_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -94,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -106,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meditation_0
+      name: monk7_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a935351c716ec57d0800000000000000
-      internalID: -2928212667995565158
+      spriteID: 194f9751a7f183150800000000000000
+      internalID: 5852462324974744721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meditation_1
+      name: monk7_1
       rect:
         serializedVersion: 2
         x: 336
@@ -154,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e928e889a0554b60800000000000000
-      internalID: 7729673024527935970
+      spriteID: a94ecde3e2133cb40800000000000000
+      internalID: 5459261247996093594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meditation_2
+      name: monk7_2
       rect:
         serializedVersion: 2
         x: 0
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b58aee3f9011bb0800000000000000
-      internalID: -4967177970727232626
+      spriteID: d14dc3a28aed75d10800000000000000
+      internalID: 2114403363918238749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meditation_3
+      name: monk7_3
       rect:
         serializedVersion: 2
         x: 336
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f670934158f21a060800000000000000
-      internalID: 6962898747507935087
+      spriteID: c065b4e3b8c446730800000000000000
+      internalID: 3991399330686391820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meditation_4
+      name: monk7_4
       rect:
         serializedVersion: 2
         x: 0
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc8e16a8afb43ea0800000000000000
-      internalID: -5893875281258705744
+      spriteID: f661d9bec0f7d37b0800000000000000
+      internalID: -5242894697720113553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meditation_5
+      name: monk7_5
       rect:
         serializedVersion: 2
         x: 336
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f922f0f834fc2fc0800000000000000
-      internalID: -3518168683485451783
+      spriteID: 384869fddf4ad20e0800000000000000
+      internalID: -2292995224976849789
       vertices: []
       indices: 
       edges: []

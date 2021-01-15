@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 5405e18ca9e123e4cb1a2f33d519c75a
+guid: c9cf65158fbe3d945b38ed2cb0599eac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1541513601985774774
-    second: Roll_0
+      213: -4657203570002021895
+    second: monk2_0
   - first:
-      213: -7983745396288232634
-    second: Roll_1
+      213: 1746683393241483928
+    second: monk2_1
   - first:
-      213: -7351514667388473569
-    second: Roll_2
+      213: 6699555432700876120
+    second: monk2_2
   - first:
-      213: 5034399978413682347
-    second: Roll_3
+      213: -1514567958629084461
+    second: monk2_3
+  - first:
+      213: 1430348986195607572
+    second: monk2_4
+  - first:
+      213: -7203379894050691785
+    second: monk2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,7 +82,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -88,7 +94,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -100,7 +106,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 4096
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 0
@@ -113,7 +119,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roll_0
+      name: monk2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1395b270a4e5fb0800000000000000
+      internalID: -4657203570002021895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk2_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 480
+        width: 336
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a8b35ba477d3810800000000000000
+      internalID: 1746683393241483928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monk2_2
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b7439db817b9ae0800000000000000
-      internalID: -1541513601985774774
+      spriteID: 8559c279b2a99fc50800000000000000
+      internalID: 6699555432700876120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_1
+      name: monk2_3
       rect:
         serializedVersion: 2
         x: 336
@@ -148,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 643641d9cd9043190800000000000000
-      internalID: -7983745396288232634
+      spriteID: 3d299b5577c2bfae0800000000000000
+      internalID: -1514567958629084461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_2
+      name: monk2_4
       rect:
         serializedVersion: 2
         x: 0
@@ -169,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f6c392c5c2af990800000000000000
-      internalID: -7351514667388473569
+      spriteID: 410870b13de99d310800000000000000
+      internalID: 1430348986195607572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_3
+      name: monk2_5
       rect:
         serializedVersion: 2
         x: 336
@@ -190,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baee4926b18cdd540800000000000000
-      internalID: 5034399978413682347
+      spriteID: 735eae8c624780c90800000000000000
+      internalID: -7203379894050691785
       vertices: []
       indices: 
       edges: []

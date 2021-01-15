@@ -62,7 +62,7 @@ public class MonkManManager : MonoBehaviour
         if (activateUltimate)
         {
             str = "ultimate";
-            CheckMeditationChange(str);
+            animator.SetBool("final", true);
             CreateElementAttack(str);
         }
         else if (meditationElement == 0)
