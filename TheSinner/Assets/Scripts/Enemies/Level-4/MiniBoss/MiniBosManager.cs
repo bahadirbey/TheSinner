@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FavorBrotherManager : MonoBehaviour
+public class MiniBosManager : MonoBehaviour
 {
     public float speed;
     public int damage;
@@ -26,12 +26,14 @@ public class FavorBrotherManager : MonoBehaviour
     public float startMeleeCd;
     float attackCd;
     public float startAttackCd;
-    int hitCounter;
     int attackType;
 
     public GameObject evilDead;
+    bool spelling;
 
-    int attackingType;
+    public GameObject spell;
+    int spellCounter;
+    float spellCountDown;
 
     void Start()
     {
@@ -42,6 +44,7 @@ public class FavorBrotherManager : MonoBehaviour
         canChase = true;
         attackCd = startAttackCd;
         meleeCd = startMeleeCd;
+        spellCountDown = .5f;
     }
 
     void Update()
@@ -51,6 +54,7 @@ public class FavorBrotherManager : MonoBehaviour
         AttackPrep();
         Daze();
         Death();
+        InstantiateSpell();
     }
 
     void Chase()
@@ -88,38 +92,39 @@ public class FavorBrotherManager : MonoBehaviour
 
     public void AttackPrep()
     {
-        if ((attackCd <= 0 || hitCounter > 3) && !attacking)
+        if (attackCd <= 0 && !attacking)
         {
             canChase = false;
             canFace = false;
             attacking = true;
+            takeDamage.hit = false;
+            spelling = true;
             if (attackType == 0)
             {
-                animator.SetTrigger("parry");
-                animator.SetBool("parrying", true);
+                animator.SetTrigger("spell");
+                animator.SetBool("spelling", true);
                 attackType++;
             }
             else if (attackType == 1)
             {
-                animator.SetTrigger("stun");
-                animator.SetBool("stunning", true);
+                animator.SetTrigger("summon");
+                animator.SetBool("summoning", true);
                 attackType--;
             }
-
-            hitCounter = 0;
         }
+
+        else if(takeDamage.hit && !attacking)
+        {
+            animator.SetBool("attacking", true);
+            canChase = false;
+            canFace = false;
+            attacking = true;
+            takeDamage.hit = false;
+        }
+         
         else if (meleeCd <= 0 && !attacking && playerToDamage != null)
         {
-            if (attackingType == 0)
-            {
-                animator.SetBool("attacking", true);
-                attackingType++;
-            }
-            else
-            {
-                animator.SetBool("attacking2", true);
-                attackingType--;
-            }
+            animator.SetBool("attacking", true);
             canChase = false;
             canFace = false;
             attacking = true;
@@ -129,6 +134,10 @@ public class FavorBrotherManager : MonoBehaviour
             canChase = true;
             canFace = true;
             meleeCd -= Time.deltaTime;
+        }
+
+        if (!spelling)
+        {
             attackCd -= Time.deltaTime;
         }
     }
@@ -154,30 +163,53 @@ public class FavorBrotherManager : MonoBehaviour
         canChase = true;
         canFace = true;
         animator.SetBool("attacking", false);
-        animator.SetBool("attacking2", false);
         attacking = false;
         meleeCd = startMeleeCd;
         chaseCd = startChaseCd;
     }
 
-    public void ParryEnd()
+    public void SpellEnd()
     {
-        animator.SetBool("parrying", false);
+        animator.SetBool("spelling", false);
         canFace = true;
         canChase = true;
         attacking = false;
         attackCd = startAttackCd;
         chaseCd = startChaseCd;
+        spelling = false;
+    }
+    
+    public void ResetSpellCounter()
+    {
+        spellCounter = 7;
     }
 
-    public void StunEnd()
+    void InstantiateSpell()
     {
-        animator.SetBool("stunning", false);
+        if (player.GetComponent<PlayerMovement>().isGrounded)
+        {
+            if (spellCounter > 0 && spellCountDown <= 0f)
+            {
+                Instantiate(spell, new Vector2(player.transform.position.x , player.transform.position.y + 2.1f), Quaternion.identity);
+                spellCounter--;
+                spellCountDown = .5f;
+            }
+            else
+            {
+                spellCountDown -= Time.deltaTime;
+            }
+        }
+    }
+
+    public void SummonEnd()
+    {
+        animator.SetBool("summoning", false);
         canFace = true;
         canChase = true;
         attacking = false;
         attackCd = startAttackCd;
         chaseCd = startChaseCd;
+        spelling = false;
     }
 
     void Daze()
