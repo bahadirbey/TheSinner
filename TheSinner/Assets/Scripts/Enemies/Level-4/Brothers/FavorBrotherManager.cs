@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EvilBrotherManager : MonoBehaviour
+public class FavorBrotherManager : MonoBehaviour
 {
     public float speed;
     public int damage;
@@ -30,6 +30,11 @@ public class EvilBrotherManager : MonoBehaviour
     int attackType;
 
     public GameObject evilDead;
+
+    public CapsuleCollider2D collider2D;
+
+    int attackingType;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -102,12 +107,21 @@ public class EvilBrotherManager : MonoBehaviour
                 animator.SetBool("stunning", true);
                 attackType--;
             }
-            
+
             hitCounter = 0;
         }
         else if (meleeCd <= 0 && !attacking && playerToDamage != null)
         {
-            animator.SetBool("attacking", true);
+            if (attackingType == 0)
+            {
+                animator.SetBool("attacking", true);
+                attackingType++;
+            }
+            else
+            {
+                animator.SetBool("attacking2", true);
+                attackingType--;
+            }
             canChase = false;
             canFace = false;
             attacking = true;
@@ -142,6 +156,7 @@ public class EvilBrotherManager : MonoBehaviour
         canChase = true;
         canFace = true;
         animator.SetBool("attacking", false);
+        animator.SetBool("attacking2", false);
         attacking = false;
         meleeCd = startMeleeCd;
         chaseCd = startChaseCd;

@@ -49,6 +49,7 @@ public class PriestManager : MonoBehaviour
         takeDamage = GetComponent<TakeDamage>();
         sprite = GetComponent<SpriteRenderer>();
         canChase = true;
+        canFace = true;
         loopAttack = true;
     }
 
