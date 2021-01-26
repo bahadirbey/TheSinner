@@ -1865,7 +1865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &272108207
 Animator:
   serializedVersion: 3
@@ -10564,7 +10564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1402529191
 Animator:
   serializedVersion: 3
@@ -10709,6 +10709,8 @@ MonoBehaviour:
   startMeleeCd: 2
   startAttackCd: 8
   evilDead: {fileID: 0}
+  stun: {fileID: 2398190274453032650, guid: ca7169ad8309a0d4dac23185417758cd, type: 3}
+  parryBall: {fileID: 3049725885406624422, guid: 4a04027af79ae854f8ddc744c5d865fa, type: 3}
 --- !u!1 &1415120404
 GameObject:
   m_ObjectHideFlags: 0

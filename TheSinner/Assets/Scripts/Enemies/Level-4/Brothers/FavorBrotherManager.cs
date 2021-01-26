@@ -33,6 +33,8 @@ public class FavorBrotherManager : MonoBehaviour
 
     int attackingType;
 
+    public GameObject stun;
+    public GameObject parryBall;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -160,6 +162,11 @@ public class FavorBrotherManager : MonoBehaviour
         chaseCd = startChaseCd;
     }
 
+    public void InstantiateParry()
+    {
+        Instantiate(parryBall, new Vector2(player.transform.position.x + Random.Range(-1,1), transform.position.y), Quaternion.identity);
+    }
+
     public void ParryEnd()
     {
         animator.SetBool("parrying", false);
@@ -168,6 +175,26 @@ public class FavorBrotherManager : MonoBehaviour
         attacking = false;
         attackCd = startAttackCd;
         chaseCd = startChaseCd;
+    }
+
+    public void InstantiateStun()
+    {
+        if (transform.position.x > player.transform.position.x)
+        {
+            DalgaManager.facingRight = false;
+        }
+        else
+        {
+            DalgaManager.facingRight = true;
+        }
+
+        Instantiate(stun, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 2f, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 4f, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 6f, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 8f, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 10f, transform.position.y), Quaternion.identity);
+        Instantiate(stun, new Vector2(transform.position.x + 12f, transform.position.y), Quaternion.identity);
     }
 
     public void StunEnd()
