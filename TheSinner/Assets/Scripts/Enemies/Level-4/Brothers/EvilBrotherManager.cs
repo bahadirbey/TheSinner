@@ -30,6 +30,9 @@ public class EvilBrotherManager : MonoBehaviour
     int attackType;
 
     public GameObject evilDead;
+
+    public GameObject parry;
+    public GameObject laser;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -147,6 +150,11 @@ public class EvilBrotherManager : MonoBehaviour
         chaseCd = startChaseCd;
     }
 
+    public void InstantiateParry()
+    {
+        Instantiate(parry, new Vector2(player.transform.position.x + Random.Range(-1, 1), transform.position.y), Quaternion.identity);
+    }
+
     public void ParryEnd()
     {
         animator.SetBool("parrying", false);
@@ -155,6 +163,16 @@ public class EvilBrotherManager : MonoBehaviour
         attacking = false;
         attackCd = startAttackCd;
         chaseCd = startChaseCd;
+    }
+
+    public void ActivateStun()
+    {
+        laser.SetActive(true);
+    }
+
+    public void DeActivateStun()
+    {
+        laser.SetActive(false);
     }
 
     public void StunEnd()
