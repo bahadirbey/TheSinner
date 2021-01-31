@@ -35,6 +35,9 @@ public class MiniBosManager : MonoBehaviour
     int spellCounter;
     float spellCountDown;
 
+    public GameObject[] spears;
+    int i = 0;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -199,6 +202,12 @@ public class MiniBosManager : MonoBehaviour
                 spellCountDown -= Time.deltaTime;
             }
         }
+    }
+
+    public void SummonAttack()
+    {
+        spears[i].GetComponent<SpearsManager>().canAnimate = true;
+        i++;
     }
 
     public void SummonEnd()

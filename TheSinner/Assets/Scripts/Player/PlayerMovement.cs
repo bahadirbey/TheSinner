@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     public float endRollingSpeed;
     public float slindingTime;
 
-    float rollingCoolDown;
+    internal float rollingCoolDown;
     public float startRollingCoolDown;
     //Roll End
 
