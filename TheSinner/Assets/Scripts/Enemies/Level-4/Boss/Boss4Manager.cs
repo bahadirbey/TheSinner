@@ -243,14 +243,14 @@ public class Boss4Manager : MonoBehaviour
 
     public void SelfDamage()
     {
-        if (playerToDamage != null)
+        if (playerToSelfDamage != null)
         {
             playerToSelfDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
-            if (playerToDamage.transform.position.x > transform.position.x)
+            if (playerToSelfDamage.transform.position.x > transform.position.x)
             {
                 PlayerMovement.dazeRight = true;
             }
-            else if (playerToDamage.transform.position.x < transform.position.x)
+            else if (playerToSelfDamage.transform.position.x < transform.position.x)
             {
                 PlayerMovement.dazeRight = false;
             }
@@ -275,6 +275,7 @@ public class Boss4Manager : MonoBehaviour
 
     public void SummonBackEnd()
     {
+        takeDamage.hit = false;
         animator.SetBool("summonBackBool", false);
         attacking = false;
         canFace = true;
