@@ -16,14 +16,18 @@ public class SpawnCrafting : MonoBehaviour
 
     public void RemoveItem()
     {
+        
         for (int i = 0; i < inventoryTest.slots.Length; i++)
         {
+           
             if (inventoryTest.isFull[i] == false)
             {
-                foreach (Transform child in transform)
-                {
+              
+
+              
+                    
                     Instantiate(item, inventoryTest.slots[i].transform, false);
-                }
+                
 
                 break;
             }

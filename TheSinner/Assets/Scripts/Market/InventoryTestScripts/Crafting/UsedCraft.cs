@@ -31,6 +31,7 @@ public class UsedCraft : MonoBehaviour
             {
                 foreach (Transform child in transform)
                 {
+                    Debug.Log(child.GetComponent<SpawnCrafting>());
                     child.GetComponent<SpawnCrafting>().RemoveItem();
                     Destroy(child.gameObject);
                     inventoryTest.isFull[i] = true;

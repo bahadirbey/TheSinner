@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b8e1ad66dc14144896d280dcc98f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 384923050512353262, guid: 4e4e4a088967f534dbcdfeeeae70f68d, type: 3}
+  itemButton: {fileID: 4786986872498007992, guid: 6acf36fcf9894984e986fd5c7f370cfc, type: 3}
   item: {fileID: 484952734222486126}
   stoneName: comp
   level: 1
