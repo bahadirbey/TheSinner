@@ -134,3 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 484952734222486126, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
   whichStone: 0
+  nextStone: {fileID: 7985913512718924763, guid: 9a2b3f3547da962419d6d63e00b95a7a, type: 3}
+  nextStoneInt: 15

@@ -8,6 +8,8 @@ public class SpawnCrafting : MonoBehaviour
     private InventoryTest inventoryTest;
 
     public int whichStone;
+    public GameObject nextStone;
+    public int nextStoneInt;
 
     void Start()
     {
@@ -16,19 +18,12 @@ public class SpawnCrafting : MonoBehaviour
 
     public void RemoveItem()
     {
-        
+
         for (int i = 0; i < inventoryTest.slots.Length; i++)
         {
-           
             if (inventoryTest.isFull[i] == false)
             {
-              
-
-              
-                    
-                    Instantiate(item, inventoryTest.slots[i].transform, false);
-                
-
+                Instantiate(item, inventoryTest.slots[i].transform, false);
                 break;
             }
         }
