@@ -35,6 +35,18 @@ PrefabInstance:
       propertyPath: whichStone
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 3292307294835875108, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 801309136869540963, guid: b80b2f4f6e89c744c92780d5f42643df, type: 3}
+    - target: {fileID: 3292307294835875108, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 646730529215911045, guid: c8bc39b36cfc03841aaac39bdda5b552, type: 3}
+    - target: {fileID: 3292307294835875108, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5456820595196549428, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: m_Name
       value: altinciitemBtn Variant

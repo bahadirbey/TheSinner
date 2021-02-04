@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3095236182041593363, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 920048357023131259, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920048357023131259, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 3607818901099751496, guid: 6f1f6d878ade50b459b3c2ce61ea0a75, type: 3}
+    - target: {fileID: 920048357023131259, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 5558477388353991099, guid: d955bc06e7e29fe4584ea9326f008f9e, type: 3}
     - target: {fileID: 925723797468861198, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: level
       value: 2

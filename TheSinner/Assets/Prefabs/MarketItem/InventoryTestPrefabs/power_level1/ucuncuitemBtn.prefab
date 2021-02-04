@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 7664834286433119891}
   - component: {fileID: 2233427677234083228}
   - component: {fileID: 4098935936770775357}
+  - component: {fileID: 2748564868665249200}
   m_Layer: 5
   m_Name: Craft
   m_TagString: Untagged
@@ -510,7 +511,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2233427677234083228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2748564868665249200}
+        m_TargetAssemblyTypeName: SelectCraftStone, Assembly-CSharp
+        m_MethodName: Craft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2748564868665249200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344496782257310840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b8e1ad66dc14144896d280dcc98f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 4324555781896938836, guid: 9ad46ddc6ccad7d4090fd6f69bc6989c, type: 3}
+  item: {fileID: 7744042344034919893}
+  stoneName: power
+  level: 1
 --- !u!1 &5615649645542771213
 GameObject:
   m_ObjectHideFlags: 0

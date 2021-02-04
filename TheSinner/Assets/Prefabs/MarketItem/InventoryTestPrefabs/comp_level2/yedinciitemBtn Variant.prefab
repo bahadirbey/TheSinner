@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: yedinciitemBtn Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2187600735799063422, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 581452019032769138, guid: 240179d27c7f87a48a7a344012063d2d, type: 3}
+    - target: {fileID: 2187600735799063422, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 7985913512718924763, guid: 9a2b3f3547da962419d6d63e00b95a7a, type: 3}
+    - target: {fileID: 2187600735799063422, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2199693807175819370, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
       propertyPath: itemButton
       value: 

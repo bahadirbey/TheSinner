@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 3877109817520209798, guid: 3c562cff1400ef447ba23495daf233b7, type: 3}
+    - target: {fileID: 1425728422513184126, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 8073374123849545373, guid: 6c80f298c130cbe499fd793950cd0f4f, type: 3}
+    - target: {fileID: 1425728422513184126, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425728422513184126, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 2883634819031684871, guid: ee5abebe41a6d2546a93943e575c3667, type: 3}
     - target: {fileID: 2766875114693555925, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

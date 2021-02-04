@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 7379124755413457395}
   - component: {fileID: 4669439481643890637}
   - component: {fileID: 6555372418436328598}
+  - component: {fileID: 878191794981770392}
   m_Layer: 5
   m_Name: Craft
   m_TagString: Untagged
@@ -314,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45, y: 80}
-  m_SizeDelta: {x: 74.899994, y: 28.56424}
+  m_AnchoredPosition: {x: 45, y: 118}
+  m_SizeDelta: {x: 74.899994, y: 32.15359}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7379124755413457395
 CanvasRenderer:
@@ -397,7 +398,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4669439481643890637}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 878191794981770392}
+        m_TargetAssemblyTypeName: SelectCraftStone, Assembly-CSharp
+        m_MethodName: Craft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &878191794981770392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3623907164347925517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b8e1ad66dc14144896d280dcc98f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 74697351028247715, guid: 833cda4db8b5bcb4d9beadc80d0acadd, type: 3}
+  item: {fileID: 2646350641056949544}
+  stoneName: def
+  level: 1
 --- !u!1 &3983800242852123836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,8 +1085,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45, y: 118}
-  m_SizeDelta: {x: 74.899994, y: 32.153595}
+  m_AnchoredPosition: {x: 45, y: 80}
+  m_SizeDelta: {x: 74.899994, y: 28.56424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &690186248278264828
 CanvasRenderer:

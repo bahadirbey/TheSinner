@@ -143,5 +143,25 @@ PrefabInstance:
       propertyPath: whichStone
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6663033511350578303, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 6232808282745500097, guid: aa3a8ee527f68b74d89a001a359c872a, type: 3}
+    - target: {fileID: 6663033511350578303, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1913391989637852214, guid: 79363f474155c434db250fee1e3c4f8e, type: 3}
+    - target: {fileID: 6663033511350578303, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547309407421182518, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714480133320707874, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}

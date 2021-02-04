@@ -31,6 +31,18 @@ PrefabInstance:
       propertyPath: whichStone
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2748564868665249200, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 2583316206454614364, guid: 6b4003e5162c1ac49b4ebd40b4e8ef85, type: 3}
+    - target: {fileID: 2748564868665249200, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 6508407899312580212, guid: 293ee1bd57dba914e82256a1f4610877, type: 3}
+    - target: {fileID: 2748564868665249200, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3856538566814446512, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
