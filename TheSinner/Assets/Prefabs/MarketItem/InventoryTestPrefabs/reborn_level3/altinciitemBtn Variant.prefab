@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 8399800398124704015, guid: c450061650820e24c9aa28741a6c7940, type: 3}
+    - target: {fileID: 2231178938486174956, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2883461440111896603, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: level
       value: 3
@@ -34,6 +38,10 @@ PrefabInstance:
     - target: {fileID: 2883461440111896603, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: whichStone
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805700931339300976, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5456820595196549428, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: m_Name

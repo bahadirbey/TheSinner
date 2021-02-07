@@ -67,9 +67,17 @@ PrefabInstance:
       propertyPath: whichStone
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4559280168318298943, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_Name
       value: stoneButton Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827735952344662157, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6859293829304619302, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_LocalPosition.x

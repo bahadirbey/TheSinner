@@ -7,9 +7,11 @@ public class QuitCrafting : MonoBehaviour
     public int[] slots = new int [3];
     private InventoryTest inventoryTest;
     public GameObject[] slotsReal;
+    private GoldScore gold;
 
     void Start()
     {
+        gold = GameObject.FindGameObjectWithTag("Player").GetComponent<GoldScore>();
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
         for (int i = 0; i < 3; i++)
         {
@@ -19,6 +21,7 @@ public class QuitCrafting : MonoBehaviour
 
     public void Quit()
     {
+        gold.notenoughmoney.gameObject.SetActive(false);
         for(int i = 0; i < 3; i++)
         {
             if (slots[i] != -1)

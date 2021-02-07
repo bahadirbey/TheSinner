@@ -1050,6 +1050,7 @@ MonoBehaviour:
   item: {fileID: 1796601869433378955}
   stoneName: rage
   level: 1
+  quitCrafting: {fileID: 0}
 --- !u!1 &8714480133320707874
 GameObject:
   m_ObjectHideFlags: 0

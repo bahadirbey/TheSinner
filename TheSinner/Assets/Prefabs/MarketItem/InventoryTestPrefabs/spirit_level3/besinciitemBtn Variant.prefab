@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 5007621803532996381, guid: 446ecba0b0d41eb44be975c965d65b78, type: 3}
+    - target: {fileID: 882659157207469967, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2766875114693555925, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -122,6 +126,10 @@ PrefabInstance:
     - target: {fileID: 7116637396813790823, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_Name
       value: besinciitemBtn Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165896887156342182, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8377798102092477714, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: level

@@ -51,6 +51,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: sekizinciitemBtn Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3233493136689026840, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623907164347925517, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6748758877506483976, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: m_Sprite
       value: 
