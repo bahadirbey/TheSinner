@@ -811,6 +811,7 @@ MonoBehaviour:
   item: {fileID: 484952734222486126}
   stoneName: comp
   level: 1
+  quitCrafting: {fileID: 0}
 --- !u!1 &5219058447758222529
 GameObject:
   m_ObjectHideFlags: 0
