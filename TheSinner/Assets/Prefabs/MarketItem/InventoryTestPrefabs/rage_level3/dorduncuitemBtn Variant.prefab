@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: whichStone
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 6533367147400677148, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: cost
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 7547309407421182518, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 4198204922202777155, guid: 98fa46b7510978f459b80df543549264, type: 3}
     - target: {fileID: 4063052996228541524, guid: fede1f75908f94c409052f7f14981013, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5593769353080493734, guid: fede1f75908f94c409052f7f14981013, type: 3}
       propertyPath: m_LocalPosition.x
@@ -151,5 +151,9 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 571441896582689106, guid: 6d1aed2a41b6d38438fac6e7bd478a33, type: 3}
+    - target: {fileID: 8902182444116527137, guid: fede1f75908f94c409052f7f14981013, type: 3}
+      propertyPath: cost
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fede1f75908f94c409052f7f14981013, type: 3}

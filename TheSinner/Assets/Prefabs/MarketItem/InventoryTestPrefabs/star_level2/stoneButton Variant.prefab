@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3095236182041593363, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 649468689745870399, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: cost
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 920048357023131259, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: level
       value: 2
@@ -77,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827735952344662157, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6859293829304619302, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_LocalPosition.x

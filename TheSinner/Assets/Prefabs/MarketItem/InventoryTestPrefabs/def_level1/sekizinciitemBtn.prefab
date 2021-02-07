@@ -427,6 +427,7 @@ MonoBehaviour:
   item: {fileID: 2646350641056949544}
   stoneName: def
   level: 1
+  quitCrafting: {fileID: 0}
 --- !u!1 &3983800242852123836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1062,7 @@ GameObject:
   - component: {fileID: 690186248278264828}
   - component: {fileID: 1339720239780610665}
   - component: {fileID: 1692910275517412949}
+  - component: {fileID: 6898329010200682105}
   m_Layer: 5
   m_Name: Sell
   m_TagString: Untagged
@@ -1168,4 +1170,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1339720239780610665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6898329010200682105}
+        m_TargetAssemblyTypeName: SellStone, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6898329010200682105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140788470346497580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3fccbddbde8454faf7710361f3eae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 30

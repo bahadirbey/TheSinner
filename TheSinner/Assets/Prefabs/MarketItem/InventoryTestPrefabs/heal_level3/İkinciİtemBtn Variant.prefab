@@ -19,6 +19,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8561867772653663074, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 3739836656370231487, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: cost
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957104518070735488, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459197668242576238, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4473929985827127256, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: level
       value: 3
@@ -146,6 +158,10 @@ PrefabInstance:
     - target: {fileID: 6135332144292648740, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: whichStone
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272115289125621098, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}

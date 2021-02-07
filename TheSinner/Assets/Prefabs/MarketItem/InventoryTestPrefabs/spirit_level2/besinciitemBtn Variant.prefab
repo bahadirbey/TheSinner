@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2847280154636419470, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: cost
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2884343278783327973, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_Sprite
       value: 

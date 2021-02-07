@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3233493136689026840, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3623907164347925517, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: m_IsActive
@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6014385540395432514, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 6898329010200682105, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: cost
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 7081235262741996589, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: itemButton
       value: 

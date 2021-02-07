@@ -11,7 +11,7 @@ public class GoldScore : MonoBehaviour
 
     private void Start()
     {
-        gold = 0;
+        gold = 200;
         notenoughmoney.gameObject.SetActive(false);
     }
 

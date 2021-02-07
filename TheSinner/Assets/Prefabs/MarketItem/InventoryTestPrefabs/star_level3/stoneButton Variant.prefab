@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3701979492401685928, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 649468689745870399, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: cost
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 925723797468861198, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: level
       value: 3

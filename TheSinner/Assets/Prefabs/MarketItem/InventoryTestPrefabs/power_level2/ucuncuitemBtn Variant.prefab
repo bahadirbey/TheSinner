@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: whichStone
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7737688276331601326, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: cost
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7744042344034919893, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_Name
       value: ucuncuitemBtn Variant

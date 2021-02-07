@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3757351184778072865, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 8879549554393500771, guid: d6aa7d5dae1d6374f85190fc40812ec6, type: 3}
+      propertyPath: cost
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8907658919182650262, guid: d6aa7d5dae1d6374f85190fc40812ec6, type: 3}
       propertyPath: itemButton
       value: 
