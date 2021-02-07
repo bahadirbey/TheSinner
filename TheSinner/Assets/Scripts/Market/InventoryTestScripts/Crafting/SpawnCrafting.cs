@@ -11,21 +11,17 @@ public class SpawnCrafting : MonoBehaviour
     public GameObject nextStone;
     public int nextStoneInt;
 
+    public QuitCrafting quitCrafting;
+
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
+        quitCrafting = GameObject.FindGameObjectWithTag("BackButton").GetComponent<QuitCrafting>();
     }
 
     public void RemoveItem()
     {
-
-        for (int i = 0; i < inventoryTest.slots.Length; i++)
-        {
-            if (inventoryTest.isFull[i] == false)
-            {
-                Instantiate(item, inventoryTest.slots[i].transform, false);
-                break;
-            }
-        }
+        Instantiate(item, inventoryTest.slots[quitCrafting.slots[transform.parent.GetComponent<UsedCraft>().i]].transform, false);
+        quitCrafting.slots[transform.parent.GetComponent<UsedCraft>().i] = -1;
     }
 }

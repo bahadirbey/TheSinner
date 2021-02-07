@@ -18,6 +18,7 @@ TagManager:
   - SmokePoint1
   - SmokePoint2
   - SmokePoint3
+  - BackButton
   layers:
   - Default
   - TransparentFX
