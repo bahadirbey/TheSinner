@@ -9,6 +9,7 @@ public class PickUpTest : MonoBehaviour
 
     public int whichStone;
 
+    public bool canPickUp;
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
@@ -32,7 +33,7 @@ public class PickUpTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && canPickUp)
         {
             PickUp();
         }
@@ -40,7 +41,7 @@ public class PickUpTest : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && canPickUp)
         {
             PickUp();
         }
