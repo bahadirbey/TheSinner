@@ -16,6 +16,7 @@ public class StoneMovement : MonoBehaviour
 
     void Start()
     {
+        canJump = true;
         jumpCounter = 7;
         checkRadius = .1f;
     }

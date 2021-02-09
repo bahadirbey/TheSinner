@@ -20,7 +20,6 @@ public class EquipAndCloseCompanion : MonoBehaviour
 
     public void Equip()
     {
-        Debug.Log("used");
         Close();
 
         for (int i = 0; i < usedItems.cslots.Length; i++)

@@ -10,6 +10,7 @@ public class PickUpTest : MonoBehaviour
     public int whichStone;
 
     public bool canPickUp;
+
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();

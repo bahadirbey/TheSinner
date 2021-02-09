@@ -15,7 +15,6 @@ public class CompanionItem : MonoBehaviour
 
     public void Use()
     {
-        Debug.Log("used");
         info1.gameObject.SetActive(true);
 
         /*for (int i = 0; i < usedItems.slots.Length; i++)
