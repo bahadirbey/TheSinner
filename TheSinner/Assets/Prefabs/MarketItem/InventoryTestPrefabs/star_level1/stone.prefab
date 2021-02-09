@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 6317127183613913838, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
   whichStone: 0
+  canPickUp: 1
 --- !u!58 &4065270973257766273
 CircleCollider2D:
   m_ObjectHideFlags: 0

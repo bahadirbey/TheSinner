@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1581776036221471475, guid: 665e615a19e7833438fed9bed39c6c3c, type: 3}
       propertyPath: m_Name
-      value: FourthPrefab
+      value: FourthPrefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2454643919363775695, guid: 665e615a19e7833438fed9bed39c6c3c, type: 3}
       propertyPath: m_Sprite
@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: 665e615a19e7833438fed9bed39c6c3c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: 665e615a19e7833438fed9bed39c6c3c, type: 3}
       propertyPath: m_SizeDelta.y

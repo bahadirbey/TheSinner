@@ -114,3 +114,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1581776036221471475, guid: efd1622210261af42927aa13f32c898b, type: 3}
   whichCompanion: 0
+  canPickUp: 1

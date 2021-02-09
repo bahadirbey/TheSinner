@@ -8,6 +8,8 @@ public class ComponionPickUp : MonoBehaviour
     public GameObject itemButton;
 
     public int whichCompanion;
+
+    public bool canPickUp;
     void Start()
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
@@ -31,7 +33,15 @@ public class ComponionPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && canPickUp)
+        {
+            PickUp();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && canPickUp)
         {
             PickUp();
         }

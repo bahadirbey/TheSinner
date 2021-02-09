@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4723107735738678597, guid: 7416c6b1584a02144b0d69a510d41a11, type: 3}
+    - target: {fileID: 4063538936232783123, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companionButton
       value: 
@@ -93,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_SizeDelta.y

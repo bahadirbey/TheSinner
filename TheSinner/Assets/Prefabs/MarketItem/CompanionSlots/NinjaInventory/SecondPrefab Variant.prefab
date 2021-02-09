@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Maskable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4063538936232783123, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companionName
       value: ninja

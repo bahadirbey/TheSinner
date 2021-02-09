@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 484952734222486126, guid: 8b8fdca74a3be8a4da31f7cb34d49a40, type: 3}
   whichStone: 6
+  canPickUp: 1
 --- !u!114 &8879549554393500771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05dfee58b50b747a98bea55923cc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 0
+  notenoughmoney: {fileID: 0}
+  pickUpTest: {fileID: 0}
+  infos: {fileID: 0}

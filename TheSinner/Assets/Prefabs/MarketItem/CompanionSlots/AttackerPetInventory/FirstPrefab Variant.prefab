@@ -83,5 +83,9 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 2076314975186393657, guid: 234f48279aea3f049909827dd3dca820, type: 3}
+    - target: {fileID: 2952053984021864807, guid: 7c7b58429cd20af4d9fc730007709ace, type: 3}
+      propertyPath: canPickUp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c7b58429cd20af4d9fc730007709ace, type: 3}
