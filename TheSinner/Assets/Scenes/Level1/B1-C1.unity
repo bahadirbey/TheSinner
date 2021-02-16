@@ -4543,7 +4543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ff1c5b2ba3e5244bab73310321916a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerr: {fileID: 0}
+  playerr: {fileID: 1015538749}
   fillimage: {fileID: 460652182}
 --- !u!114 &286388798
 MonoBehaviour:
@@ -12639,8 +12639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7c73370541d5c438abfde7ec9f8f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldview: {fileID: 0}
-  notenoughmoney: {fileID: 0}
+  goldview: {fileID: 2066741807}
+  notenoughmoney: {fileID: 195076425}
 --- !u!114 &1015538746
 MonoBehaviour:
   m_ObjectHideFlags: 0
