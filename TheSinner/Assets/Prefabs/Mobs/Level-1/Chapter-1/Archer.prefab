@@ -155,10 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 30
   bar: {fileID: 5932980031757723681}
   healthBar: {fileID: 5932980032442197220}
   startDazedTime: 0.5
+  defence: 0
 --- !u!114 &2994618354797051629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,13 +189,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRangeX: 20
   attackRangeY: 7
-  startReadyAttackTime: 3
+  startReadyAttackTime: 1.5
   arrow: {fileID: 2794281208851113109, guid: b8d79c850b8c3ad4fb50d038646e734f, type: 3}
   attackPos: {fileID: 2994618355622955474}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 10
+  damage: 5
 --- !u!1 &2994618354802982742
 GameObject:
   m_ObjectHideFlags: 0
