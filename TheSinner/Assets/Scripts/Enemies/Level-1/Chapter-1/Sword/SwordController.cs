@@ -37,7 +37,15 @@ public class SwordController : MonoBehaviour
 
     void Animate()
     {
-        animator.SetBool("walking", patrol.patrolMovement);
+        if (patrol.patrolMovement || meleeAttack.canChase)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
+       
     }
 
     void Daze()

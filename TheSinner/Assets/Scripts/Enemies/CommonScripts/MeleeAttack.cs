@@ -22,7 +22,7 @@ public class MeleeAttack : MonoBehaviour
 
     public int damage;
 
-    bool canChase;
+    internal bool canChase;
     Collider2D playerToChase;
     public LayerMask whatIsToChase;
 
@@ -119,6 +119,11 @@ public class MeleeAttack : MonoBehaviour
             else if (playerToChase.transform.position.x > transform.position.x)
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
+            if (playerToDamage == null)
+            {
+                canChase = true;
             }
         }
 
