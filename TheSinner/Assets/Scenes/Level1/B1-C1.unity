@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 3
-  saveSystem: {fileID: 0}
+  saveSystem: {fileID: 810703828}
 --- !u!114 &102932456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10477,6 +10477,8 @@ MonoBehaviour:
   - {fileID: 16512157191103476, guid: 3e2a2faff635c4540b372076f2f63fd5, type: 3}
   - {fileID: 4120555521612501675, guid: a0d1bbda44bce3c4c9793d4fcc6157fe, type: 3}
   - {fileID: 2271047134590344865, guid: 1874a7a873cece544be162afedb5a7cf, type: 3}
+  marketStones: []
+  marketCompanions: []
 --- !u!4 &810703829
 Transform:
   m_ObjectHideFlags: 0
@@ -11895,7 +11897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 2
-  saveSystem: {fileID: 0}
+  saveSystem: {fileID: 810703828}
 --- !u!114 &940525950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14503,7 +14505,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.007936537, y: 0.007936537, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -55598,7 +55600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 0
-  saveSystem: {fileID: 0}
+  saveSystem: {fileID: 810703828}
 --- !u!114 &1279767518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58079,7 +58081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 1
-  saveSystem: {fileID: 0}
+  saveSystem: {fileID: 810703828}
 --- !u!114 &1579379935
 MonoBehaviour:
   m_ObjectHideFlags: 0

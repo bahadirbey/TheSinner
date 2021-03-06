@@ -11,4 +11,7 @@ public class SaveSystem : MonoBehaviour
     public GameObject[] slotCompanions;
     public GameObject[] usedSlotCompanions;
     public GameObject[] sUsedSlotCompanions;
+
+    public GameObject[] marketStones;
+    public GameObject[] marketCompanions;
 }
