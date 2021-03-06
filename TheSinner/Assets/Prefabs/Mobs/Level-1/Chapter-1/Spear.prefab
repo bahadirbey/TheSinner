@@ -347,7 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRangeX: 1.5
   attackRangeY: 1
-  chaseRangeX: 8
+  chaseRangeX: 14
   chaseRangeY: 2
   chasingPoint: {fileID: 3711552980748470497}
   startReadyAttackTime: 1.25
@@ -355,7 +355,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 8
+  damage: 7
   whatIsToChase:
     serializedVersion: 2
     m_Bits: 2048
@@ -391,6 +391,7 @@ MonoBehaviour:
   healthBar: {fileID: 5213828775532966034}
   startDazedTime: 0.5
   defence: 0
+  price: 12
 --- !u!114 &3711552980748470492
 MonoBehaviour:
   m_ObjectHideFlags: 0

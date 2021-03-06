@@ -170,6 +170,8 @@ MonoBehaviour:
   bar: {fileID: 7146756801440810691}
   healthBar: {fileID: 7146756801821198854}
   startDazedTime: 0.5
+  defence: 0
+  price: 200
 --- !u!114 &1798986920365769703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +195,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 10
+  damage: 13
   redHoodDead: {fileID: 1798986920912443052}
   arrow: {fileID: 2794281208851113109, guid: b8d79c850b8c3ad4fb50d038646e734f, type: 3}
 --- !u!1 &1798986920912443052

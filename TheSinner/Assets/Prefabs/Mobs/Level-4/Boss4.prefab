@@ -172,6 +172,7 @@ MonoBehaviour:
   healthBar: {fileID: 2418655359773094611}
   startDazedTime: 0
   defence: 0
+  price: 1000
 --- !u!1 &6505980025334667701
 GameObject:
   m_ObjectHideFlags: 0

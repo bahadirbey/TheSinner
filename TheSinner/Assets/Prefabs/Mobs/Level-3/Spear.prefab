@@ -186,13 +186,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRangeX: 20
   attackRangeY: 10
-  startReadyAttackTime: 2
+  startReadyAttackTime: 1.25
   arrow: {fileID: 424108926992055026, guid: 08e14494de1ab4a408fc95f487d8652b, type: 3}
   attackPos: {fileID: 5947041024386245313}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 10
+  damage: 7
 --- !u!114 &5947041025460874297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   healthBar: {fileID: 2977172017721536212}
   startDazedTime: 0.5
   defence: 0
+  price: 38
 --- !u!70 &5947041025460874294
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

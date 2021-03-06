@@ -168,11 +168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 40
   bar: {fileID: 5184142647938879761}
   healthBar: {fileID: 5184142648588230100}
   startDazedTime: 0.5
   defence: 0
+  price: 17
 --- !u!114 &4334976484516255881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,15 +201,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94f37443a31cb0459bc20d71fcd715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRangeX: 15
-  attackRangeY: 5
-  startReadyAttackTime: 2
+  attackRangeX: 20
+  attackRangeY: 6
+  startReadyAttackTime: 1.5
   spell: {fileID: 8838190169322704602, guid: 32bab6d3bb338dd4bad5455a635e9493, type: 3}
   attackPos: {fileID: 4334976485166606997}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 5
+  damage: 4
 --- !u!1 &4334976485166606996
 GameObject:
   m_ObjectHideFlags: 0

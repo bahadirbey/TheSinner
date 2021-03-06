@@ -303,6 +303,7 @@ MonoBehaviour:
   healthBar: {fileID: 2790439064693437521}
   startDazedTime: 0.5
   defence: 0
+  price: 60
 --- !u!114 &6728529487178475807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +320,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 10
+  damage: 12
   attackPos: {fileID: 6728529486550457418}
 --- !u!58 &6728529487178475799
 CircleCollider2D:

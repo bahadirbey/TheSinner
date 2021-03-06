@@ -23,6 +23,8 @@ public class TakeDamage : MonoBehaviour
 
     public float defence;
 
+    public int price;
+
     void Start()
     {
         startBarHidingTime = 2f;
@@ -72,11 +74,11 @@ public class TakeDamage : MonoBehaviour
 
     public void Destroyed()
     {
-        int goldEarned = Random.Range(8, 12);
         dead = true;
         PlayerMovement.killCounter += 1;
         PlayerMovement.stoneKillCounter += 1;
-        GoldScore.gold += goldEarned;
+        GoldScore.gold += price;
+        PlayerPrefs.SetInt("Gold", GoldScore.gold);
     }
 
     void ShowHealthBar()

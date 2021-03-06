@@ -432,6 +432,7 @@ MonoBehaviour:
   healthBar: {fileID: 5875328350327042440}
   startDazedTime: 0.5
   defence: 0
+  price: 44
 --- !u!114 &5875328350073390846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +485,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 15
+  damage: 12
   whatIsToChase:
     serializedVersion: 2
     m_Bits: 2048

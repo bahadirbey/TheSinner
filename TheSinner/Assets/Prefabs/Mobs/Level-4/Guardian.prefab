@@ -219,7 +219,7 @@ MonoBehaviour:
   chaseRangeX: 20
   chaseRangeY: 2
   chasingPoint: {fileID: 2288957928848399782}
-  startReadyAttackTime: 2
+  startReadyAttackTime: 1.25
   attackPos: {fileID: 2288957928746867416}
   whatIsEnemies:
     serializedVersion: 2
@@ -275,6 +275,7 @@ MonoBehaviour:
   healthBar: {fileID: 7213969985582047521}
   startDazedTime: 0.5
   defence: 2
+  price: 110
 --- !u!70 &2288957928848399807
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

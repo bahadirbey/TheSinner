@@ -625,11 +625,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 60
   bar: {fileID: 6842391932472622753}
   healthBar: {fileID: 6842391932472622752}
   startDazedTime: 0.5
   defence: 3
+  price: 16
 --- !u!114 &6842391932781085460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRangeX: 1
   attackRangeY: 1.25
-  chaseRangeX: 20
+  chaseRangeX: 14
   chaseRangeY: 2
   chasingPoint: {fileID: 6842391932781085457}
   startReadyAttackTime: 1
@@ -667,7 +668,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 10
+  damage: 5
   whatIsToChase:
     serializedVersion: 2
     m_Bits: 2048

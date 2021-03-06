@@ -291,7 +291,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 20
+  damage: 12
   whatIsToChase:
     serializedVersion: 2
     m_Bits: 2048
@@ -314,6 +314,7 @@ MonoBehaviour:
   healthBar: {fileID: 1456564724482629266}
   startDazedTime: 0.5
   defence: 0
+  price: 32
 --- !u!1001 &8065922222747036692
 PrefabInstance:
   m_ObjectHideFlags: 0

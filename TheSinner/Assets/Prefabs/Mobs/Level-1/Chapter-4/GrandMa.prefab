@@ -1405,6 +1405,8 @@ MonoBehaviour:
   bar: {fileID: 3252107129924423516}
   healthBar: {fileID: 3252107130349372313}
   startDazedTime: 0.5
+  defence: 0
+  price: 200
 --- !u!114 &6267012134095184113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,6 +1434,7 @@ MonoBehaviour:
   laserAnimation: {fileID: 6267012132972618470}
   destroyEffect: {fileID: 8652187044171822283, guid: 7c83cfa76aabfdd4abccf3576201d4eb, type: 3}
   spawnEffect: {fileID: 1218988517132401088, guid: 713ae822208255847b791930751b1466, type: 3}
+  grandmaDead: {fileID: 0}
 --- !u!1001 &6267012134100513055
 PrefabInstance:
   m_ObjectHideFlags: 0

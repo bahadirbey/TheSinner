@@ -11,6 +11,7 @@ public class SellCompanionControl : MonoBehaviour
     void Start()
     {
         marketNum = PlayerPrefs.GetInt("marketNum");
+        PlayerPrefs.SetInt("NewInMarket" + marketNum, 0);
 
         if (PlayerPrefs.GetInt("NewInMarket" + marketNum) == 0)
         {
@@ -27,15 +28,24 @@ public class SellCompanionControl : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (transform.childCount == 0)
+        {
+            PlayerPrefs.SetInt("CanSellCompanion", 1);
+        }
+    }
+
     public void RefreshCompanion()
     {
         if (transform.childCount > 0)
         {
             Destroy(transform.GetChild(0).gameObject);
         }
-        randomNum = Random.Range(0, 7);
+        randomNum = Random.Range(0, 8);
         Instantiate(saveSystem.marketCompanions[randomNum], transform.position, Quaternion.identity, transform);
         PlayerPrefs.SetInt("SellCompanion", randomNum);
         PlayerPrefs.SetInt("refreshMarket", 0);
+        PlayerPrefs.SetInt("CanSellCompanion", 0);
     }
 }

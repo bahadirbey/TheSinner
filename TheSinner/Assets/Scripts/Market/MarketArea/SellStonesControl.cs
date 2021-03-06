@@ -22,7 +22,18 @@ public class SellStonesControl : MonoBehaviour
         }
         else
         {
-            Instantiate(saveSystem.marketStones[PlayerPrefs.GetInt("SellStone" + i)], transform.position, Quaternion.identity, transform);  
+            if (PlayerPrefs.GetInt("CanSellStone" + i) == 0)
+            {
+                Instantiate(saveSystem.marketStones[PlayerPrefs.GetInt("SellStone" + i)], transform.position, Quaternion.identity, transform);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (transform.childCount == 0)
+        {
+            PlayerPrefs.SetInt("CanSellStone" + i, 1);
         }
     }
 
@@ -32,9 +43,10 @@ public class SellStonesControl : MonoBehaviour
         {
             Destroy(transform.GetChild(0).gameObject);
         }
-        randomNum = Random.Range(0, 7);
+        randomNum = Random.Range(0, 8);
         Instantiate(saveSystem.marketStones[randomNum], transform.position, Quaternion.identity, transform);
         PlayerPrefs.SetInt("SellStone" + i, randomNum);
         PlayerPrefs.SetInt("refreshMarket", 0);
+        PlayerPrefs.SetInt("CanSellStone" + i, 0);
     }
 }

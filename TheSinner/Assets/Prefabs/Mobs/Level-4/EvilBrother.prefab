@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  damage: 7
+  damage: 20
   attackPos: {fileID: 4833960875406397085}
   whatIsPlayer:
     serializedVersion: 2
@@ -324,6 +324,7 @@ MonoBehaviour:
   healthBar: {fileID: 4092793146912152760}
   startDazedTime: 0.5
   defence: 3
+  price: 500
 --- !u!70 &4833960877203863668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

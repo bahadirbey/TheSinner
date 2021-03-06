@@ -300,11 +300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 20
   bar: {fileID: 4032405078974274977}
   healthBar: {fileID: 4032405079665037668}
   startDazedTime: 0.5
   defence: 0
+  price: 20
 --- !u!114 &5488994518908942862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,9 +333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519b76ef6f9e26546a86762007cc383b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRangeX: 15
+  attackRangeX: 20
   attackRangeY: 7
-  startReadyAttackTime: 2
+  startReadyAttackTime: 1
   arrow: {fileID: 2794281208851113109, guid: b8d79c850b8c3ad4fb50d038646e734f, type: 3}
   attackPos: {fileID: 5488994519477234447}
   whatIsEnemies:

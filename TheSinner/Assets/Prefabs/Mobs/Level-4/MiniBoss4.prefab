@@ -167,11 +167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 600
   bar: {fileID: 4637116224134093491}
   healthBar: {fileID: 4637116223449126518}
   startDazedTime: 0.5
   defence: 5
+  price: 750
 --- !u!1 &4288395257099630822
 GameObject:
   m_ObjectHideFlags: 0

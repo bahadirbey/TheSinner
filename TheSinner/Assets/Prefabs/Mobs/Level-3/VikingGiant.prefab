@@ -175,12 +175,12 @@ MonoBehaviour:
   chaseRangeX: 20
   chaseRangeY: 2
   chasingPoint: {fileID: 3219505512179468649}
-  startReadyAttackTime: 1
+  startReadyAttackTime: 1.5
   attackPos: {fileID: 3219505512744410367}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 20
+  damage: 16
   whatIsToChase:
     serializedVersion: 2
     m_Bits: 2048
@@ -226,11 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
+  health: 100
   bar: {fileID: 6301894137141293196}
   healthBar: {fileID: 6301894136751995977}
   startDazedTime: 0.5
   defence: 2
+  price: 80
 --- !u!1 &3219505512548086020
 GameObject:
   m_ObjectHideFlags: 0

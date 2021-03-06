@@ -207,7 +207,10 @@ public class MiniBosManager : MonoBehaviour
     public void SummonAttack()
     {
         spears[i].GetComponent<SpearsManager>().canAnimate = true;
-        i++;
+        if (i < spears.Length)
+        {
+            i++;
+        }
     }
 
     public void SummonEnd()
