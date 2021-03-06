@@ -16,7 +16,7 @@ public class SpellTrap : MonoBehaviour
     float dirY;
     public int lenght;
     float angleBetween;
-    public int angleDiff;
+    public float angleDiff;
 
     bool activated;
 

@@ -83,13 +83,14 @@ public class Boss4Manager : MonoBehaviour
 
         if (playerToDamage == null && canChase && !attacking)
         {
-            if (chaseCd <= 0)
+            if (chaseCd <= 0 && Mathf.Abs(player.transform.position.x - transform.position.x) > .2f)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
                 animator.SetBool("walking", true);
             }
             else
             {
+                animator.SetBool("walking", false);
                 chaseCd -= Time.deltaTime;
             }
         }
@@ -153,7 +154,7 @@ public class Boss4Manager : MonoBehaviour
 
     public void FireBulletForever()
     {  
-        if (canFire == 2 && canFireBullet && ! attacking)
+        if (canFire == 2 && canFireBullet && !attacking)
         {
             animator.SetTrigger("fireBulletForever");
             animator.SetBool("fireBulletForeverBool", true);
@@ -191,7 +192,7 @@ public class Boss4Manager : MonoBehaviour
 
     void Fire()
     {
-        if (fireCd <= 0)
+        if (fireCd <= 0 && !attacking)
         {
             animator.SetTrigger("fire");
             animator.SetBool("fireBool", true);
@@ -265,11 +266,11 @@ public class Boss4Manager : MonoBehaviour
 
         if (Mathf.Abs(transform.position.x - summonPoint1.position.x) < Mathf.Abs(transform.position.x - summonPoint2.position.x))
         {
-            transform.position = new Vector2(summonPoint2.position.x, transform.position.y);
+            transform.position = new Vector2(summonPoint2.position.x - 2f, transform.position.y);
         }
         else
         {
-            transform.position = new Vector2(summonPoint1.position.x, transform.position.y);
+            transform.position = new Vector2(summonPoint1.position.x + 2f, transform.position.y);
         }
     }
 
