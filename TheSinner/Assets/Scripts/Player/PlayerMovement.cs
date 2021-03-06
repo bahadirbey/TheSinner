@@ -169,6 +169,9 @@ public class PlayerMovement : MonoBehaviour
     //COMPANIONS BEGIN---------------
     public GameObject companionManager;
     //COMPANIONS END-----------------
+
+    public static bool canCheckStats;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -194,10 +197,14 @@ public class PlayerMovement : MonoBehaviour
         canCheckReborn = true;
         tempDef = def;
         turningPoint = transform.position;
+
+        canCheckStats = true;
     }
 
     void Update()
     {
+        CheckStats();
+
         if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
@@ -513,14 +520,12 @@ public class PlayerMovement : MonoBehaviour
                 if (PlayerPrefs.GetInt("def3") == 1)
                 {
                     hittable = false;
-                    def = 4;
                     Instantiate(barrier, transform.position, Quaternion.identity);
                 }
                 else
                 if (PlayerPrefs.GetInt("def2") == 1)
                 {
                     hittable = false;
-                    def = 2;
                     Instantiate(barrier, transform.position, Quaternion.identity);
                 }
                 else if (PlayerPrefs.GetInt("def1") == 1)
@@ -681,14 +686,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void CheckStar()
+    public void CheckStar() 
     {
         if (PlayerPrefs.GetInt("star3") == 1)
         {
             star.SetActive(true);
             star.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
             StarDamage.damage = 10;
-
         }
         else if (PlayerPrefs.GetInt("star2") == 1)
         {
@@ -950,6 +954,122 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+    }
+
+    public void CheckStats()
+    {
+        if (canCheckStats)
+        {
+            maxHealth = 100;
+            damage = 10;
+            def = 0;
+
+            #region defstone
+            if (PlayerPrefs.GetInt("def3") == 1)
+            {
+                def += 5;
+            }
+            else if (PlayerPrefs.GetInt("def2") == 1)
+            {
+                def += 3;
+            }
+            else if (PlayerPrefs.GetInt("def1") == 1)
+            {
+                def += 1;
+            }
+            #endregion
+
+            #region starstone
+            if (PlayerPrefs.GetInt("star3") == 1)
+            {
+                def -= 7;
+                damage -= 3;
+            }
+            else if (PlayerPrefs.GetInt("star2") == 1)
+            {
+                def -= 5;
+                damage -= 2;
+            }
+            else if (PlayerPrefs.GetInt("star1") == 1)
+            {
+                def -= 3;
+                damage -= 1;
+            }
+            #endregion
+
+            #region ragestone
+            if (PlayerPrefs.GetInt("rage3") == 1)
+            {
+                def -= 5;
+                damage += 6;
+            }
+            else if (PlayerPrefs.GetInt("rage2") == 1)
+            {
+                def -= 3;
+                damage += 4;
+            }
+            else if (PlayerPrefs.GetInt("rage1") == 1)
+            {
+                def -= 1;
+                damage += 2;
+            }
+            #endregion
+
+            #region powerstone
+            if (PlayerPrefs.GetInt("power3") == 1)
+            {
+                damage += 6;
+            }
+            else if (PlayerPrefs.GetInt("power2") == 1)
+            {
+                damage += 4;
+            }
+            else if (PlayerPrefs.GetInt("power1") == 1)
+            {
+                damage += 2;
+            }
+            #endregion
+
+            #region healstone
+            if (PlayerPrefs.GetInt("heal3") == 1)
+            {
+                maxHealth += 75;
+            }
+            else if (PlayerPrefs.GetInt("heal2") == 1)
+            {
+                maxHealth += 50;
+            }
+            else if (PlayerPrefs.GetInt("heal1") == 1)
+            {
+                maxHealth += 25;
+            }
+            #endregion
+
+            #region spirit
+            if (PlayerPrefs.GetInt("spirit3") == 1)
+            {
+                maxHealth += 30;
+                damage -= 3;
+                def += 3;
+            }
+            else if (PlayerPrefs.GetInt("spirit2") == 1)
+            {
+                maxHealth += 20;
+                damage -= 2;
+                def += 2;
+            }
+            else if (PlayerPrefs.GetInt("spirit1") == 1)
+            {
+                maxHealth += 10;
+                damage -= 1;
+                def += 1;
+            }
+            #endregion
+
+            Debug.Log(def + " " + damage + " " + maxHealth);
+
+            canCheckStats = false;
+        }
     }
 
     private void OnDrawGizmosSelected()

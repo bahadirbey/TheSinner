@@ -37,6 +37,9 @@ public class EquipandCloseStone : MonoBehaviour
 
                 usedItems.isFull[i] = true;
                 usedItems.sisFull[i] = true;
+
+                PlayerMovement.canCheckStats = true;
+
                 Destroy(item);
                 break; 
             }    

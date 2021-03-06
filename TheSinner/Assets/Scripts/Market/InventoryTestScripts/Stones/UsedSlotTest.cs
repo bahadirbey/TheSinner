@@ -37,6 +37,8 @@ public class UsedSlotTest : MonoBehaviour
                     PlayerPrefs.SetInt("inventoryTest" + i, 1);
                     PlayerPrefs.SetInt("slotTestItem" + i, child.GetComponent<SpawnTest>().whichStone);
 
+                    PlayerMovement.canCheckStats = true;
+
                     Destroy(child.gameObject);
                     inventoryTest.isFull[i] = true;
                 }
