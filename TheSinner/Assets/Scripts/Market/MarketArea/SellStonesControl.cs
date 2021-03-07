@@ -27,8 +27,6 @@ public class SellStonesControl : MonoBehaviour
                 Instantiate(saveSystem.marketStones[PlayerPrefs.GetInt("SellStone" + i)], transform.position, Quaternion.identity, transform);
             }
         }
-
-        RefreshStones();
     }
 
     private void Update()

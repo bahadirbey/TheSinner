@@ -26,8 +26,6 @@ public class SellCompanionControl : MonoBehaviour
         {
             Instantiate(saveSystem.marketCompanions[PlayerPrefs.GetInt("SellCompanion")], transform.position, Quaternion.identity, transform);
         }
-
-        RefreshCompanion();
     }
 
     private void Update()

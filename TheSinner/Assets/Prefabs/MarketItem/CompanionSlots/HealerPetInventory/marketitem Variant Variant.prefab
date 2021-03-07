@@ -79,5 +79,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: marketitem Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2498677938691497540, guid: eedffcfbb35aa2a448dccbeb5a9d8bb3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0a031d34a38b28d4d95bc7983b4dbe8d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eedffcfbb35aa2a448dccbeb5a9d8bb3, type: 3}

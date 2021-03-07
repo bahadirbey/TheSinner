@@ -1066,8 +1066,6 @@ public class PlayerMovement : MonoBehaviour
             }
             #endregion
 
-            Debug.Log(def + " " + damage + " " + maxHealth);
-
             canCheckStats = false;
         }
     }
