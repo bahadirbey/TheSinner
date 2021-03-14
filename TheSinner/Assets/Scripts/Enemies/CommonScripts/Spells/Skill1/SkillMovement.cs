@@ -60,7 +60,14 @@ public class SkillMovement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(transform.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+            if (enemiesToDamage[i].GetComponent<PlayerMovement>() != null)
+            {
+                enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+            }
+            else
+            {
+                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
+            }
         }
         Destroy(gameObject);
     }

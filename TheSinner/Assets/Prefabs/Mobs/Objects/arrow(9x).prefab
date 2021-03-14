@@ -104,6 +104,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 2048
+  str: Player
 --- !u!58 &-7241320426359862558
 CircleCollider2D:
   m_ObjectHideFlags: 0

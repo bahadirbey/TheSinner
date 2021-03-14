@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRangeX: 20
-  attackRangeY: 7
+  attackRangeY: 12
   startReadyAttackTime: 1.5
   arrow: {fileID: 2794281208851113109, guid: b8d79c850b8c3ad4fb50d038646e734f, type: 3}
   attackPos: {fileID: 2994618355622955474}

@@ -13,10 +13,10 @@ public class arrowManager : MonoBehaviour
     public GameObject explosionEffect;
     public float attackRange;
     public LayerMask whatIsEnemy;
-
+    public string str;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag(str);
         target = new Vector2(player.transform.position.x, player.transform.position.y + .5f);
         direction = transform.position - player.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -46,7 +46,14 @@ public class arrowManager : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(transform.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+            if (enemiesToDamage[i].GetComponent<PlayerMovement>() != null)
+            {
+                enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+            }
+            else
+            {
+                enemiesToDamage[i].GetComponent<TakeDamage>().GetDamage(damage);
+            }   
         }
         Destroy(gameObject);
     }
