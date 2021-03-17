@@ -76,7 +76,15 @@ public class MeleeAttack : MonoBehaviour
         {
             if (!PlayerMovement.blocking)
             {
-                playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+                if (playerToDamage.GetComponent<PlayerMovement>() != null)
+                {
+                    playerToDamage.GetComponent<PlayerMovement>().TakeDamage(damage);
+                }
+                else
+                {
+                    playerToDamage.GetComponent<TakeDamage>().GetDamage(damage);
+                }
+                
                 if (playerToDamage.transform.position.x > transform.position.x)
                 {
                     PlayerMovement.dazeRight = true;

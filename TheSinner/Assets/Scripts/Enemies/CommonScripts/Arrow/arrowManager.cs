@@ -60,27 +60,39 @@ public class arrowManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (str == "Player")
         {
-            collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage);
-
-            if (collision.gameObject.transform.position.x > transform.position.x)
+            if (collision.gameObject.tag == "Player")
             {
-                PlayerMovement.dazeRight = true;
+                collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(damage);
+
+                if (collision.gameObject.transform.position.x > transform.position.x)
+                {
+                    PlayerMovement.dazeRight = true;
+                }
+                else if (collision.gameObject.transform.position.x < transform.position.x)
+                {
+                    PlayerMovement.dazeRight = false;
+                }
+
+                Instantiate(destroyAnimation, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
-            else if (collision.gameObject.transform.position.x < transform.position.x)
+
+            if (collision.gameObject.tag == "shield")
             {
-                PlayerMovement.dazeRight = false;
+                Destroy(gameObject);
             }
-
-            Instantiate(destroyAnimation, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "shield")
+        }else if(str == "Enemy")
         {
-            Destroy(gameObject);                        
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<TakeDamage>().GetDamage(damage);
+                Instantiate(destroyAnimation, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
+        
     }
 
     private void OnDrawGizmosSelected()
