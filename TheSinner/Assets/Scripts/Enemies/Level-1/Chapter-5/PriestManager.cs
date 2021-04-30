@@ -194,7 +194,6 @@ public class PriestManager : MonoBehaviour
                     meleeCd -= Time.deltaTime;
                 }
             }
-
         }
     }
 
