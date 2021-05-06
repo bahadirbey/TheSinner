@@ -244,7 +244,14 @@ public class PriestManager : MonoBehaviour
 
     public void HealUp()
     {
-        takeDamage.currentHealth += healthPower;
+        if (takeDamage.currentHealth + healthPower > takeDamage.health)
+        {
+            takeDamage.currentHealth = takeDamage.health;
+        }
+        else
+        {
+            takeDamage.currentHealth += healthPower;
+        }
     }
 
     public void HealEnd()

@@ -120,7 +120,20 @@ public class Warlock : MonoBehaviour
     public void SpellCastEnd()
     {
         animator.SetBool("spellCasting", false);
-        spellCd = startSpellCd;
+        if (takeDamage.currentHealth < takeDamage.health * 3 / 4 && takeDamage.currentHealth > takeDamage.health / 2)
+        {
+            spellCd = startSpellCd * 3 / 4;
+        }else if (takeDamage.currentHealth < takeDamage.health / 2 && takeDamage.currentHealth > takeDamage.health * 1 / 4)
+        {
+            spellCd = startSpellCd / 2;
+        }else if (takeDamage.currentHealth < takeDamage.health / 4)
+        {
+            spellCd = startSpellCd / 4;
+        }
+        else
+        {
+            spellCd = startSpellCd;
+        }
         attacking = false;
         canFace = true;
         canChase = true;

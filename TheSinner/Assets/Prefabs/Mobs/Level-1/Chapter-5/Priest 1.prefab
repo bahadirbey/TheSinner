@@ -308,7 +308,7 @@ MonoBehaviour:
     m_Bits: 2048
   attackRange: 1
   startMeleeCd: 2
-  healthPower: 20
+  healthPower: 5
   startHealthCd: 5
   startChaseCd: 0.5
   dazeSpeed: 0.5

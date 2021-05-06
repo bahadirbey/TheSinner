@@ -22,22 +22,29 @@ public class SpellTrap : MonoBehaviour
 
     float pi2 = 6.283185307179586476924f;
 
+    GameObject player;
+    public float distance;
+
     private void Start()
     {
         angleBetween = angleDiff;
         cd = startCd;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
-        if (cd <= 0 && !activated)
+        if (Vector2.Distance(transform.position, player.transform.position) < distance)
         {
-            StartCoroutine("FireTrap");
-            activated = true;
-        }
-        else
-        {
-            cd -= Time.deltaTime;
+            if (cd <= 0 && !activated)
+            {
+                StartCoroutine("FireTrap");
+                activated = true;
+            }
+            else
+            {
+                cd -= Time.deltaTime;
+            }
         }
     }
 

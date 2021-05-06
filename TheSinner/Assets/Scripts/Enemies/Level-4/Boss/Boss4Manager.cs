@@ -35,8 +35,8 @@ public class Boss4Manager : MonoBehaviour
     public float startFireCd;
     float fireCd;
 
-    public Transform summonPoint1;
-    public Transform summonPoint2;
+    public GameObject summonPoint1;
+    public GameObject summonPoint2;
 
     private SpriteRenderer sprite;
     public GameObject fourDead;
@@ -44,6 +44,8 @@ public class Boss4Manager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        summonPoint1 = GameObject.FindGameObjectWithTag("SummonPoint1");
+        summonPoint2 = GameObject.FindGameObjectWithTag("SummonPoint2");
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         canChase = true;
@@ -264,13 +266,13 @@ public class Boss4Manager : MonoBehaviour
         animator.SetTrigger("summonBack");
         animator.SetBool("summonBackBool", true);
 
-        if (Mathf.Abs(transform.position.x - summonPoint1.position.x) < Mathf.Abs(transform.position.x - summonPoint2.position.x))
+        if (Mathf.Abs(transform.position.x - summonPoint1.transform.position.x) < Mathf.Abs(transform.position.x - summonPoint2.transform.position.x))
         {
-            transform.position = new Vector2(summonPoint2.position.x - 2f, transform.position.y);
+            transform.position = new Vector2(summonPoint2.transform.position.x - 2f, transform.position.y);
         }
         else
         {
-            transform.position = new Vector2(summonPoint1.position.x + 2f, transform.position.y);
+            transform.position = new Vector2(summonPoint1.transform.position.x + 2f, transform.position.y);
         }
     }
 
