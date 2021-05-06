@@ -359,8 +359,8 @@ TextureImporter:
       name: sizden nefret ediyorum_2
       rect:
         serializedVersion: 2
-        x: 2152
-        y: 2462
+        x: 2147
+        y: 2457
         width: 320
         height: 686
       alignment: 0
@@ -910,7 +910,7 @@ TextureImporter:
         width: 200
         height: 146
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -918,6 +918,27 @@ TextureImporter:
       bones: []
       spriteID: 30a10908586248410800000000000000
       internalID: 1478348932513798659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sizden nefret ediyorum_21
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 2862
+        width: 176
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d8cb9e4333c2170800000000000000
+      internalID: 8154949327613889828
       vertices: []
       indices: 
       edges: []
