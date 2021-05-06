@@ -102,7 +102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 3944456462571895638, guid: 9b567e690dd1bf54488b4c1a6bc1f2db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8458161f589e4c9408313bb289c98760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellCounter: 10
-  startCd: 1
+  spellCounter: 4
+  startCd: 2
   cdBetween: 0
   spellTrap: {fileID: 4161776103818431067, guid: e4cfcc7ff572220459868a86c87d594e, type: 3}
   point: {fileID: 1158606265553160258}
   lenght: 10
-  angleDiff: 0.5
+  angleDiff: 1.57
   distance: 20
