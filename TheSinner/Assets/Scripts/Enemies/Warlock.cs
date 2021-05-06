@@ -113,7 +113,15 @@ public class Warlock : MonoBehaviour
             i = 0;
         }
         Instantiate(summonEffect, new Vector2(transform.position.x + 1.9f, transform.position.y + 1.25f), Quaternion.identity);
-        Instantiate(bosses[i], new Vector2(transform.position.x + 2f, transform.position.y), Quaternion.identity);
+
+        if (i == 3)
+        {
+            Instantiate(bosses[i], new Vector2(transform.position.x + 2f, transform.position.y - .35f), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(bosses[i], new Vector2(transform.position.x + 2f, transform.position.y), Quaternion.identity);
+        }
         i++;
     }
 

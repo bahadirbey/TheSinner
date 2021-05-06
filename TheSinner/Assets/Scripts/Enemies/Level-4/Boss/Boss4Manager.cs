@@ -181,7 +181,7 @@ public class Boss4Manager : MonoBehaviour
 
     public void InstantiateBulletForever()
     {
-        Instantiate(bulletForever, new Vector2(transform.position.x, transform.position.y - .75f), Quaternion.identity);
+        Instantiate(bulletForever, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
         canFire--;
     }
 
@@ -220,7 +220,7 @@ public class Boss4Manager : MonoBehaviour
 
     public void InstantiateBullet()
     {
-        Instantiate(bullet, new Vector2(transform.position.x, transform.position.y - .75f), Quaternion.identity);
+        Instantiate(bullet, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
     }
 
     public void FireEnd()

@@ -110,7 +110,7 @@ public class NinjaManager : MonoBehaviour
 
         if (!assasinated)
         {
-            for (int i = 0; i < boss.Length; i++)
+            for (int i = 0; i < boss.Length - 1; i++)
             {
                 if (boss[i].GetComponent<TakeDamage>().currentHealth < (enemies[i].GetComponent<TakeDamage>().health / 8))
                 {
