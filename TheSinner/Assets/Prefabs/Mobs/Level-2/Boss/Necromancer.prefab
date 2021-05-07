@@ -142,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 8959485368446878139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.16, y: -3.29, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8959485369818227014}
   - {fileID: 8959485369276396834}
@@ -253,6 +253,7 @@ MonoBehaviour:
   healthBar: {fileID: 8959485369818227014}
   startDazedTime: 0.5
   defence: 2
+  price: 0
 --- !u!114 &8959485368446878138
 MonoBehaviour:
   m_ObjectHideFlags: 0
