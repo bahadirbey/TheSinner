@@ -25,17 +25,28 @@ public class TakeDamage : MonoBehaviour
 
     public int price;
 
+    public EnemyHealthBar enemyHealth;
+    public bool bossScript;
+
     void Start()
     {
         startBarHidingTime = 2f;
         animator = GetComponent<Animator>();
         currentHealth = health;
+        enemyHealth.SetMaxHealth(health);
     }
 
     void Update()
     {
-        SetSize();
-        ShowHealthBar();
+        if (bossScript)
+        {
+            enemyHealth.SetHealth(currentHealth);
+        }
+        else
+        {
+            SetSize();
+            ShowHealthBar();
+        }
     }
 
     public void GetDamage(int damage)
