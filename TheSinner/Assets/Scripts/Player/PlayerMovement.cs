@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //GameOverContainer
+    public GameObject gameovercont;
+    
     //General elements Begin
     public static PlayerMovement instance;
     private Rigidbody2D rb;
@@ -646,7 +649,7 @@ public class PlayerMovement : MonoBehaviour
     void Death()
     {
         animator.SetBool("reborn", false);
-
+        
         if (currentHealth <= 0)
         {
             RebornDeath();
@@ -665,6 +668,7 @@ public class PlayerMovement : MonoBehaviour
                 canFlip = false;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
+                gameovercont.gameObject.SetActive(true);
             }
             else
             {

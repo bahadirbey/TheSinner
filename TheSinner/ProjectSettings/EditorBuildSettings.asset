@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Market.unity
     guid: c049664e33559454db709f5a7b27838e
-  - enabled: 1
-    path: Assets/Scenes/Test/Mert'sTestScene.unity
-    guid: 50e5fde9ff120db49beb031663b1e19d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
