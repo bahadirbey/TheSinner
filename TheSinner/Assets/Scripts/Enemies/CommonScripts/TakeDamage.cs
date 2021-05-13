@@ -33,7 +33,10 @@ public class TakeDamage : MonoBehaviour
         startBarHidingTime = 2f;
         animator = GetComponent<Animator>();
         currentHealth = health;
-        enemyHealth.SetMaxHealth(health);
+        if (bossScript)
+        {
+            enemyHealth.SetMaxHealth(health);
+        }   
     }
 
     void Update()
