@@ -19,7 +19,7 @@ public class GoldScore : MonoBehaviour
 
     public void Update()
     {
-        goldview.text = "Gold : " + gold;
+        goldview.text = "" + gold + "G";
     }
 
     public static void UpdateGold()
