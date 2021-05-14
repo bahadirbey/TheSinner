@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SahneGecis : MonoBehaviour
 {
-    public string gecilceksahne;
+    
+    public int gecilceksahne;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            PlayerPrefs.SetInt("ActiveScene", gecilceksahne);
             SceneManager.LoadScene(gecilceksahne);
         }
         

@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MarketGecis : MonoBehaviour
 {
-
+    public GameObject marketgecisbuton;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Market");
+            marketgecisbuton.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            marketgecisbuton.gameObject.SetActive(false);
         }
     }
 }
