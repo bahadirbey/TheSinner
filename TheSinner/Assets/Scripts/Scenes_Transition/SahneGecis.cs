@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SahneGecis : MonoBehaviour
 {
-    
-    public int gecilceksahne;
+    GameObject transactionPanel;
+
+    private void Start()
+    {
+        transactionPanel = GameObject.FindGameObjectWithTag("SceneTransactionPanel");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            PlayerPrefs.SetInt("ActiveScene", gecilceksahne);
-            SceneManager.LoadScene(gecilceksahne);
+            transactionPanel.GetComponent<Animator>().SetTrigger("sceneTransaction");
         }
-        
-    }
-    
-       
-    
+    }    
 }

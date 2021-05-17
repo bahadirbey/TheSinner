@@ -21,6 +21,7 @@ TagManager:
   - BackButton
   - SummonPoint1
   - SummonPoint2
+  - SceneTransactionPanel
   layers:
   - Default
   - TransparentFX

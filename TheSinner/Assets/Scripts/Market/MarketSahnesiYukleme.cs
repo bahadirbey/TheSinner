@@ -6,10 +6,7 @@ using UnityEngine.UI;
 
 public class MarketSahnesiYukleme : MonoBehaviour
 {
-
     public string geldigimizsahne;
-
-    // Start is called before the first frame update
     
     public void marketegecis()
     {
