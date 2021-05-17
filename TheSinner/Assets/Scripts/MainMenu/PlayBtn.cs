@@ -10,7 +10,7 @@ public class PlayBtn : MonoBehaviour
   
     public void play()
     {
-        SceneManager.LoadScene("Mert'sTestScene");
+        SceneManager.LoadScene(PlayerPrefs.GetInt("ActiveScene"));
     }
 
     void OnTriggerEnter2D(Collider2D collision)
