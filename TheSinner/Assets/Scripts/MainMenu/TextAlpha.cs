@@ -9,12 +9,18 @@ public class TextAlpha : MonoBehaviour
     public string newstring;
     public Color newcolor;
 
-    public void Update()
+    public void Start()
     {
         gamename.text = newstring;
         newstring = "SINNER";
-        gamename.color = newcolor;
+        gamename.color = newcolor ;
         
-        newcolor.a  += 0.002f;
+        
+    }
+
+    public void Update()
+    {
+        gamename.color = newcolor;
+        newcolor.a += 0.006f;
     }
 }
