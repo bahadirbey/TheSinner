@@ -27,6 +27,4 @@ public class MarketControl : MonoBehaviour
             craftarea.gameObject.SetActive(false);
         }
     }
-
-
 }
