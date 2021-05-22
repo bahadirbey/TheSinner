@@ -89,11 +89,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 15.3
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 24.7
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -126,6 +126,14 @@ PrefabInstance:
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 6597294088649315006, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companionButton
