@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8875381550299258216, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8875381550400407746, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.96
@@ -67,9 +71,117 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarketItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 266cf77ed53c79a48857793440274869, type: 3}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Text
+      value: "PARANIZ YETERS\u0130Z"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822864, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822865, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822865, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 44.702118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822865, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 167.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822865, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 192.54724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381550923822870, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8875381551097998405, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
       propertyPath: cost
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551097998407, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6128828632904817928, guid: f135403d37ea934428da7c0346a0bcc9, type: 3}
+    - target: {fileID: 8875381551097998407, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551097998410, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 167.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551097998411, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551111951119, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551111951119, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551111951119, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551111951119, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 266cf77ed53c79a48857793440274869, type: 3}
+    - target: {fileID: 8875381551130509685, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_Text
+      value: "-YILDIZLARIN ARMA\u011EINI-\n g\xF6ky\xFCz\xFCnden gelen yard\u0131m\n500G"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551130509685, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 266cf77ed53c79a48857793440274869, type: 3}
+    - target: {fileID: 8875381551130509685, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551130509690, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551130509690, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 167.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551130509690, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200.9465
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875381551130509690, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60.979668
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
