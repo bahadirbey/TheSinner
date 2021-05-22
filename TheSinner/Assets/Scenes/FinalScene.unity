@@ -11993,7 +11993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &391271245
 Transform:
   m_ObjectHideFlags: 0
@@ -14610,7 +14610,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -1561314798596654798, guid: 63001dea98adb1b4e88d2e9ffe782dd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23406,10 +23406,34 @@ PrefabInstance:
       propertyPath: bossScript
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5651135621559456363, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: health
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 5651135621559456368, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
       propertyPath: m_Name
       value: Warlock
       objectReference: {fileID: 0}
+    - target: {fileID: 5651135621559456372, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: backgrounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651135621559456372, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: backgrounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 391271244}
+    - target: {fileID: 5651135621559456372, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: backgrounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 783431205}
+    - target: {fileID: 5651135621559456372, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: backgrounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 762236546}
+    - target: {fileID: 5651135621559456372, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
+      propertyPath: backgrounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 1923569216}
     - target: {fileID: 5651135621559456373, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.44
@@ -23456,7 +23480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5651135621559456374, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a369b2fa6de10e48a0c3d3471b76baf, type: 3}
@@ -23554,7 +23578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &783431206
 Transform:
   m_ObjectHideFlags: 0

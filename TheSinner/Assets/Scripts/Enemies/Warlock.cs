@@ -36,6 +36,10 @@ public class Warlock : MonoBehaviour
     int i;
 
     public GameObject summonEffect;
+
+    public GameObject[] backgrounds;
+    int j;
+
     void Start()
     {
         spellCd = startSpellCd;
@@ -99,6 +103,21 @@ public class Warlock : MonoBehaviour
             attacking = true;
             canFace = false;
             canChase = false;
+
+            j++;
+            if (j == backgrounds.Length)
+            {
+                j = 0;
+            }
+            
+            backgrounds[j].SetActive(true);
+            for (int k = 0; k < backgrounds.Length; k++)
+            {
+                if (k != j)
+                {
+                    backgrounds[k].SetActive(false);
+                }
+            }
         }
         else
         {

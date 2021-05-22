@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 4723107735738678597, guid: 8590f0cef6272b348a2947e3f24e230e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -167,12 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 60
   bar: {fileID: 2418655359348178454}
   healthBar: {fileID: 2418655359773094611}
   startDazedTime: 0
   defence: 0
   price: 1000
+  enemyHealth: {fileID: 0}
+  bossScript: 0
+  necromancer: 0
 --- !u!1 &6505980025334667701
 GameObject:
   m_ObjectHideFlags: 0

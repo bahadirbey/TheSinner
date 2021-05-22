@@ -28,6 +28,8 @@ public class TakeDamage : MonoBehaviour
     public EnemyHealthBar enemyHealth;
     public bool bossScript;
 
+    public bool necromancer; 
+
     void Start()
     {
         startBarHidingTime = 2f;
@@ -35,6 +37,11 @@ public class TakeDamage : MonoBehaviour
         currentHealth = health;
         if (bossScript)
         {
+            if (necromancer)
+            {
+                enemyHealth = GameObject.FindGameObjectWithTag("enemyHealth").GetComponent<EnemyHealthBar>();
+            }
+
             enemyHealth.SetMaxHealth(health);
         }   
     }

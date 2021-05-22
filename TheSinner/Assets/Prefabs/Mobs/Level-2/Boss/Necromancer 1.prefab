@@ -248,12 +248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9d381f813948442a85dd44d7719afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 60
   bar: {fileID: 8959485368865855649}
   healthBar: {fileID: 8959485369818227014}
   startDazedTime: 0.5
   defence: 2
   price: 0
+  enemyHealth: {fileID: 0}
+  bossScript: 0
+  necromancer: 0
 --- !u!114 &8959485368446878138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +293,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sword: {fileID: 3293153258474296173, guid: 5404b5c203c61f742b4c51dc063f934b, type: 3}
-  necroDead: {fileID: 1962261057436799963, guid: 71e0906a9b0109e40834cb3cd047ecd0, type: 3}
+  necroDead: {fileID: 1962261057436799963, guid: 9bc94a281811b644bb147ece17f618a7, type: 3}
 --- !u!1 &8959485368735754685
 GameObject:
   m_ObjectHideFlags: 0
