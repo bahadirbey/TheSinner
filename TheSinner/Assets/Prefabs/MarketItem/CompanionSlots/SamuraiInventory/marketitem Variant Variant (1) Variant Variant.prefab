@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 1148644943546167039, guid: 94daac7e0eb25184f8d62d29ed725dbb, type: 3}
+    - target: {fileID: 8400500081830445202, guid: 22ea446a4be076d478c8742666a0816a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8400500081998714168, guid: 22ea446a4be076d478c8742666a0816a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -78,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 8400500081998714173, guid: 22ea446a4be076d478c8742666a0816a, type: 3}
       propertyPath: m_Name
       value: marketitem Variant Variant (1) Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400500082342943887, guid: 22ea446a4be076d478c8742666a0816a, type: 3}
+      propertyPath: m_Text
+      value: "-eski kurt-\nsay\u0131n\u0131n benim i\xE7in bir \xF6nemi yok\n500g"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ea446a4be076d478c8742666a0816a, type: 3}

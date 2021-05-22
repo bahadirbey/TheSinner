@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8043ccda9710284408a7d6975b35aff5, type: 2}
+    - target: {fileID: 410063543440676824, guid: ae89cc6efbfd3eb41b11e26a9451710c, type: 3}
+      propertyPath: m_Text
+      value: '-ATMACA-
+
+        sahibime kimse dokunamaz
+
+        500g'
+      objectReference: {fileID: 0}
     - target: {fileID: 410063544319614570, guid: ae89cc6efbfd3eb41b11e26a9451710c, type: 3}
       propertyPath: m_Name
       value: marketitem Variant Variant

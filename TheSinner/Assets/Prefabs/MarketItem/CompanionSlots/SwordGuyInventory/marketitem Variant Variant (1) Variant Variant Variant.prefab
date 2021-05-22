@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: whichCompanion
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8519410903859946641, guid: 767a3c2520f52a14f9d768b3c7cd080c, type: 3}
+      propertyPath: m_Text
+      value: "-k\u0131demli-\nd\xFCnya de\u011Fil ben d\xF6n\xFCyorum\n500g"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519410904507185292, guid: 767a3c2520f52a14f9d768b3c7cd080c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8519410904607354147, guid: 767a3c2520f52a14f9d768b3c7cd080c, type: 3}
       propertyPath: m_Name
       value: marketitem Variant Variant (1) Variant Variant Variant

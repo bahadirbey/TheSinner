@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 20c42a5d33dbbb54b80546e715e9b2b6, type: 2}
+    - target: {fileID: 3154947971380764301, guid: 691b3c4d0493e30419524f0a9d6ca7af, type: 3}
+      propertyPath: m_Text
+      value: "-g\xF6lge-\nson vuru\u015F benim i\u015Fim\n500g"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154947971404612240, guid: 691b3c4d0493e30419524f0a9d6ca7af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3154947971571898170, guid: 691b3c4d0493e30419524f0a9d6ca7af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.189032

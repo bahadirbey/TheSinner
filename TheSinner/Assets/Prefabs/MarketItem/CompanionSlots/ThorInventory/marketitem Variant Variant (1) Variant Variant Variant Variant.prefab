@@ -71,5 +71,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: marketitem Variant Variant (1) Variant Variant Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4477545391997513089, guid: 5b8bb98f440cc9741a72ef7a21cbfbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477545392156111260, guid: 5b8bb98f440cc9741a72ef7a21cbfbb3, type: 3}
+      propertyPath: m_Text
+      value: "-\xE7eki\xE7li-\n\u015Fim\u015Feklere h\xFCkmeden d\xFCnyaya h\xFCkmeder\n500g"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8bb98f440cc9741a72ef7a21cbfbb3, type: 3}

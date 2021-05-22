@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363397315827072807, guid: 827a6ca461183294683cd036f5bd4060, type: 3}
       propertyPath: m_Text
-      value: "-kimsesiz de\u011Fil-\nbeni tek ki\u015Fimi sand\u0131n\n500g"
+      value: "-kimsesiz de\u011Fil-\nayn\u0131 bedende 2 ruh\n500g"
       objectReference: {fileID: 0}
     - target: {fileID: 4363397315827072807, guid: 827a6ca461183294683cd036f5bd4060, type: 3}
       propertyPath: m_FontData.m_Font

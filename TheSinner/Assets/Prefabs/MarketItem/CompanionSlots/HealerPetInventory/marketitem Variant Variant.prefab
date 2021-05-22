@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: whichCompanion
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1613775827422576382, guid: eedffcfbb35aa2a448dccbeb5a9d8bb3, type: 3}
+      propertyPath: m_Text
+      value: "-\u015Fifac\u0131-\nonu sa\u011Fl\u0131\u011F\u0131na kavu\u015Fturmal\u0131y\u0131m\n500g"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613775827516154595, guid: eedffcfbb35aa2a448dccbeb5a9d8bb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1613775827617380168, guid: eedffcfbb35aa2a448dccbeb5a9d8bb3, type: 3}
       propertyPath: m_Sprite
       value: 
