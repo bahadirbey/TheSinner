@@ -111,5 +111,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8982905275985581131, guid: 32c61406bf1b72e46b3613af4424fed2, type: 3}
+      propertyPath: m_Text
+      value: "-\xC7\u0130FTE HASAR SV2-\ninan\u0131rsan \u015Fansa ihtiyac\u0131n
+        yok"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32c61406bf1b72e46b3613af4424fed2, type: 3}

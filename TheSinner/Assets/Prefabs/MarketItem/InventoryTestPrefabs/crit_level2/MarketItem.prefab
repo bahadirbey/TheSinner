@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarketItem
       objectReference: {fileID: 0}
+    - target: {fileID: 4250908417437415487, guid: dbc9f45e3614f464a9413ee1290dc79a, type: 3}
+      propertyPath: m_Text
+      value: "-\xE7ifte hasar SV2-\ninan\u0131rsan \u015Fansa ihtiyac\u0131n yok\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 4250908417610470671, guid: dbc9f45e3614f464a9413ee1290dc79a, type: 3}
       propertyPath: infos
       value: 

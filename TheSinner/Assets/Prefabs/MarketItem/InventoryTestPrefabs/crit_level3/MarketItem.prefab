@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8430955730585874501, guid: 0b9b6433784c04e4b81603dffc2309d1, type: 3}
+      propertyPath: m_Text
+      value: "-\xE7ifte hasar SV3-\ninan\u0131rsan \u015Fansa ihtiyac\u0131n yok\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 8430955730777012722, guid: 0b9b6433784c04e4b81603dffc2309d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.96
