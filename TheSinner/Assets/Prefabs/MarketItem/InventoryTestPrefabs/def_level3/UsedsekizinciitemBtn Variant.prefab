@@ -111,5 +111,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6014385540395432514, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 8788209946403845460, guid: 18765461ac455294fb5e1353a8a85442, type: 3}
+      propertyPath: m_Text
+      value: "-koruma kalkan SV3-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18765461ac455294fb5e1353a8a85442, type: 3}

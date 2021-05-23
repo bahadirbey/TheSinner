@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 690070497605398041, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: m_Text
+      value: "-koruma kalkan sv3-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r"
+      objectReference: {fileID: 0}
     - target: {fileID: 925083928258386911, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: level
       value: 3
@@ -154,6 +158,14 @@ PrefabInstance:
     - target: {fileID: 8295998642912315556, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330639636740912970, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330639636740912970, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51762b4d5a7ee34489f0d6bdcc6300f1, type: 3}

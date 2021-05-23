@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373033016281557577, guid: ed987f2c228a48d4f9ee373acea50501, type: 3}
       propertyPath: m_Text
-      value: "-can hasat\u0131-\nya\u015Famak i\xE7in \xF6ld\xFCr\n500g"
+      value: "-can hasat\u0131 SV1-\nya\u015Famak i\xE7in \xF6ld\xFCr\n500g"
       objectReference: {fileID: 0}
     - target: {fileID: 2373033016281557577, guid: ed987f2c228a48d4f9ee373acea50501, type: 3}
       propertyPath: m_FontData.m_Font

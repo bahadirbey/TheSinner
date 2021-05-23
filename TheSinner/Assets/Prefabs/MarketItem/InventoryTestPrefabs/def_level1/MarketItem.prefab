@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2057288453952833255, guid: c11edfaced2b5054396f7fbb5527515f, type: 3}
       propertyPath: m_Text
-      value: " -koruma kalkan\u0131-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r\n500g\n"
+      value: " -koruma kalkan\u0131 sv1-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r\n500g\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2057288453952833256, guid: c11edfaced2b5054396f7fbb5527515f, type: 3}
       propertyPath: m_SizeDelta.y

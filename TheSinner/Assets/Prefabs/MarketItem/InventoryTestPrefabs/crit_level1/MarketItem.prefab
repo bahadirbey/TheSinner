@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7590483853130039199, guid: 870d8162b31fe5c4a8fd35f204cd2513, type: 3}
       propertyPath: m_Text
-      value: "-\xE7ifte hasar-\ninan\u0131rsan \u015Fansa ihtiyac\u0131n yok\n500g"
+      value: "-\xE7ifte hasar sv1-\ninan\u0131rsan \u015Fansa ihtiyac\u0131n yok\n500g"
       objectReference: {fileID: 0}
     - target: {fileID: 7590483853459409402, guid: 870d8162b31fe5c4a8fd35f204cd2513, type: 3}
       propertyPath: m_FontData.m_Font

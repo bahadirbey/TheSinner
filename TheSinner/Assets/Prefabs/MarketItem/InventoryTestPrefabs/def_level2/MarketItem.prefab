@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3145370421504631006, guid: bcd7464f93f249449b629c3536f05234, type: 3}
+      propertyPath: m_Text
+      value: " -koruma kalkan\u0131 sv2-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r\n500g\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 3145370421604191726, guid: bcd7464f93f249449b629c3536f05234, type: 3}
       propertyPath: cost
       value: 100

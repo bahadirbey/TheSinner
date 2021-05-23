@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 2184960724607176877, guid: 11fd86bc1cb2eda4485aa2cd2972e24f, type: 3}
+      propertyPath: m_Text
+      value: " -koruma kalkan\u0131 sv3-\nbazen en iyi sald\u0131r\u0131 savunmad\u0131r\n500g\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 2184960724818237722, guid: 11fd86bc1cb2eda4485aa2cd2972e24f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.96
