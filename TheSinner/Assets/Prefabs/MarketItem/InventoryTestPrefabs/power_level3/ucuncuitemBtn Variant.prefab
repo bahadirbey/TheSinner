@@ -143,6 +143,14 @@ PrefabInstance:
       propertyPath: whichStone
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7388301186672586910, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388301186672586910, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
+      objectReference: {fileID: 0}
     - target: {fileID: 7651324270587908740, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -202,6 +210,10 @@ PrefabInstance:
     - target: {fileID: 7744042344034919893, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
       propertyPath: m_Name
       value: ucuncuitemBtn Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150803857409301560, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: m_Text
+      value: "-a\u011F\u0131r darbe sv3-\ndaha sert vur"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}

@@ -159,5 +159,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ucuncuitemBtn Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9150803857409301560, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}
+      propertyPath: m_Text
+      value: "-a\u011F\u0131r darbe sv2-\ndaha sert vur"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e1a543452e13f1469d9ed8ed00b59a9, type: 3}

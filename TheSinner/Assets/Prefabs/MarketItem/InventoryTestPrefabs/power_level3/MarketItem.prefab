@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9032927860118735670, guid: 5a928b3235b6c1449a887994b12315c1, type: 3}
+      propertyPath: m_Text
+      value: "-a\u011F\u0131r darbe sv3-\ndaha sert vur\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 9032927860358882822, guid: 5a928b3235b6c1449a887994b12315c1, type: 3}
       propertyPath: cost
       value: 200

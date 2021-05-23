@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: whichStone
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 3336332576612876415, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
+      propertyPath: m_Text
+      value: "-a\u011F\u0131r darbe sv2-\ndaha sert vur"
+      objectReference: {fileID: 0}
     - target: {fileID: 3870866232616092699, guid: 38acedb4fea052744b73dcb4ac4d2aa5, type: 3}
       propertyPath: m_Name
       value: UseducuncuitemBtn Variant
