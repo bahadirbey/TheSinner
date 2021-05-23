@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 201075303412184011, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 2846401537308898029, guid: f3ab97f750479fb47be7a8bf5145f801, type: 3}
+      propertyPath: m_Text
+      value: "-kimsesiz de\u011Fil sv3-\nbeni tek ki\u015Fimi sand\u0131n"
+      objectReference: {fileID: 0}
     - target: {fileID: 8654075103737766306, guid: f3ab97f750479fb47be7a8bf5145f801, type: 3}
       propertyPath: item
       value: 

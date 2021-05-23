@@ -67,6 +67,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarketItem
       objectReference: {fileID: 0}
+    - target: {fileID: 1786757708623433128, guid: a686aab7b0b5f414a9e7938cd12308d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786757708798808501, guid: a686aab7b0b5f414a9e7938cd12308d8, type: 3}
+      propertyPath: m_Text
+      value: "-kimsesiz de\u011Fil sv2-\nayn\u0131 bedende 2 ruh\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 1786757708902579333, guid: a686aab7b0b5f414a9e7938cd12308d8, type: 3}
       propertyPath: cost
       value: 100

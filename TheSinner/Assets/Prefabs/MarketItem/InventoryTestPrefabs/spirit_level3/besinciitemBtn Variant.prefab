@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 5007621803532996381, guid: 446ecba0b0d41eb44be975c965d65b78, type: 3}
     - target: {fileID: 882659157207469967, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2766875114693555925, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,6 +107,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 201075303412184011, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 4054596925318105778, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: m_Text
+      value: "-kimsesiz de\u011Fil sv3-\nbeni tek ki\u015Fimi sand\u0131n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178040257684285854, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178040257684285854, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
+      objectReference: {fileID: 0}
     - target: {fileID: 4917176017428810739, guid: e56c2098b4e52e447a97bc3e25806160, type: 3}
       propertyPath: level
       value: 3
