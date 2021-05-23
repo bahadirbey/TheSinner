@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774665025333631808, guid: 303927873479ec94d9e1667fd2519f96, type: 3}
       propertyPath: m_Text
-      value: "-a\u011F\u0131r darbe-\ndaha sert vur\n500g"
+      value: "-a\u011F\u0131r darbe sv1-\ndaha sert vur\n500g"
       objectReference: {fileID: 0}
     - target: {fileID: 1774665025333631823, guid: 303927873479ec94d9e1667fd2519f96, type: 3}
       propertyPath: m_AnchoredPosition.x

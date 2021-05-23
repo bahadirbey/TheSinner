@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 4223784299578540991, guid: de27c452b2214d547b2fc0ca37f31a1d, type: 3}
+    - target: {fileID: 1435372753960471630, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_Text
+      value: "-can hasat\u0131 sv3-\nya\u015Famak i\xE7in \xF6ld\xFCr"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445266250829231746, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445266250829231746, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
+      objectReference: {fileID: 0}
     - target: {fileID: 1853895641545234279, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: m_Name
       value: "\u0130kinci\u0130temBtn Variant"
@@ -25,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3957104518070735488, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4459197668242576238, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: m_IsActive

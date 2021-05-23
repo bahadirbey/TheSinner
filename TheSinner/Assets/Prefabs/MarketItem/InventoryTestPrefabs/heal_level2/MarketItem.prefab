@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8476044134060563548, guid: 5c3e2f96b614c114e9ffbf5326356f77, type: 3}
+      propertyPath: m_Text
+      value: "-can hasat\u0131 SV2-\nya\u015Famak i\xE7in \xF6ld\xFCr\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 8476044134269457898, guid: 5c3e2f96b614c114e9ffbf5326356f77, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8512501003420418008, guid: 3be2337eebd226143bbd47584ed4b26b, type: 3}
+      propertyPath: m_Text
+      value: "-can hasat\u0131 SV3-\nya\u015Famak i\xE7in \xF6ld\xFCr\n500g"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3be2337eebd226143bbd47584ed4b26b, type: 3}

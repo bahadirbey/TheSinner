@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: whichStone
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4213509135727725390, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_Text
+      value: "-can hasat\u0131 sv2-\nya\u015Famak i\xE7in \xF6ld\xFCr"
+      objectReference: {fileID: 0}
     - target: {fileID: 4543954116130733692, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 8316832355356086914, guid: b60f557a2c8d17b46b81a8d531987fce, type: 3}
+    - target: {fileID: 1435372753960471630, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
+      propertyPath: m_Text
+      value: "-can hasat\u0131 sv2-\nya\u015Famak i\xE7in \xF6ld\xFCr"
+      objectReference: {fileID: 0}
     - target: {fileID: 1853895641545234279, guid: 330e2998e2daabd4bbb2ca1d373390f2, type: 3}
       propertyPath: m_Name
       value: "\u0130kinci\u0130temBtn Variant"
