@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4734253993605361599, guid: 1c08bba0b138ed54894aeaf979cb26a2, type: 3}
+      propertyPath: m_Text
+      value: "-yeniden do\u011Fu\u015F sv3-\nHer \xF6l\xFCml\xFC 2. \u015Fans\u0131
+        hak eder"
+      objectReference: {fileID: 0}
     - target: {fileID: 5788995898008067088, guid: 1c08bba0b138ed54894aeaf979cb26a2, type: 3}
       propertyPath: m_IsActive
       value: 0

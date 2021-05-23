@@ -11,6 +11,11 @@ PrefabInstance:
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5197308599971725340, guid: 7bc00e0cb1f6ca349aeb8144916f7c37, type: 3}
+      propertyPath: m_Text
+      value: "-yeniden do\u011Fu\u015F sv2-\nHer \xF6l\xFCml\xFC 2. \u015Fans\u0131
+        hak eder\n500g"
+      objectReference: {fileID: 0}
     - target: {fileID: 5197308600316938666, guid: 7bc00e0cb1f6ca349aeb8144916f7c37, type: 3}
       propertyPath: m_Sprite
       value: 

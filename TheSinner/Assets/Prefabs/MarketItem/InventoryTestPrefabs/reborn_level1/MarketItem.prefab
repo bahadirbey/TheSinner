@@ -133,8 +133,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6027345516779084305, guid: a77a23e8610ff474b82742d59c48d84a, type: 3}
       propertyPath: m_Text
-      value: "-yeniden do\u011Fu\u015F-\nHer \xF6l\xFCml\xFC 2. \u015Fans\u0131 hak
-        eder\n500g"
+      value: "-yeniden do\u011Fu\u015F sv1-\nHer \xF6l\xFCml\xFC 2. \u015Fans\u0131
+        hak eder\n500g"
       objectReference: {fileID: 0}
     - target: {fileID: 6027345516779084318, guid: a77a23e8610ff474b82742d59c48d84a, type: 3}
       propertyPath: m_AnchoredPosition.x

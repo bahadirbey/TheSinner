@@ -51,6 +51,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5222351142040924302, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
+      propertyPath: m_Text
+      value: "-yeniden do\u011Fu\u015F sv2-\nHer \xF6l\xFCml\xFC 2. \u015Fans\u0131
+        hak eder"
+      objectReference: {fileID: 0}
     - target: {fileID: 5456820595196549428, guid: b6b0ac665778c6345ac8b89b2cd33334, type: 3}
       propertyPath: m_Name
       value: altinciitemBtn Variant
