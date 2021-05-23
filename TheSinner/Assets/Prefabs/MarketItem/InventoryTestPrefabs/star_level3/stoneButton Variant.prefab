@@ -39,6 +39,11 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 5533430984976606692, guid: e63c7d5df561afa4180690ce2bdeb86b, type: 3}
+    - target: {fileID: 3003305114504108290, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: m_Text
+      value: "-y\u0131ld\u0131zlar\u0131n arma\u011Fan\u0131 sv3-\ng\xF6ky\xFCz\xFCnden
+        gelen l\xFCtuf"
+      objectReference: {fileID: 0}
     - target: {fileID: 4175787812443657366, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: level
       value: 3
@@ -154,6 +159,10 @@ PrefabInstance:
     - target: {fileID: 6859293829304619302, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352545990825305972, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}

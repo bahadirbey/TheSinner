@@ -111,5 +111,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3701979492401685928, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 7015598413778396293, guid: 2af32397c1518ba41980b24b0601adb2, type: 3}
+      propertyPath: m_Text
+      value: "-y\u0131ld\u0131zlar\u0131n arma\u011Fan\u0131 sv3-\ng\xF6ky\xFCz\xFCnden
+        gelen yard\u0131m"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477327117722747611, guid: 2af32397c1518ba41980b24b0601adb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af32397c1518ba41980b24b0601adb2, type: 3}

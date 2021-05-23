@@ -51,6 +51,11 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 8111673570556733336, guid: 1d30db1e9145cbd4b90983155f99606e, type: 3}
+    - target: {fileID: 3003305114504108290, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
+      propertyPath: m_Text
+      value: "-y\u0131ld\u0131zlar\u0131n arma\u011Fan\u0131 sv2-\ng\xF6ky\xFCz\xFCnden
+        gelen l\xFCtuf"
+      objectReference: {fileID: 0}
     - target: {fileID: 4175787812443657366, guid: 75f5677ad5f602243a6e7168e5db3f3e, type: 3}
       propertyPath: level
       value: 2

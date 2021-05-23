@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3180220353139045487, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 3206161996200661101, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3267653229197007210, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: name
       value: heal
@@ -30,6 +34,10 @@ PrefabInstance:
     - target: {fileID: 4213509135727725390, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Text
       value: "-can hasat\u0131 sv2-\nya\u015Famak i\xE7in \xF6ld\xFCr"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346587876307951072, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 64.1
       objectReference: {fileID: 0}
     - target: {fileID: 4543954116130733692, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -114,6 +122,18 @@ PrefabInstance:
     - target: {fileID: 4543954116130733692, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245061654451000362, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245061654451000362, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901896785333155516, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 111.91002
       objectReference: {fileID: 0}
     - target: {fileID: 8942430272559719720, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Name

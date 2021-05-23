@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1819962879843774571, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2949000948942776642, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -110,6 +114,14 @@ PrefabInstance:
     - target: {fileID: 4543954116130733692, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245061654451000362, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245061654451000362, guid: f20ad4833f980404388ce76995d22c08, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8942430272559719720, guid: f20ad4833f980404388ce76995d22c08, type: 3}
       propertyPath: m_Name

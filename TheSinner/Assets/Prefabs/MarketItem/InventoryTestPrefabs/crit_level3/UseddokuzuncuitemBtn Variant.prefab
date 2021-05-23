@@ -27,6 +27,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UseddokuzuncuitemBtn Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2843598253988964578, guid: 32c61406bf1b72e46b3613af4424fed2, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843598253988964578, guid: 32c61406bf1b72e46b3613af4424fed2, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4340721797918602475, guid: 32c61406bf1b72e46b3613af4424fed2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

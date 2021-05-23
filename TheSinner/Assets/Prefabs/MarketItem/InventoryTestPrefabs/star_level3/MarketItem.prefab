@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: cost
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 3096955723512596099, guid: bc45d735ed3e1f04f874c106e5ac13b0, type: 3}
+      propertyPath: m_Text
+      value: "-YILDIZLARIN ARMA\u011EINI sv3-\n g\xF6ky\xFCz\xFCnden gelen l\xFCtuf\n500G"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc45d735ed3e1f04f874c106e5ac13b0, type: 3}

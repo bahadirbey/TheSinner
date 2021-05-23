@@ -157,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 266cf77ed53c79a48857793440274869, type: 3}
     - target: {fileID: 8875381551130509685, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
       propertyPath: m_Text
-      value: "-YILDIZLARIN ARMA\u011EINI-\n g\xF6ky\xFCz\xFCnden gelen l\xFCtuf\n500G"
+      value: "-YILDIZLARIN ARMA\u011EINI sv1-\n g\xF6ky\xFCz\xFCnden gelen l\xFCtuf\n500G"
       objectReference: {fileID: 0}
     - target: {fileID: 8875381551130509685, guid: 0c61ac012b110914aaa1f8c5dca6f2c2, type: 3}
       propertyPath: m_FontData.m_Font
