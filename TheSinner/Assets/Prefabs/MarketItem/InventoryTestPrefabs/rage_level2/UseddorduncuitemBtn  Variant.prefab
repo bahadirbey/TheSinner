@@ -15,6 +15,11 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2361725087032394992, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 6373698235006326429, guid: b49b64ed812cfce4f8e218bd9e1e372a, type: 3}
+      propertyPath: m_Text
+      value: "-pervas\u0131z h\xFCcum sv2-\nkontrols\xFCz sald\u0131r\u0131 kan damlata
+        bilir ama kimden ?"
+      objectReference: {fileID: 0}
     - target: {fileID: 7197431063721443414, guid: b49b64ed812cfce4f8e218bd9e1e372a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

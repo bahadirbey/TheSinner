@@ -163,6 +163,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7681690380469107285, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
+      propertyPath: m_Text
+      value: "-pervas\u0131z huc\xFCm sv2-\nkontrols\xFCz sald\u0131r\u0131 kan damlata
+        bilir ama kimden ?"
+      objectReference: {fileID: 0}
     - target: {fileID: 8714480133320707874, guid: 837c4f629d0c96c4795e20b544b07001, type: 3}
       propertyPath: m_IsActive
       value: 0

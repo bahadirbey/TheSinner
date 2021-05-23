@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2361725087032394992, guid: 98fa46b7510978f459b80df543549264, type: 3}
+    - target: {fileID: 1941486479431727651, guid: 845644f718985fa4993ef28ef5712b50, type: 3}
+      propertyPath: m_Text
+      value: "-pervas\u0131z huc\xFCm sv2-\n\xD6FKE kan damlatabilir, ama kimden
+        ?\n500G\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 1941486479464240915, guid: 845644f718985fa4993ef28ef5712b50, type: 3}
       propertyPath: cost
       value: 100
