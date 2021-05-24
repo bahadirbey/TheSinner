@@ -14045,6 +14045,10 @@ PrefabInstance:
       propertyPath: icePoints.Array.data[6]
       value: 
       objectReference: {fileID: 1580319389}
+    - target: {fileID: 7905759753794819362, guid: 538581e04a621f844a3d34f44711a529, type: 3}
+      propertyPath: healthStone
+      value: 
+      objectReference: {fileID: 7703902615947980448, guid: 786a08ab45a3f944481f9d1286cf31bc, type: 3}
     - target: {fileID: 8947378814875139090, guid: 538581e04a621f844a3d34f44711a529, type: 3}
       propertyPath: m_Layer
       value: 13

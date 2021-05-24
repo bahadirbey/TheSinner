@@ -752,23 +752,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("heal3") == 1)
         {
-            if (stoneKillCounter >= 3)
+            if (stoneKillCounter > 0)
             {
-                GetHeal(stoneKillCounter);
+                GetHeal(stoneKillCounter + 2);
                 stoneKillCounter = 0;
             }
         }
         else if (PlayerPrefs.GetInt("heal2") == 1)
         {
-            if (stoneKillCounter >= 6)
+            if (stoneKillCounter > 0)
             {
-                GetHeal(stoneKillCounter);
+                GetHeal(stoneKillCounter + 1);
                 stoneKillCounter = 0;
             }
         }
         else if (PlayerPrefs.GetInt("heal1") == 1)
         {
-            if (stoneKillCounter >= 9)
+            if (stoneKillCounter > 0)
             {
                 GetHeal(stoneKillCounter);
                 stoneKillCounter = 0;
@@ -780,7 +780,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rageLastCd <= 0)
         {
-            canBeDamaged = true;
+            hittable = true;
             rageCd -= Time.deltaTime;
             if (canColorRage)
             {
@@ -790,6 +790,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            hittable = false;
             rageLastCd -= Time.deltaTime;
             gameObject.GetComponent<SpriteRenderer>().material.color = Color.red;
             canColorRage = true;

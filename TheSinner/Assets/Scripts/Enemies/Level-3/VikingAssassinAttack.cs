@@ -38,6 +38,9 @@ public class VikingAssassinAttack : MonoBehaviour
     GameObject player;
     bool targetDedected;
     bool dashing;
+
+    bool face;
+
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
@@ -122,8 +125,9 @@ public class VikingAssassinAttack : MonoBehaviour
 
     void Dash()
     {
-        if (playerToChase != null)
+        if (playerToChase != null && !face)
         {
+            face = true;
             if (playerToChase.transform.position.x < transform.position.x)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
@@ -139,6 +143,7 @@ public class VikingAssassinAttack : MonoBehaviour
             reachedToTarget = true;
             animator.SetBool("dashing", false);
             canDash = false;
+            animator.SetTrigger("attack2");
             animator.SetBool("attacking2", true);
             attacking = true;
             dashing = false;

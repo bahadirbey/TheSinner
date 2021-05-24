@@ -42,6 +42,9 @@ public class PriestManager : MonoBehaviour
     int j = 0;
     bool loopAttack;
     bool quarterHealth;
+
+    public GameObject healthStone;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -303,6 +306,8 @@ public class PriestManager : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            Instantiate(healthStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
