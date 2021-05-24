@@ -19,6 +19,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 55141dacd94d9a64887656592dff6c00, type: 3}
+    - target: {fileID: 4217388608532815427, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.32449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companiontousedBtn
       value: 
@@ -38,6 +58,11 @@ PrefabInstance:
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companionName
       value: thor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409137894485173640, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_Text
+      value: "-\xC7EK\u0130\xC7L\u0130-\n\u015Fim\u015Feklere h\xFCkmeden d\xFCnyaya
+        h\xFCkmeder"
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_LocalPosition.x

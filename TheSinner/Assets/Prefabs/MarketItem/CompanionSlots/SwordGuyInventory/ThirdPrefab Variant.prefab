@@ -31,6 +31,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6800654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.44750637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5498409
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.88998973
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409137894485173640, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_Text
+      value: "-KIDEML\u0130-\nd\xFCnya de\u011Fil ben d\xF6n\xFCyorum"
+      objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -126,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 5478133214354313422, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734524448418673265, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.925
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
