@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4063538936232783123, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: companionName
@@ -50,6 +50,10 @@ PrefabInstance:
     - target: {fileID: 4239464222007583537, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: whichCompanion
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409137894485173640, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_Text
+      value: "-g\xF6lge-\nson vuru\u015F benim i\u015Fim"
       objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_LocalPosition.x

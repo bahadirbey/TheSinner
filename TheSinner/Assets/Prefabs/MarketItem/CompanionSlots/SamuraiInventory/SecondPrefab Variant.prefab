@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: companionName
       value: samurai
       objectReference: {fileID: 0}
+    - target: {fileID: 4409137894485173640, guid: efd1622210261af42927aa13f32c898b, type: 3}
+      propertyPath: m_Text
+      value: "-eski kurt-\nsay\u0131n\u0131n benim i\xE7in bir \xF6nemi yok\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: efd1622210261af42927aa13f32c898b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

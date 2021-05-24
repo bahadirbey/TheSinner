@@ -31,6 +31,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4217388608532815427, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409137894485173640, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
+      propertyPath: m_Text
+      value: "-g\xF6lge-\nson vuru\u015F benim i\u015Fim"
+      objectReference: {fileID: 0}
     - target: {fileID: 5478133214354313422, guid: aa724666fe93c1b4ebefd676346a6900, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
