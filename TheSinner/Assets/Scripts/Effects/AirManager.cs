@@ -25,7 +25,7 @@ public class AirManager : MonoBehaviour
     
     void Update()
     {
-        if (airCounter > 1 && x == 0)
+        if (airCounter > 1 && x == 0 || MonkManManager.monkDead)
         {
             Destroy(gameObject);
         }
