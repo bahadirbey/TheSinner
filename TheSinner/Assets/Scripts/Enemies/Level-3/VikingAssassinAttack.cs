@@ -64,7 +64,6 @@ public class VikingAssassinAttack : MonoBehaviour
         Roll();
         Dash();
     }
-
     void MeleeAttackPrep()
     {
         if (canChase && canDash && playerToChase != null)
@@ -123,6 +122,18 @@ public class VikingAssassinAttack : MonoBehaviour
 
     void Dash()
     {
+        if (playerToChase != null)
+        {
+            if (playerToChase.transform.position.x < transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+            }
+            else if (playerToChase.transform.position.x > transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+        }
+
         if (Vector2.Distance(transform.position, target) < .2f && !reachedToTarget && playerToChase != null)
         {
             reachedToTarget = true;

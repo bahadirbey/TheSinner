@@ -31,7 +31,9 @@ public class MonkManManager : MonoBehaviour
     private TakeDamage takeDamage;
     bool earthCreated;
 
-    public static bool monkDefeated;
+    public GameObject deadParticle;
+    public static bool monkDead;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -44,16 +46,30 @@ public class MonkManManager : MonoBehaviour
 
     void Update()
     {
-        ChangeElement();
-        ArrangeMeditationElement();
+        if (Vector2.Distance(player.transform.position, transform.position) < 20f)
+        {
+            FacePlayer();
+            ChangeElement();
+            ArrangeMeditationElement();
+        }
 
         if (takeDamage.currentHealth <= takeDamage.health * 3 / 5)
         {
             activateUltimate = true;
-        }else if (takeDamage.currentHealth <= takeDamage.health * 1 / 5)
+        }
+
+        Death();
+    }
+
+    void FacePlayer()
+    {
+        if (player.transform.position.x > transform.position.x)
         {
-            monkDefeated = true;
-            //Load Scene or detroy all objects
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
         }
     }
 
@@ -96,7 +112,8 @@ public class MonkManManager : MonoBehaviour
         if (activateUltimate)
         {
 
-        }else if (changeElementCd <= 0)
+        }
+        else if (changeElementCd <= 0)
         {
             checkMeditationChange = true;
             changeElementCd = startChangeElementCd;
@@ -187,6 +204,16 @@ public class MonkManManager : MonoBehaviour
         else
         {
             skillCd -= Time.deltaTime;
+        }
+    }
+
+    void Death()
+    {
+        if (takeDamage.currentHealth <= 0)
+        {
+            monkDead = true;
+            Instantiate(deadParticle, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

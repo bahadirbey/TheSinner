@@ -15,7 +15,8 @@ public class EarthCreator : MonoBehaviour
     
     void Update()
     {
-        if (!MonkManManager.earthActive)
+
+        if (!MonkManManager.earthActive || MonkManManager.monkDead)
         {
             Destroy(gameObject);
         }

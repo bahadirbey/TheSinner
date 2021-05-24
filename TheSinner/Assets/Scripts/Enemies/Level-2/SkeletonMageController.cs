@@ -102,7 +102,7 @@ public class SkeletonMageController : MonoBehaviour
             }
         }
 
-        if (playerToDamage == null && Mathf.Abs(transform.position.x - player.transform.position.x) < 20f)
+        if (playerToDamage == null && Mathf.Abs(transform.position.x - player.transform.position.x) < 20f && Mathf.Abs(transform.position.y - player.transform.position.y) < 2f)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             animator.SetBool("walking", true);
