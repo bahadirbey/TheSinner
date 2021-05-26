@@ -12,6 +12,7 @@ public class SahneGecis : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            PlayerPrefs.SetInt("ResetGame", 0);
             transactionPanel.SetActive(true);
             transactionPanel.GetComponent<Animator>().SetTrigger("sceneTransaction");
         }

@@ -12,6 +12,7 @@ public class MarketGecis : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             marketgecisbuton.gameObject.SetActive(true);
+            PlayerPrefs.SetInt("ResetGame", 0);
         }
     }
 

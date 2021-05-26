@@ -8083,6 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d006337c971ea478de659c2a308781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transactionPanel: {fileID: 0}
 --- !u!4 &258357919
 Transform:
   m_ObjectHideFlags: 0
@@ -22978,7 +22979,7 @@ RectTransform:
   - {fileID: 1865730134}
   - {fileID: 1200101061}
   m_Father: {fileID: 2104513960}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -61622,8 +61623,8 @@ RectTransform:
   m_LocalScale: {x: 0.7122462, y: 0.7122462, z: 0.7122462}
   m_Children:
   - {fileID: 35111935}
-  - {fileID: 757656833}
   - {fileID: 2108138532}
+  - {fileID: 757656833}
   - {fileID: 933591067}
   - {fileID: 811924953}
   - {fileID: 493301511}
@@ -61819,7 +61820,7 @@ RectTransform:
   - {fileID: 1782747288}
   - {fileID: 579833007}
   m_Father: {fileID: 2104513960}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

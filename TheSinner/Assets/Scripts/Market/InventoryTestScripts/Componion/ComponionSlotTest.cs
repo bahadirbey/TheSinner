@@ -14,7 +14,15 @@ public class ComponionSlotTest : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
-        CheckItem();
+        
+        if (PlayerPrefs.GetInt("ResetGame") == 1)
+        {
+            ResetInventory();
+        }
+        else
+        {
+            CheckItem();
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +50,14 @@ public class ComponionSlotTest : MonoBehaviour
         {
             inventory.cisFull[i] = true;
             Instantiate(saveSystem.slotCompanions[PlayerPrefs.GetInt("cslotTestItem" + i)], inventoryTest.companionslots[i].transform, false);
+        }
+    }
+
+    public void ResetInventory()
+    {
+        if (PlayerPrefs.GetInt("cinventoryTest" + i) == 1)
+        {
+            PlayerPrefs.SetInt("cinventoryTest" + i, 0);
         }
     }
 }

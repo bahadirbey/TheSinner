@@ -202,6 +202,28 @@ public class PlayerMovement : MonoBehaviour
         turningPoint = transform.position;
 
         canCheckStats = true;
+
+        if (PlayerPrefs.GetInt("ResetGame") == 1)
+        {
+            PlayerPrefs.SetInt("def1", 0);
+            PlayerPrefs.SetInt("def2", 0);
+            PlayerPrefs.SetInt("def3", 0);
+            PlayerPrefs.SetInt("star1", 0);
+            PlayerPrefs.SetInt("star2", 0);
+            PlayerPrefs.SetInt("star3", 0);
+            PlayerPrefs.SetInt("rage1", 0);
+            PlayerPrefs.SetInt("rage2", 0);
+            PlayerPrefs.SetInt("rage3", 0);
+            PlayerPrefs.SetInt("power1", 0);
+            PlayerPrefs.SetInt("power2", 0);
+            PlayerPrefs.SetInt("power3", 0);
+            PlayerPrefs.SetInt("heal1", 0);
+            PlayerPrefs.SetInt("heal2", 0);
+            PlayerPrefs.SetInt("heal3", 0);
+            PlayerPrefs.SetInt("spirit1", 0);
+            PlayerPrefs.SetInt("spirit2", 0);
+            PlayerPrefs.SetInt("spirit3", 0);
+        }
     }
 
     void Update()

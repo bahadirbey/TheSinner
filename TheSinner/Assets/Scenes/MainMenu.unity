@@ -4195,8 +4195,8 @@ GameObject:
   - component: {fileID: 1982143323}
   - component: {fileID: 1982143322}
   - component: {fileID: 1982143321}
-  - component: {fileID: 1982143320}
   - component: {fileID: 1982143319}
+  - component: {fileID: 1982143320}
   m_Layer: 5
   m_Name: NewGameBtn
   m_TagString: Untagged
@@ -4259,7 +4259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982143317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652397c284d23fb4799a15e7dbcb3ab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 75f76d648a03dc84f8c8709e0698c1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   options: {fileID: 1358343779}
@@ -4307,7 +4307,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1982143320}
-        m_TargetAssemblyTypeName: PlayBtn, Assembly-CSharp
+        m_TargetAssemblyTypeName: NewGamePlayBtn, Assembly-CSharp
         m_MethodName: play
         m_Mode: 1
         m_Arguments:

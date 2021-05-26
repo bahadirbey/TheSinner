@@ -11,7 +11,15 @@ public class UsedSlotTest : MonoBehaviour
     {
         inventoryTest = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryTest>();
         usedItem = GameObject.FindGameObjectWithTag("Player").GetComponent<UsedItemsTest>();
-        CheckItem();
+
+        if (PlayerPrefs.GetInt("ResetGame") == 1)
+        {
+            ResetInventory();
+        }
+        else
+        {
+            CheckItem();
+        }  
     }
 
     void Update()
@@ -53,6 +61,14 @@ public class UsedSlotTest : MonoBehaviour
         {
             usedItem.isFull[i] = true;
             Instantiate(saveSystem.usedSlotStones[PlayerPrefs.GetInt("slotUsedTestItem" + i)], usedItem.slots[i].transform, false);
+        }
+    }
+
+    void ResetInventory()
+    {
+        if (PlayerPrefs.GetInt("inventoryUsedTest" + i) == 1)
+        {
+            PlayerPrefs.SetInt("inventoryUsedTest" + i, 0);
         }
     }
 }
