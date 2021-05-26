@@ -45,6 +45,10 @@ public class VikingBossController : MonoBehaviour
     public float tauntCoolDown;
     float tauntCd;
     public GameObject thunder;
+
+    public GameObject priceStone;
+
+    public GameObject portal, nextChapter;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -342,6 +346,10 @@ public class VikingBossController : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            portal.SetActive(true);
+            nextChapter.SetActive(true);
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

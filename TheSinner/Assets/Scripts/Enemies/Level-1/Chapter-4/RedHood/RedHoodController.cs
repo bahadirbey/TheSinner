@@ -40,6 +40,8 @@ public class RedHoodController : MonoBehaviour
     public GameObject redHoodDead;
 
     public GameObject arrow;
+
+    public GameObject priceStone;
     void Start()
     {
         takeDamage = GetComponent<TakeDamage>();
@@ -247,6 +249,9 @@ public class RedHoodController : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            DeathControl.redHoodDead = true;
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

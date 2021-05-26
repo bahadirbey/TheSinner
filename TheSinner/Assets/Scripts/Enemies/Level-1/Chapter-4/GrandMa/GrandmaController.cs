@@ -40,6 +40,8 @@ public class GrandmaController : MonoBehaviour
     public GameObject spawnEffect;
 
     public GameObject grandmaDead;
+
+    public GameObject priceStone;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -266,6 +268,9 @@ public class GrandmaController : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            DeathControl.grandmaDead = true;
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

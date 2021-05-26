@@ -41,6 +41,10 @@ public class Boss4Manager : MonoBehaviour
     private SpriteRenderer sprite;
     public GameObject fourDead;
 
+    public GameObject priceStone;
+
+    public GameObject portal, nextChapter;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -323,6 +327,10 @@ public class Boss4Manager : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            nextChapter.SetActive(true);
+            portal.SetActive(true);
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

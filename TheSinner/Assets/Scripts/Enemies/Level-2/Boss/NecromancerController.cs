@@ -47,6 +47,11 @@ public class NecromancerController : MonoBehaviour
     private GameObject smokePoint1;
     private GameObject smokePoint2;
     private GameObject smokePoint3;
+
+    public GameObject priceStone;
+
+    public GameObject portal, nextChapter;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -330,6 +335,10 @@ public class NecromancerController : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            portal.SetActive(true);
+            nextChapter.SetActive(true);
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

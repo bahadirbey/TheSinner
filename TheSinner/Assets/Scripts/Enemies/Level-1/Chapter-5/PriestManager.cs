@@ -45,6 +45,8 @@ public class PriestManager : MonoBehaviour
 
     public GameObject healthStone;
 
+     public GameObject portal, nextChapter;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -307,6 +309,8 @@ public class PriestManager : MonoBehaviour
                 MeleeDead.facingRight = false;
             }
 
+            nextChapter.SetActive(true);
+            portal.SetActive(true);
             Instantiate(healthStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
