@@ -205,6 +205,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (PlayerPrefs.GetInt("ResetGame") == 1)
         {
+            PlayerPrefs.SetInt("archer", 0);
+            PlayerPrefs.SetInt("warrior", 0);
+            PlayerPrefs.SetInt("ninja", 0);
+            PlayerPrefs.SetInt("samurai", 0);
+            PlayerPrefs.SetInt("swordguy", 0);
+            PlayerPrefs.SetInt("healerpet", 0);
+            PlayerPrefs.SetInt("attackerpet", 0);
+            PlayerPrefs.SetInt("thor", 0);
             PlayerPrefs.SetInt("def1", 0);
             PlayerPrefs.SetInt("def2", 0);
             PlayerPrefs.SetInt("def3", 0);
@@ -223,6 +231,12 @@ public class PlayerMovement : MonoBehaviour
             PlayerPrefs.SetInt("spirit1", 0);
             PlayerPrefs.SetInt("spirit2", 0);
             PlayerPrefs.SetInt("spirit3", 0);
+            PlayerPrefs.SetInt("crit1", 0);
+            PlayerPrefs.SetInt("crit2", 0);
+            PlayerPrefs.SetInt("crit3", 0);
+            PlayerPrefs.SetInt("reborn1", 0);
+            PlayerPrefs.SetInt("reborn2", 0);
+            PlayerPrefs.SetInt("reborn3", 0);
         }
     }
 

@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameOverRestart : MonoBehaviour
 {
-    public string bolumadi;
     public void restart()
     {
-        SceneManager.LoadScene(bolumadi);
+        PlayerPrefs.SetInt("refreshMarket", 1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("ActiveScene"));
     }
 
     public void anamenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
-
 }

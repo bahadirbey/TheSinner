@@ -1006,7 +1006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37818ede11b4c8b46b2444b9a7ce2d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bolumadi: 
 --- !u!1 &84302951
 GameObject:
   m_ObjectHideFlags: 0
@@ -5225,9 +5224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50dbbf61b137b18428f19d8630127a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comp1: {fileID: 0}
-  comp2: {fileID: 0}
-  craftarea: {fileID: 0}
+  comp1: {fileID: 389033619}
+  comp2: {fileID: 1786747341}
+  craftarea: {fileID: 463110551}
 --- !u!61 &508428221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16630,6 +16629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d006337c971ea478de659c2a308781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transactionPanel: {fileID: 1963911120}
 --- !u!4 &2062334272
 Transform:
   m_ObjectHideFlags: 0

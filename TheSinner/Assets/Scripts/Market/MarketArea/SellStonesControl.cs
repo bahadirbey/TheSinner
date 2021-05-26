@@ -10,13 +10,7 @@ public class SellStonesControl : MonoBehaviour
 
     void Start()
     {
-        SellCompanionControl.marketNum = PlayerPrefs.GetInt("marketNum");
-
-        if (PlayerPrefs.GetInt("NewInMarket" + SellCompanionControl.marketNum) == 0)
-        {
-            RefreshStones();
-        }
-        else if(PlayerPrefs.GetInt("refreshMarket") == 1)
+        if(PlayerPrefs.GetInt("refreshMarket") == 1)
         {
             RefreshStones();
         }
@@ -46,7 +40,6 @@ public class SellStonesControl : MonoBehaviour
         randomNum = Random.Range(0, 8);
         Instantiate(saveSystem.marketStones[randomNum], transform.position, Quaternion.identity, transform);
         PlayerPrefs.SetInt("SellStone" + i, randomNum);
-        PlayerPrefs.SetInt("refreshMarket", 0);
         PlayerPrefs.SetInt("CanSellStone" + i, 0);
     }
 }

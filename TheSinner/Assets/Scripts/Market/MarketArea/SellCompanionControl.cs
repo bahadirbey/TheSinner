@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class SellCompanionControl : MonoBehaviour
 {
-    public static int marketNum;
     public SaveSystem saveSystem;
     int randomNum;
 
     void Start()
     {
-        marketNum = PlayerPrefs.GetInt("marketNum");
-        PlayerPrefs.SetInt("NewInMarket" + marketNum, 0);
-
-        if (PlayerPrefs.GetInt("NewInMarket" + marketNum) == 0)
-        {
-            RefreshCompanion();
-            PlayerPrefs.SetInt("NewInMarket" + marketNum, 1);
-        }
-        else if (PlayerPrefs.GetInt("refreshMarket") == 1)
+        if (PlayerPrefs.GetInt("refreshMarket") == 1)
         {
             RefreshCompanion();           
         }

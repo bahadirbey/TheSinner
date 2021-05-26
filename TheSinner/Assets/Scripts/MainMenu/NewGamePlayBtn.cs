@@ -11,6 +11,7 @@ public class NewGamePlayBtn : MonoBehaviour
     {
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("ResetGame", 1);
+        PlayerPrefs.SetInt("refreshMarket", 1);
         options.gameObject.SetActive(true);
         PlayerPrefs.SetInt("Gold", 0);
         PlayerPrefs.SetInt(("ActiveScene"), 2);

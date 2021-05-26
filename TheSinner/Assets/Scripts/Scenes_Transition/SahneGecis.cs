@@ -15,6 +15,7 @@ public class SahneGecis : MonoBehaviour
             PlayerPrefs.SetInt("ResetGame", 0);
             transactionPanel.SetActive(true);
             transactionPanel.GetComponent<Animator>().SetTrigger("sceneTransaction");
+            PlayerPrefs.SetInt("refreshMarket", 1);
         }
     }    
 }
