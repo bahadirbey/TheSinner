@@ -33,6 +33,9 @@ public class EvilBrotherManager : MonoBehaviour
 
     public GameObject parry;
     public GameObject laser;
+
+    public Transform chasePoint;
+    public GameObject priceStone;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -65,6 +68,15 @@ public class EvilBrotherManager : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
             }
+        }
+
+        if (Mathf.Abs(player.transform.position.x - chasePoint.position.x) < 20f && Mathf.Abs(player.transform.position.y - chasePoint.position.y) < 4f)
+        {
+            canChase = true;
+        }
+        else
+        {
+            canChase = false;
         }
 
         if (playerToDamage == null && canChase)
@@ -224,6 +236,8 @@ public class EvilBrotherManager : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

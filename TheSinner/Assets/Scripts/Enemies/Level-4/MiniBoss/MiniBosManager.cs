@@ -38,6 +38,9 @@ public class MiniBosManager : MonoBehaviour
     public GameObject[] spears;
     int i = 0;
 
+    public Transform chasePoint;
+    public GameObject priceStone;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -62,6 +65,15 @@ public class MiniBosManager : MonoBehaviour
 
     void Chase()
     {
+        if (Mathf.Abs(player.transform.position.x - chasePoint.position.x) < 20f && Mathf.Abs(player.transform.position.y - chasePoint.position.y) < 4f)
+        {
+            canChase = true;
+        }
+        else
+        {
+            canChase = false;
+        }
+
         if (canFace)
         {
             if (player.transform.position.x > transform.position.x)
@@ -263,6 +275,8 @@ public class MiniBosManager : MonoBehaviour
             {
                 MeleeDead.facingRight = false;
             }
+
+            Instantiate(priceStone, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
