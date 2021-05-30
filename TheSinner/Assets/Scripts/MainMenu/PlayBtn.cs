@@ -6,8 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayBtn : MonoBehaviour
 {
+    
     public GameObject options;
-  
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("NewGame") != 1)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     public void play()
     { 
         Time.timeScale = 1f;
@@ -25,4 +33,6 @@ public class PlayBtn : MonoBehaviour
             options.gameObject.SetActive(true);
         }
     }
+
+
 }
