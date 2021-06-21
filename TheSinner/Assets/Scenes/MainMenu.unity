@@ -498,7 +498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.100006, y: 87.85}
+  m_AnchoredPosition: {x: 5.899994, y: 87.85}
   m_SizeDelta: {x: -127.438934, y: -196.21582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158828731
@@ -534,7 +534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "eme\u011Fi ge\xE7enler"
+  m_Text: "Geli\u015Ftiriciler"
 --- !u!222 &158828732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365211055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -829,8 +829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.699997, y: 10.199997}
-  m_SizeDelta: {x: -37.973755, y: -107.02017}
+  m_AnchoredPosition: {x: 10.843, y: 5.85}
+  m_SizeDelta: {x: -21.686432, y: -98.39485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386358948
 MonoBehaviour:
@@ -865,7 +865,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "a\nb\nc\n\xF6zel te\u015Fekk\xFCr olarak\n"
+  m_Text: "Ahmet mert ordu\t\nZ\xFCbeyr Bahad\u0131r Damar\t\nZ\xFClfikar Bellikli\nG\xF6khan
+    Do\u011Fda\u015F\n\nVe \xF6zel te\u015Fekk\xFCrlerimiz sahipleri\nEkrem, Seray
+    ve efe\n"
 --- !u!222 &386358949
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1584,8 +1586,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333.31, y: -166.66}
-  m_SizeDelta: {x: 134.98923, y: 19.856304}
+  m_AnchoredPosition: {x: -326.5, y: -165.4}
+  m_SizeDelta: {x: 148.58438, y: 22.328724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565393414
 MonoBehaviour:
@@ -1985,7 +1987,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbea6599a38a6a4438d006ff45752a52, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.539
+  m_Volume: 0.212
   m_Pitch: 1
   Loop: 1
   Mute: 0
